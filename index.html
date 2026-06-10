@@ -2122,28 +2122,31 @@ svg.leaflet-image-layer.leaflet-interactive path {
         overflow: hidden;
       }
 
-      /* Map tab panel — fills aside height, hidden until .visible */
-      .map-tab-panel {
+      /* Mobile map tab: hide aside, show map-wrap via shell class toggle */
+      /* Default mobile: map hidden, aside visible */
+      .map-wrap {
         display: none;
+      }
+      /* Map tab active: show map-wrap fullscreen, hide aside */
+      .shell.map-tab-active aside {
+        display: none;
+      }
+      .shell.map-tab-active .map-wrap {
+        display: flex;
+        flex-direction: column;
         flex: 1;
         height: 0;
+        min-height: 0;
         overflow: hidden;
       }
-      .map-tab-panel.visible {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-      .map-tab-panel .map-wrap {
-        flex: 1;
-        min-height: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      .map-tab-panel #map {
+      .shell.map-tab-active .map-wrap #map {
         flex: 1;
         height: 100% !important;
         min-height: 0;
+      }
+      /* tab-bar stays visible in both states */
+      .shell.map-tab-active .tab-bar {
+        display: flex;
       }
 
       /* aside = full remaining height between status bar & bottom nav */
@@ -2382,6 +2385,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     /* Hide PWA banner on desktop entirely */
     .pwa-install-banner { display: none !important; }
+
+    /* Desktop: map-wrap is the second grid column — always visible */
+    .map-wrap {
+      display: block;
+    }
 
     /* Wider sidebar for planning */
     .shell {
@@ -2959,17 +2967,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   </nav>
 
-    <div id="tab-map" class="panel-view map-tab-panel">
-      <section class="map-wrap" aria-label="Interactive itinerary map">
-        <div id="map"></div>
-        <div class="legend" aria-label="Route legend">
-          <p class="legend-title">Map Mode</p>
-          <div class="legend-row">Tap <strong>Map this day</strong> to show numbered stops in order.</div>
-          <div class="legend-row">Tap any pin/card to show only nearby connections.</div>
-          <div class="legend-row">Use the color filters only when browsing places, not when navigating a day.</div>
-        </div>
-      </section>
-    </div>
+    <section class="map-wrap" aria-label="Interactive itinerary map">
+      <div id="map"></div>
+      <div class="legend" aria-label="Route legend">
+        <p class="legend-title">Map Mode</p>
+        <div class="legend-row">Tap <strong>Map this day</strong> to show numbered stops in order.</div>
+        <div class="legend-row">Tap any pin/card to show only nearby connections.</div>
+        <div class="legend-row">Use the color filters only when browsing places, not when navigating a day.</div>
+      </div>
+    </section>
   </main>
 
   <div class="carousel-modal" id="carouselModal" aria-hidden="true">
@@ -6086,14 +6092,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (card) card.classList.toggle('expanded');
     };
 
-    // switchToMapTab — shared by all "Map this day" buttons
+    // switchToMapTab — activates map view on mobile; on desktop map is always visible
     function switchToMapTab() {
+      // Mark map tab button active
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       const mapBtn = document.querySelector('.tab-btn[data-tab="map"]');
       if (mapBtn) mapBtn.classList.add('active');
-      document.querySelectorAll('.panel-view').forEach(pv => pv.classList.remove('visible'));
-      const mapPanel = document.getElementById('tab-map');
-      if (mapPanel) mapPanel.classList.add('visible');
+      // On mobile: toggle class on shell to swap aside <-> map-wrap
+      // On desktop: map-wrap is always the second grid column — no DOM change needed
+      const shell = document.querySelector('.shell');
+      if (shell) shell.classList.add('map-tab-active');
+      // Leaflet must recalculate size after map becomes visible
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           if (window._leafletMap) window._leafletMap.invalidateSize(true);
@@ -6611,21 +6620,22 @@ svg.leaflet-image-layer.leaflet-interactive path {
         btn.classList.add('active');
         const tab = btn.dataset.tab;
         document.querySelectorAll('.panel-view').forEach(p => p.classList.remove('visible'));
-        document.getElementById('tab-'+tab)?.classList.add('visible');
+        // Remove map tab active state when switching to non-map tabs
+        const shell = document.querySelector('.shell');
+        if (tab !== 'map') {
+          if (shell) shell.classList.remove('map-tab-active');
+          document.getElementById('tab-'+tab)?.classList.add('visible');
+        } else {
+          // Map tab: use switchToMapTab for consistent behaviour
+          switchToMapTab();
+          return; // switchToMapTab handles button active state
+        }
         if (tab === 'scenario') {
           renderPicker();
           renderCanvas();
           updatePickerCount();
           runLogistics();
           renderScenarioDays();
-        }
-        if (tab === 'map') {
-          // Leaflet needs invalidateSize after container transitions from display:none
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              if (window._leafletMap) window._leafletMap.invalidateSize(true);
-            });
-          });
         }
       });
     });
