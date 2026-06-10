@@ -1,0 +1,3280 @@
+{
+  "source_map": "yourejustgonnaeat7elevenanyway",
+  "places": [
+    {
+      "id": "place-001",
+      "name": "85[ハチゴウ] COREDO室町テラス店 (Fermentation)",
+      "description": "See entry for 85[ハチゴウ] COREDO室町テラス店 (Fermentation)",
+      "coords": [
+        35.6879802,
+        139.7726272
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 10,
+        "nature": 2,
+        "food": 10,
+        "craft": 8,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "High priority — aligns directly with food systems interest.",
+      "tabelog_score": null,
+      "tabelog_verdict": "Retail fermented foods shop (miso, sake, koji products) in COREDO Muromachi Terrace — no Tabelog dining score. Worth 20 min browse near Nihombashi base.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Nihombashi / COREDO"
+    },
+    {
+      "id": "place-002",
+      "name": "Rikugien Gardens",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7327591,
+        139.7477067
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 10,
+        "food": 3,
+        "craft": 9,
+        "recovery": 9
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Edo-period stroll garden in Komagome — authentic landscape design."
+    },
+    {
+      "id": "place-003",
+      "name": "Ginza",
+      "description": "description: Nowhere in Tokyo exudes \"fuck you money\" more than Ginza. Home to hundreds of high end boutiques, countless flagship stores, Japan's most important department stores, and incredible restaurants and cafes; Ginza no doubt contains more luxury-per-square-meter than anywhere else in Toky...",
+      "coords": [
+        35.671269,
+        139.7650087
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 3,
+        "food": 10,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-004",
+      "name": "Kappabashi",
+      "description": "description: Tsukiji may be the first destination for foodies visiting Tokyo, and a depachika is absolutely essential on your food vacation checklist, but one often-neglected attraction is the restaurant-supply district of Kappabashi. Originally famous for being where those ubiquitous plastic/wax...",
+      "coords": [
+        35.7144955,
+        139.788871
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 3,
+        "food": 10,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Professional kitchenware district — knives, lacquerware, plastic food samples. Ideal for food entrepreneurs."
+    },
+    {
+      "id": "place-005",
+      "name": "HIGASHIYA GINZA (Wagashi/Tea)",
+      "description": "See entry for HIGASHIYA GINZA (Wagashi/Tea)",
+      "coords": [
+        35.6742784,
+        139.76795
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 1,
+        "food": 8,
+        "craft": 9,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.53,
+      "tabelog_verdict": "Tabelog 100 Cafe 2021 — rarefied modern wagashi tea salon on Chuo-dori. Reserve 2 weeks ahead, no photos inside.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "required",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-006",
+      "name": "Shinjuku Gyoen National Garden",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6851763,
+        139.7100517
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 10,
+        "food": 3,
+        "craft": 7,
+        "recovery": 9
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Best park in Tokyo — Japanese/French/English gardens. Morning walk ideal."
+    },
+    {
+      "id": "place-007",
+      "name": "Ginza Akebono (Wagashi)",
+      "description": "See entry for Ginza Akebono (Wagashi)",
+      "coords": [
+        35.6713197,
+        139.7644979
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 8,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": false,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.37,
+      "tabelog_verdict": "Score (3.37) is weak for a Ginza wagashi pick. It's a retail shop, not a tea room. CUT — grab Toraya or Higashiya instead.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-008",
+      "name": "Takemura (Wagashi)",
+      "description": "See entry for Takemura (Wagashi)",
+      "coords": [
+        35.6966837,
+        139.7690827
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 8,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "[BEST-IN-CLASS] Tabelog 100 Japanese Sweets 2023 — Kanda kanmidokoro, anmitsu + oshiruko in atmospheric old-Tokyo room. Walk-in. High value.",
+      "tabelog_score": 3.76,
+      "tabelog_verdict": "Tabelog 100 Japanese Sweets 2023 — Kanda kanmidokoro, anmitsu + oshiruko in atmospheric old-Tokyo room. Walk-in. High value.",
+      "tabelog_keep": "BEST-IN-CLASS",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Kanda / Jimbocho"
+    },
+    {
+      "id": "place-009",
+      "name": "Kawaguchiko base",
+      "description": "Address: Kawaguchiko Station, 3641 Funatsu, Fujikawaguchiko, Yamanashi 401-0301Latitude: 35.4982Longitude: 138.7687Category: natureDay: Days 8-11Itinerary Days: Notes: Apartment-style stay near the station works well for groceries, light dinners, and Fuji e-bike days.Source: https://commons.wikim...",
+      "coords": [
+        35.4982,
+        138.7687
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 10,
+        "food": 4,
+        "craft": 6,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Your Fuji base — e-bike rental on arrival, lake circumference is 20km flat loop."
+    },
+    {
+      "id": "place-010",
+      "name": "Oishi Park / Lake Kawaguchi ride",
+      "description": "Address: Oishi Park, 2525-11 Oishi, Fujikawaguchiko, Yamanashi 401-0305Latitude: 35.5253Longitude: 138.7453Category: natureDay: Day 9Itinerary Days: Notes: Classic Fuji viewpoint and a natural stop on a guided e-bike loop around Lake Kawaguchi.Source: https://commons.wikimedia.org/wiki/File:Mount...",
+      "coords": [
+        35.5253,
+        138.7453
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 10,
+        "food": 4,
+        "craft": 6,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "North shore of Lake Kawaguchi — best Mt Fuji framing, e-bike here from Kawaguchiko station."
+    },
+    {
+      "id": "place-011",
+      "name": "Higashimukojima coffee shop",
+      "description": "See entry for Higashimukojima coffee shop",
+      "coords": [
+        35.7200572,
+        139.8154625
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 2,
+        "food": 10,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "East Tokyo artisan belt — combine with Kuramae craft shops and Sumida River walk.",
+      "tabelog_score": 3.58,
+      "tabelog_verdict": "Same as Coffee-ten cheesecake below — it's a single small shop. Worth it IF doing Kiyosumi coffee + East Tokyo day.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "recommended (¥200 visit fee)",
+      "tabelog_area_label": "Higashimukojima / East Tokyo"
+    },
+    {
+      "id": "place-012",
+      "name": "Higashi-Mukojima Coffee-ten (Cheesecake)",
+      "description": "See entry for Higashi-Mukojima Coffee-ten (Cheesecake)",
+      "coords": [
+        35.7200572,
+        139.8154625
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 2,
+        "food": 10,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "East Tokyo artisan belt — combine with Kuramae craft shops and Sumida River walk.",
+      "tabelog_score": 3.58,
+      "tabelog_verdict": "Confirmed same location as above — no-bake cheesecake + coffee in a tiny machiya. Consolidate to single entry.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "recommended (¥200 visit fee)",
+      "tabelog_area_label": "Higashimukojima / East Tokyo (duplicate)"
+    },
+    {
+      "id": "place-013",
+      "name": "Ueno Park",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.714071,
+        139.774079
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 9,
+        "food": 4,
+        "craft": 6,
+        "recovery": 6
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Museums + park — cherry blossom OG spot but crowded."
+    },
+    {
+      "id": "place-014",
+      "name": "Yoyogi Park",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.671736,
+        139.6949447
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 10,
+        "food": 3,
+        "craft": 6,
+        "recovery": 8
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Massive park — Sunday flea market, cycling paths, Forest area near Meiji."
+    },
+    {
+      "id": "place-015",
+      "name": "KOFFEE MAMEYA -Kakeru-",
+      "description": "See entry for KOFFEE MAMEYA -Kakeru-",
+      "coords": [
+        35.6764735,
+        139.804184
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 10,
+        "nature": 1,
+        "food": 7,
+        "craft": 6,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Reservation-only coffee omakase in Omotesando — most innovative coffee concept in Tokyo.",
+      "tabelog_score": 3.45,
+      "tabelog_verdict": "Score 3.45 doesn't match the hype — reservation-only coffee omakase is a concept experience, not a consensus pick. Optional.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "required",
+      "tabelog_area_label": "Omotesando"
+    },
+    {
+      "id": "place-016",
+      "name": "Houtou Fudou Kawaguchiko Station",
+      "description": "Address: Funatsu / Kawaguchiko Station area, Fujikawaguchiko, Yamanashi 401-0301Latitude: 35.4985Longitude: 138.7685Category: foodDay: Fuji foodItinerary Days: Notes: Classic Yamanashi houtou: thick noodles, pumpkin, vegetables, miso broth. Easiest station-adjacent comfort meal.Source: https://ww...",
+      "coords": [
+        35.4985,
+        138.7685
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 9,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": false,
+      "ai_note": "Fujiyoshida-style Houtou udon — flat wheat noodles in miso-pumpkin broth, uniquely regional.",
+      "tabelog_score": 3.42,
+      "tabelog_verdict": "Regional houtou udon (thick noodle miso-pumpkin broth) — score 3.42. Kawaguchiko is not in current itinerary. Flag as scenario-only.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Kawaguchiko (not in itinerary)"
+    },
+    {
+      "id": "place-017",
+      "name": "Hakone",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.2323825,
+        139.1069355
+      ],
+      "layer": "area",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 9,
+        "food": 3,
+        "craft": 7,
+        "recovery": 7
+      },
+      "transit_minutes_estimate": 30,
+      "worth_it": true,
+      "ai_note": "Base area for days 6-7 — Gora funicular, rotenburo onsen, Pola Museum nearby."
+    },
+    {
+      "id": "place-018",
+      "name": "La Maison du Chocolat (Chocolate)",
+      "description": "See entry for La Maison du Chocolat (Chocolate)",
+      "coords": [
+        35.6761846,
+        139.7619641
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 8,
+        "food": 2,
+        "craft": 6,
+        "recovery": 8
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": false,
+      "ai_note": "French chocolate — skip in favor of Japanese wagashi; only if passing through Ginza.",
+      "tabelog_score": null,
+      "tabelog_verdict": "French import. Low food payoff (2/10) in its own AI note. Skip entirely — out of place on a Japan itinerary.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Omotesando"
+    },
+    {
+      "id": "place-019",
+      "name": "Kiyosumi",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6812164,
+        139.7971635
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 5,
+        "food": 5,
+        "craft": 7,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Kiyosumi-Shirakawa — Tokyo's coffee district, canal walk."
+    },
+    {
+      "id": "place-020",
+      "name": "Ningyocho imahan (Sukiyaki) (¥¥¥-¥¥¥¥)",
+      "description": "See entry for Ningyocho imahan (Sukiyaki) (¥¥¥-¥¥¥¥)",
+      "coords": [
+        35.6857703,
+        139.7836715
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 9,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Historic sukiyaki house in Tokyo — wagyu sourcing pedigree, private rooms.",
+      "tabelog_score": 3.69,
+      "tabelog_verdict": "Legendary sukiyaki house, private tatami rooms, wagyu pedigree. Book 2-3 weeks out.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "required",
+      "tabelog_area_label": "Ningyocho / Nihombashi"
+    },
+    {
+      "id": "place-021",
+      "name": "Imojin (Kakigori/Wagashi)",
+      "description": "See entry for Imojin (Kakigori/Wagashi)",
+      "coords": [
+        35.720236,
+        139.763607
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 8,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Japanese traditional confection — highest craft-food overlap.",
+      "tabelog_score": 3.7,
+      "tabelog_verdict": "Century-old Nezu kanmidokoro. Anmitsu + kakigori in a quiet neighborhood — pair with Yanaka/Nezu half-day.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Nezu / Yanaka"
+    },
+    {
+      "id": "place-022",
+      "name": "Tsukiji Outer Market",
+      "description": "description: Tsukiji Outer Market is a lively old-world commercial district situated right outside of the world's largest fish market. Home to tons of raw ingredients, sushi restaurants that source their ingredients right next door, and a plethora of streetfood (especially oldschool japanese brea...",
+      "coords": [
+        35.6654861,
+        139.7706668
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 3,
+        "food": 9,
+        "craft": 5,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Arrive before 8:30am — tuna-don at Sushi Dai or Daiwa, tamagoyaki at Tsukiji Shouro.",
+      "tabelog_score": 3.64,
+      "tabelog_verdict": "Go before 9am. Sushi Dai Honkan (3.53) is the in-market sushi anchor. Tamagoyaki at Tsukiji Shouro. Note: Sushi Dai / Daiwa main locations moved to Toyosu.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Tsukiji"
+    },
+    {
+      "id": "place-023",
+      "name": "Ippodo tea store Tokyo Marunouchi",
+      "description": "See entry for Ippodo tea store Tokyo Marunouchi",
+      "coords": [
+        35.6769756,
+        139.7616149
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 7,
+        "craft": 8,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": false,
+      "ai_note": "[CLOSED] PERMANENTLY CLOSED Jan 15, 2025 — Marunouchi tearoom shut. Takeout-only kiosk remains in Shin-Marunouchi B1F. New Aoyama tearoom opened. Update note.",
+      "tabelog_score": null,
+      "tabelog_verdict": "PERMANENTLY CLOSED Jan 15, 2025 — Marunouchi tearoom shut. Takeout-only kiosk remains in Shin-Marunouchi B1F. New Aoyama tearoom opened. Update note.",
+      "tabelog_keep": "CLOSED",
+      "tabelog_reservation": "n/a",
+      "tabelog_area_label": "Marunouchi (CLOSED — use Aoyama location)"
+    },
+    {
+      "id": "place-024",
+      "name": "Fujiyama Onsen",
+      "description": "Address: 4-17-1 Shinnishihara, Fujiyoshida, Yamanashi 403-0017Latitude: 35.4856Longitude: 138.7807Category: natureDay: Day 8 or 9Itinerary Days: Notes: Practical post-ride soak near Fuji-Q / Kawaguchiko area. Use after the lake e-bike day if you want another onsen hit.Source: https://www.fujiyama...",
+      "coords": [
+        35.4856,
+        138.7807
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 9,
+        "food": 4,
+        "craft": 6,
+        "recovery": 6
+      },
+      "transit_minutes_estimate": 30,
+      "worth_it": true,
+      "ai_note": "Large natural hot spring complex near Kawaguchiko — post e-bike recovery."
+    },
+    {
+      "id": "place-025",
+      "name": "Nihonbashi",
+      "description": "description: The \"Center of Japan\", Nihonbashi is where the Japan highway network started in the early Edo-period, and also marked Japans main crossroads of commercial culture. Originally just a wooden bridge (and rebuilt as stone in the Meiji-period) this is a centuries old district filled with ...",
+      "coords": [
+        35.6831478,
+        139.7734845
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 9,
+        "craft": 7,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Walking distance from base — Mitsukoshi basement, Haibara washi paper, historic bridge."
+    },
+    {
+      "id": "place-026",
+      "name": "Meiji Jingu Shrine",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6763976,
+        139.6993259
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 8,
+        "food": 2,
+        "craft": 8,
+        "recovery": 7
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Forest shrine — 100-year-old zelkova forest, sacred energy."
+    },
+    {
+      "id": "place-027",
+      "name": "Yanaka/Nezu",
+      "description": "description: One of the few remaining neighborhoods in Tokyo where you can get a taste for the oldschool Shitamachi aesthetic. Strolling around this area gives you an overwhelming sense of nostalgia and makes you feel at home.Filled with low key shops and homes as well as an incredibly scenic cem...",
+      "coords": [
+        35.7240783,
+        139.7673798
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 10,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-028",
+      "name": "Yoyogi National Stadium",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6672534,
+        139.6999365
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 8,
+        "food": 3,
+        "craft": 6,
+        "recovery": 7
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Tange Kenzo architecture — more interesting as a walk-by than the park itself."
+    },
+    {
+      "id": "place-029",
+      "name": "Ganso Shokuhin Sample-ya Kappabashi Showroom (Model Food)",
+      "description": "See entry for Ganso Shokuhin Sample-ya Kappabashi Showroom (Model Food)",
+      "coords": [
+        35.714885,
+        139.7891014
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 1,
+        "food": 6,
+        "craft": 8,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Professional kitchenware district — knives, lacquerware, plastic food samples. Ideal for food entrepreneurs."
+    },
+    {
+      "id": "place-030",
+      "name": "KOFFEE MAMEYA",
+      "description": "See entry for KOFFEE MAMEYA",
+      "coords": [
+        35.668368,
+        139.710888
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 10,
+        "nature": 1,
+        "food": 7,
+        "craft": 6,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Reservation-only coffee omakase in Omotesando — most innovative coffee concept in Tokyo.",
+      "tabelog_score": 3.45,
+      "tabelog_verdict": "Same brand, walk-in version. Redundant if already visiting Kakeru. Pick one; original is more accessible.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "recommended",
+      "tabelog_area_label": "Omotesando"
+    },
+    {
+      "id": "place-031",
+      "name": "Higashi-Koji, Heiwa-Koji, Suzuran-dori",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6075316,
+        139.7360848
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_outer",
+      "payoff": {
+        "innovation": 9,
+        "nature": 2,
+        "food": 10,
+        "craft": 7,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 35,
+      "worth_it": true,
+      "ai_note": "Koji culture production — core of Japanese food innovation."
+    },
+    {
+      "id": "place-032",
+      "name": "Glitch Coffee",
+      "description": "See entry for Glitch Coffee",
+      "coords": [
+        35.6937428,
+        139.7613047
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 1,
+        "food": 7,
+        "craft": 5,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "[BEST-IN-CLASS] Tokyo's best specialty coffee flagship — transparent sourcing, filter-focus. Walk-in, near Kanda/Takemura. Pair them.",
+      "tabelog_score": 3.65,
+      "tabelog_verdict": "Tokyo's best specialty coffee flagship — transparent sourcing, filter-focus. Walk-in, near Kanda/Takemura. Pair them.",
+      "tabelog_keep": "BEST-IN-CLASS",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Kanda / Jimbocho"
+    },
+    {
+      "id": "place-033",
+      "name": "GLITCH COFFEE GINZA",
+      "description": "See entry for GLITCH COFFEE GINZA",
+      "coords": [
+        35.6689171,
+        139.7686324
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 1,
+        "food": 7,
+        "craft": 5,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.65,
+      "tabelog_verdict": "Ginza branch of Glitch — same quality, closer to base. If you visit one Glitch, make it this one (saves a trip to Kanda).",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-034",
+      "name": "FUGLEN ASAKUSA",
+      "description": "See entry for FUGLEN ASAKUSA",
+      "coords": [
+        35.7144656,
+        139.7939944
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 2,
+        "food": 6,
+        "craft": 6,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Norwegian café in Yoyogi — iconic design, natural wine at night.",
+      "tabelog_score": 3.59,
+      "tabelog_verdict": "Asakusa branch (3.59) vs Yoyogi (3.69) — pick one. Yoyogi wins on score and has better pairing with PATH.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Asakusa (use Yoyogi instead)"
+    },
+    {
+      "id": "place-035",
+      "name": "\"East\" Shinjuku",
+      "description": "description: Tokyo's most raucous city. Shinjuku has many personalities that span from ho-hum offices, to glitzy neon lit red light districts, to low-key 5 seater bars, to tranquil parks and shrines,. You could spend a lifetime in Shinjuku alone and still not even scratch the surface.This is the ...",
+      "coords": [
+        35.6928466,
+        139.7019768
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 9,
+        "craft": 6,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-036",
+      "name": "\"West\" Shinjuku",
+      "description": "description: Tokyo's most raucous city. Shinjuku has many personalities that span from ho-hum offices, to glitzy neon lit red light districts, to low-key 5 seater bars, to tranquil parks and shrines,. You could spend a lifetime in Shinjuku alone and still not even scratch the surface.This is the ...",
+      "coords": [
+        35.6902847,
+        139.6966457
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 9,
+        "craft": 6,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-037",
+      "name": "Kabukiza Theatre",
+      "description": "See entry for Kabukiza Theatre",
+      "coords": [
+        35.6694184,
+        139.7677369
+      ],
+      "layer": "entertainment",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-038",
+      "name": "Asakusa",
+      "description": "description: The heart of Shitamachi; this town can only be described as traditional. An extremely atmospheric location that offers the sights, sounds and smells of old, historical Tokyo like nowhere else can. Noted for being home to the most famous temple in Japan (Sensoji) which attracts thousa...",
+      "coords": [
+        35.7128241,
+        139.7963369
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-039",
+      "name": "Marunouchi",
+      "description": "description: Home to Japan's most powerful corporations, this formerly unexciting business district has recently been revitalized into modern, tasteful shopping and dining destination. Notable for it's very high concentration of skyscrapers and Tokyo Station. Come here to feel the power of Japan'...",
+      "coords": [
+        35.6815183,
+        139.7633415
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-040",
+      "name": "Asahi Art Square",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7098466,
+        139.8003302
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-041",
+      "name": "Yanaka Coffee-ten Yanaka Shop",
+      "description": "See entry for Yanaka Coffee-ten Yanaka Shop",
+      "coords": [
+        35.7269027,
+        139.764731
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 5,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Old Tokyo neighborhood — pre-war architecture, artisan shops, cemetery walk."
+    },
+    {
+      "id": "place-042",
+      "name": "Tokyo Bike Yanaka (Bike Rentals)",
+      "description": "See entry for Tokyo Bike Yanaka (Bike Rentals)",
+      "coords": [
+        35.7217584,
+        139.7643958
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 5,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Old Tokyo neighborhood — pre-war architecture, artisan shops, cemetery walk."
+    },
+    {
+      "id": "place-043",
+      "name": "Yanaka matsunoya (Home / Lifestyle)",
+      "description": "See entry for Yanaka matsunoya (Home / Lifestyle)",
+      "coords": [
+        35.7275716,
+        139.7675819
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 5,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Old Tokyo neighborhood — pre-war architecture, artisan shops, cemetery walk."
+    },
+    {
+      "id": "place-044",
+      "name": "Yanaka Cemetery",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.724811,
+        139.771504
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 5,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Old Tokyo neighborhood — pre-war architecture, artisan shops, cemetery walk."
+    },
+    {
+      "id": "place-045",
+      "name": "Yanaka Ginza",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7276552,
+        139.7667968
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 5,
+        "craft": 9,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-046",
+      "name": "Ginza Ginger (Kakigori)",
+      "description": "See entry for Ginza Ginger (Kakigori)",
+      "coords": [
+        35.675124,
+        139.7670086
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.69,
+      "tabelog_verdict": "Tabelog 100 Cafe 2022 — condensed milk kakigori at Ginza Itchome. Walk-in, great if in Ginza anyway.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-047",
+      "name": "Beer Lupulin (Kakigori)",
+      "description": "See entry for Beer Lupulin (Kakigori)",
+      "coords": [
+        35.6703786,
+        139.7626705
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Japanese shaved ice — best in summer but Himitsudo runs Oct. Book via line app.",
+      "tabelog_score": 3.55,
+      "tabelog_verdict": "Craft beer + kakigori hybrid — fun if in Ginza at night, but kakigori isn't the main draw. Situational.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-048",
+      "name": "Kamaasa (Knives)",
+      "description": "See entry for Kamaasa (Knives)",
+      "coords": [
+        35.7138476,
+        139.7886768
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 0,
+        "food": 5,
+        "craft": 10,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-049",
+      "name": "Japanese knife store KAMATA Hakensha",
+      "description": "See entry for Japanese knife store KAMATA Hakensha",
+      "coords": [
+        35.7131012,
+        139.7885324
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 9,
+        "nature": 0,
+        "food": 5,
+        "craft": 10,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Japanese knife shopping — Kappabashi or Ningyocho. Ask to watch sharpening."
+    },
+    {
+      "id": "place-050",
+      "name": "Imperial Palace",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.685175,
+        139.7527995
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 7,
+        "food": 2,
+        "craft": 7,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "East garden free, running path around moat — early morning only."
+    },
+    {
+      "id": "place-051",
+      "name": "Tokyu Hands - Shibuya (Lifestyle)",
+      "description": "Tokyu Hands is kind of hard to pin down. Is it a department store? Is it a hobby store? A hardware store? A home/kitchen store Pet store? Stationary? Gifts? Matcha describes them as being a \"hint market\" - a place full of useful hints for everyday life. You can find everything you need here to br...",
+      "coords": [
+        35.6619892,
+        139.6978121
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-052",
+      "name": "Lake Kawaguchi Explorer e-bike tour",
+      "description": "Address: Kawaguchiko Station area, Fujikawaguchiko, Yamanashi 401-0301Latitude: 35.4987Longitude: 138.7689Category: natureDay: Day 9Itinerary Days: Notes: Small-group English e-bike tour from Kawaguchiko Station, typically 2-3 hours, with local cultural context.Source: https://www.viator.com/tour...",
+      "coords": [
+        35.4987,
+        138.7689
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 5,
+        "nature": 8,
+        "food": 4,
+        "craft": 4,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-053",
+      "name": "Lake Bake",
+      "description": "Address: 2585-85 Oishi, Fujikawaguchiko, Yamanashi 401-0305Latitude: 35.5257Longitude: 138.744Category: foodDay: Fuji dessertItinerary Days: Notes: North-shore bakery near Oishi Park. Good after the lake ride if Fuji views are showing.Source: https://www.fujisan.ne.jp/post_detail/%E3%83%AC%E3%82%...",
+      "coords": [
+        35.5257,
+        138.744
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 6,
+        "food": 4,
+        "craft": 6,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-054",
+      "name": "Nezu Shrine",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7202332,
+        139.7607381
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 4,
+        "craft": 8,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Quiet old neighborhood adj to Yanaka — Nezu Shrine has mini torii tunnels."
+    },
+    {
+      "id": "place-055",
+      "name": "Nezu Museum",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6622568,
+        139.7170937
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 4,
+        "food": 4,
+        "craft": 8,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Quiet old neighborhood adj to Yanaka — Nezu Shrine has mini torii tunnels."
+    },
+    {
+      "id": "place-056",
+      "name": "Usagiya (Dorayaki)",
+      "description": "See entry for Usagiya (Dorayaki)",
+      "coords": [
+        35.7062352,
+        139.7716353
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 7,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "[BEST-IN-CLASS] Tabelog 100 Japanese Sweets 2023 — Tokyo's best dorayaki near Ueno. Buy early AM or after 4pm, sell out daily.",
+      "tabelog_score": 3.84,
+      "tabelog_verdict": "Tabelog 100 Japanese Sweets 2023 — Tokyo's best dorayaki near Ueno. Buy early AM or after 4pm, sell out daily.",
+      "tabelog_keep": "BEST-IN-CLASS",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ueno / Yushima"
+    },
+    {
+      "id": "place-057",
+      "name": "ShinQs (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6590018,
+        139.7034327
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-058",
+      "name": "Tobu Department Store (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7297141,
+        139.7102444
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-059",
+      "name": "Asagaya BIRD LAND (Yakitori) (¥¥¥)",
+      "description": "See entry for Asagaya BIRD LAND (Yakitori) (¥¥¥)",
+      "coords": [
+        35.704362,
+        139.634749
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_outer",
+      "payoff": {
+        "innovation": 9,
+        "nature": 0,
+        "food": 10,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 50,
+      "worth_it": true,
+      "ai_note": "Ginza yakitori — all parts, pristine sourcing, reservation essential 2 weeks out.",
+      "tabelog_score": 3.56,
+      "tabelog_verdict": "Tabelog 100 Yakitori EAST 2024 — Ginza basement counter, all-parts pristine skewers. Book 2 weeks out.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "required",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-060",
+      "name": "Fuglen Tokyo",
+      "description": "See entry for Fuglen Tokyo",
+      "coords": [
+        35.6666375,
+        139.6924404
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 2,
+        "food": 6,
+        "craft": 6,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Norwegian café in Yoyogi — iconic design, natural wine at night.",
+      "tabelog_score": 3.69,
+      "tabelog_verdict": "Norwegian café + natural wine bar — best in Tomigaya. Pair with PATH brunch on the same Yoyogi/Tomigaya half-day.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Tomigaya / Yoyogi"
+    },
+    {
+      "id": "place-061",
+      "name": "Ginza West Aoyama Garden (Cakes/Deserts)",
+      "description": "See entry for Ginza West Aoyama Garden (Cakes/Deserts)",
+      "coords": [
+        35.666869,
+        139.7246791
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 4,
+        "food": 5,
+        "craft": 8,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.54,
+      "tabelog_verdict": "Aoyama branch of Ginza West (3.55) — the Ginza Honten is closer to base and equally good. Consolidate to one visit.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Aoyama (use Ginza Honten instead)"
+    },
+    {
+      "id": "place-062",
+      "name": "MITSUKOSHI Ginza store (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6712258,
+        139.7658043
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-063",
+      "name": "MITSUKOSHI Nihonbashi Main Store (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6856,
+        139.773416
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Walking distance from base — Mitsukoshi basement, Haibara washi paper, historic bridge."
+    },
+    {
+      "id": "place-064",
+      "name": "Nihonbashi Takashimaya S.C.",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6808012,
+        139.7735107
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Walking distance from base — Mitsukoshi basement, Haibara washi paper, historic bridge."
+    },
+    {
+      "id": "place-065",
+      "name": "Nihombashi Mitsukoshi Main Store",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6856412,
+        139.7735797
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Nihombashi flagship — oldest dept store, basement fish and wagashi."
+    },
+    {
+      "id": "place-066",
+      "name": "Path cafe (Breakfast/Brunch) (¥¥)",
+      "description": "See entry for Path cafe (Breakfast/Brunch) (¥¥)",
+      "coords": [
+        35.6685131,
+        139.6899099
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting.",
+      "tabelog_score": 3.55,
+      "tabelog_verdict": "Tabelog 100 Cafe — Tomigaya brunch institution, Dutch pancakes. Walk-in morning only; dinner is a course.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "dinner only",
+      "tabelog_area_label": "Tomigaya / Yoyogi"
+    },
+    {
+      "id": "place-067",
+      "name": "WAGYUMAFIA DISTRICT (Beef / Fusion) (¥¥¥-¥¥¥¥)",
+      "description": "See entry for WAGYUMAFIA DISTRICT (Beef / Fusion) (¥¥¥-¥¥¥¥)",
+      "coords": [
+        35.6708893,
+        139.7131682
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "Verify current hours and any reservation requirements before visiting.",
+      "tabelog_score": 3.27,
+      "tabelog_verdict": "Low Tabelog score (3.27) for ¥20k+ price point. Style over substance. CUT in favor of Imahan or Butagumi.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "required",
+      "tabelog_area_label": "Omotesando / Gaiemmae"
+    },
+    {
+      "id": "place-068",
+      "name": "Shinjuku 2-Chome / Nichome",
+      "description": "description: Tokyo's Gay/LGBT district. Possibly the world's most diverse place. By day, this looks like any other Shinjuku street. But by night, witness it transform into the most lively hive of gayness you've ever seen. You may think you know or understand the many subcultures of homosexuality....",
+      "coords": [
+        35.6903871,
+        139.7080949
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-069",
+      "name": "Ebisu",
+      "description": "description: More of an upper middle class residential area and close relative to Daikanyama and Shibuya, Ebisu has a very low key feeling to it. Lots of expats call this home as well so there is a sort of international undercurrent here.Name: Address: Latitude: Longitude: Category: Day: Itinerar...",
+      "coords": [
+        35.6480902,
+        139.7079206
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 9,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-070",
+      "name": "Butagumi (Tonkatsu) (¥¥-¥¥¥)",
+      "description": "See entry for Butagumi (Tonkatsu) (¥¥-¥¥¥)",
+      "coords": [
+        35.6609321,
+        139.7221145
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 0,
+        "food": 9,
+        "craft": 5,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Pork sourcing menu — 20+ regional breeds listed. Order the 'compare breeds' set.",
+      "tabelog_score": 3.67,
+      "tabelog_verdict": "Tabelog 100 Tonkatsu — 20+ labeled pork breeds, Nishi-Azabu townhouse. Worth the detour.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "recommended",
+      "tabelog_area_label": "Nishi-Azabu / Omotesando"
+    },
+    {
+      "id": "place-071",
+      "name": "Shimura Confectionery (Kakigori)",
+      "description": "See entry for Shimura Confectionery (Kakigori)",
+      "coords": [
+        35.7224343,
+        139.7056423
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Japanese shaved ice — best in summer but Himitsudo runs Oct. Book via line app.",
+      "tabelog_score": 3.76,
+      "tabelog_verdict": "Tabelog 100 Japanese Sweets 2023 — Mejiro location (35 min from base). Seasonal kakigori + wagashi. October is good season.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "recommended",
+      "tabelog_area_label": "Mejiro (outer loop)"
+    },
+    {
+      "id": "place-072",
+      "name": "Himitsudō (Kakigori)",
+      "description": "See entry for Himitsudō (Kakigori)",
+      "coords": [
+        35.7273365,
+        139.7665968
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "[BEST-IN-CLASS] Tabelog 100 Sweets 2023 — natural-ice kakigori pilgrimage in Yanaka. Expect a queue. Pairs perfectly with Yanaka walk.",
+      "tabelog_score": 3.77,
+      "tabelog_verdict": "Tabelog 100 Sweets 2023 — natural-ice kakigori pilgrimage in Yanaka. Expect a queue. Pairs perfectly with Yanaka walk.",
+      "tabelog_keep": "BEST-IN-CLASS",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Nezu / Yanaka"
+    },
+    {
+      "id": "place-073",
+      "name": "URARA (Kakigori)",
+      "description": "See entry for URARA (Kakigori)",
+      "coords": [
+        35.649077,
+        139.701407
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 7,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "Japanese shaved ice — best in summer but Himitsudo runs Oct. Book via line app.",
+      "tabelog_score": 3.46,
+      "tabelog_verdict": "Score (3.46) is weakest kakigori on list. Daikanyama detour not justified — CUT, focus on Himitsudo and Shimura.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Daikanyama"
+    },
+    {
+      "id": "place-074",
+      "name": "Komiyama Book Store (Photo Books)",
+      "description": "See entry for Komiyama Book Store (Photo Books)",
+      "coords": [
+        35.6958174,
+        139.7595312
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-075",
+      "name": "Chagohan Tokyo - Japanese Cuisine Cooking Classes",
+      "description": "See entry for Chagohan Tokyo - Japanese Cuisine Cooking Classes",
+      "coords": [
+        35.7130827,
+        139.7902711
+      ],
+      "layer": "entertainment",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-076",
+      "name": "Akihabara",
+      "description": "description: Electronics capital turned worldwide Otaku Culture mecca. This is your destination for all things anime, manga, video games, themed cafes, and collectibles (and porn). Also home to many hobbyist oriented shops for tabletop games, card games, diecast, model kits, and everything else.H...",
+      "coords": [
+        35.6999999,
+        139.7714031
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-077",
+      "name": "Ochanomizu",
+      "description": "description: Ochanomizu is a low-key neighborhood that's  especially famous for its second hand musical instrument shops. If you're looking for a nice guitar or violin on the cheap, look no further.Additionally known for its second hand ski, snowboard, and surf shops.Name: Address: Latitude: Long...",
+      "coords": [
+        35.6990416,
+        139.7629648
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-078",
+      "name": "Kanda Jinbocho",
+      "description": "description: Charming neighborhood overflowing with used book stores that pour out into the sidewalks. Looking for that rare photo book? An old childhood memory? Rare literature? Jinbocho is your jam.Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Sea...",
+      "coords": [
+        35.6960597,
+        139.7595845
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-079",
+      "name": "Yurakucho",
+      "description": "description: Combined with it's Neighbor Ginza, Yurakucho offers a more approachable and \"everyday\" sort of shopping and dining experience. Notable for a 700m long string of nearly uninterrupted restaurants and bars underneath the train tracks along the Yamanote line. A nice place to cap off your...",
+      "coords": [
+        35.6739534,
+        139.7626913
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-080",
+      "name": "Tokyo Character Street",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6820186,
+        139.7686526
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-081",
+      "name": "Toraya Tokyo Midtown (Wagashi)",
+      "description": "See entry for Toraya Tokyo Midtown (Wagashi)",
+      "coords": [
+        35.6661994,
+        139.7307407
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 1,
+        "food": 6,
+        "craft": 8,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "500-year wagashi brand — Minami Aoyama café, not a tourist shop.",
+      "tabelog_score": 3.07,
+      "tabelog_verdict": "Score 3.07 is low — Midtown outpost is just a retail shelf. Skip. Go to Takemura (3.76) or HIGASHIYA (3.53) for a real experience.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Minami Aoyama / Midtown"
+    },
+    {
+      "id": "place-082",
+      "name": "TORAYA CAFÉ・AN STAND (Wagashi)",
+      "description": "See entry for TORAYA CAFÉ・AN STAND (Wagashi)",
+      "coords": [
+        35.6636717,
+        139.7098528
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 1,
+        "food": 6,
+        "craft": 8,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "[CLOSED] PERMANENTLY CLOSED as of Feb 2024 — all Tokyo AN STAND locations shut. Remove from list.",
+      "tabelog_score": null,
+      "tabelog_verdict": "PERMANENTLY CLOSED as of Feb 2024 — all Tokyo AN STAND locations shut. Remove from list.",
+      "tabelog_keep": "CLOSED",
+      "tabelog_reservation": "n/a",
+      "tabelog_area_label": "Aoyama (CLOSED)"
+    },
+    {
+      "id": "place-083",
+      "name": "Brown Rice by Neals'yard Remedies (Japanese / Vegetarian) (¥¥)",
+      "description": "See entry for Brown Rice by Neals'yard Remedies (Japanese / Vegetarian) (¥¥)",
+      "coords": [
+        35.6656388,
+        139.7098303
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 1,
+        "food": 8,
+        "craft": 5,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "Neal's Yard wellness brand — interesting food system crossover.",
+      "tabelog_score": 3.47,
+      "tabelog_verdict": "Mediocre score for a ¥2-3k lunch. Wholesome but not distinctive. Skip unless you need vegetarian.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Omotesando"
+    },
+    {
+      "id": "place-084",
+      "name": "SunnyHills Minami Aoyama Store (Pastries)",
+      "description": "See entry for SunnyHills Minami Aoyama Store (Pastries)",
+      "coords": [
+        35.6656994,
+        139.7162105
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 5,
+        "craft": 8,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting.",
+      "tabelog_score": 3.61,
+      "tabelog_verdict": "Kengo Kuma cedar building + free tea service — worth 20 min stop if in Omotesando. Taiwanese pineapple cake.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Minami Aoyama"
+    },
+    {
+      "id": "place-085",
+      "name": "Minami Aoyama Shimizu-yu",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.666043,
+        139.714009
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 5,
+        "craft": 8,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-086",
+      "name": "Hantei (Kushiage) (¥¥-¥¥¥)",
+      "description": "See entry for Hantei (Kushiage) (¥¥-¥¥¥)",
+      "coords": [
+        35.7173406,
+        139.7661307
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 5,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Osaka-style skewer fry — interesting production ritual.",
+      "tabelog_score": 3.65,
+      "tabelog_verdict": "All-you-can-eat kushiage in a registered cultural property building in Nezu. Pair with Yanaka walk.",
+      "tabelog_keep": "KEEP",
+      "tabelog_reservation": "recommended",
+      "tabelog_area_label": "Nezu / Yanaka"
+    },
+    {
+      "id": "place-087",
+      "name": "Traveler's Factory Nakameguro (Stationery)",
+      "description": "See entry for Traveler's Factory Nakameguro (Stationery)",
+      "coords": [
+        35.644793,
+        139.6972796
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_outer",
+      "payoff": {
+        "innovation": 7,
+        "nature": 5,
+        "food": 5,
+        "craft": 7,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 35,
+      "worth_it": true,
+      "ai_note": "Canal walk — lined with independent shops, roasters, restaurants. Evening ideal."
+    },
+    {
+      "id": "place-088",
+      "name": "Majimaya (Kitchen Supply)",
+      "description": "See entry for Majimaya (Kitchen Supply)",
+      "coords": [
+        35.7125431,
+        139.7886654
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 1,
+        "food": 6,
+        "craft": 7,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-089",
+      "name": "Haibara (Stationery)",
+      "description": "See entry for Haibara (Stationery)",
+      "coords": [
+        35.6819446,
+        139.773759
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 3,
+        "craft": 9,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 10,
+      "worth_it": true,
+      "ai_note": "Nihombashi washi paper shop since 1806 — walking distance from base."
+    },
+    {
+      "id": "place-090",
+      "name": "Chūka Soba Ginza Hachigo (Ramen) (¥)",
+      "description": "See entry for Chūka Soba Ginza Hachigo (Ramen) (¥)",
+      "coords": [
+        35.6705477,
+        139.77015
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "[BEST-IN-CLASS] BEST FOOD ON ENTIRE LIST — 2x Michelin star ramen. Enter Saturday lottery on tabelog.com; sell out in minutes.",
+      "tabelog_score": 3.96,
+      "tabelog_verdict": "BEST FOOD ON ENTIRE LIST — 2x Michelin star ramen. Enter Saturday lottery on tabelog.com; sell out in minutes.",
+      "tabelog_keep": "BEST-IN-CLASS",
+      "tabelog_reservation": "required (Saturday 9am lottery)",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-091",
+      "name": "Ginza Tsuquiya (Ramen) (¥)",
+      "description": "See entry for Ginza Tsuquiya (Ramen) (¥)",
+      "coords": [
+        35.6698717,
+        139.76401
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.52,
+      "tabelog_verdict": "Solid Fukuoka-style ramen inside Ginza Six — casual walk-in fallback if Hachigo lottery fails.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-092",
+      "name": "Gyoza Hohei - Ginza (Gyoza) (¥)",
+      "description": "See entry for Gyoza Hohei - Ginza (Gyoza) (¥)",
+      "coords": [
+        35.6682129,
+        139.7609013
+      ],
+      "layer": "food",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": false,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.37,
+      "tabelog_verdict": "Below-average Tabelog score. Gion-origin crispy gyoza — fine late-night snack but not a destination.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-093",
+      "name": "BONGEN COFFEE Tokyo Ginza",
+      "description": "See entry for BONGEN COFFEE Tokyo Ginza",
+      "coords": [
+        35.6710205,
+        139.770851
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": false,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi.",
+      "tabelog_score": 3.55,
+      "tabelog_verdict": "Score 3.55 — redundant given Glitch Ginza (3.65) is same area. CUT.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Ginza"
+    },
+    {
+      "id": "place-094",
+      "name": "Ginza Yamano Music Head Office (Music Instruments)",
+      "description": "See entry for Ginza Yamano Music Head Office (Music Instruments)",
+      "coords": [
+        35.6718,
+        139.76525
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-095",
+      "name": "Lemon Inc Ginza (Camera)",
+      "description": "See entry for Lemon Inc Ginza (Camera)",
+      "coords": [
+        35.672907,
+        139.764273
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-096",
+      "name": "Grand Seiko Boutique Flagship GINZA",
+      "description": "See entry for Grand Seiko Boutique Flagship GINZA",
+      "coords": [
+        35.6716709,
+        139.7650083
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-097",
+      "name": "Kanda Myojin",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7019218,
+        139.7678456
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Book town + old Tokyo feel — Jimbocho for used books."
+    },
+    {
+      "id": "place-098",
+      "name": "GINZA SIX",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6696559,
+        139.7639876
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-099",
+      "name": "Seiko House Ginza Clock Tower",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6715697,
+        139.7650504
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-100",
+      "name": "Ginza West",
+      "description": "Address: 7-3-6 Ginza, Chuo City, Tokyo 104-0061Latitude: 35.6695Longitude: 139.7611Category: foodDay: Tokyo dessertItinerary Days: Notes: Old-school Tokyo cake and tea option. Use it when you want calm rather than a reservation-heavy meal.Source: https://www.ginza-west.co.jp/Google Maps Search: h...",
+      "coords": [
+        35.6695,
+        139.7611
+      ],
+      "layer": "scenario",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 2,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Best explored Saturday afternoon — flagship stores, architecture, depachika basements at Mitsukoshi."
+    },
+    {
+      "id": "place-101",
+      "name": "Asakusa Kagetsudō (Melon Buns)",
+      "description": "See entry for Asakusa Kagetsudō (Melon Buns)",
+      "coords": [
+        35.7146332,
+        139.7951685
+      ],
+      "layer": "dessert",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 5,
+        "nature": 3,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting.",
+      "tabelog_score": 3.56,
+      "tabelog_verdict": "Asakusa jumbo melon-pan institution — buy one as you walk Nakamise, sells out early. Fun street snack, not a destination meal.",
+      "tabelog_keep": "DOWNGRADE",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Asakusa"
+    },
+    {
+      "id": "place-102",
+      "name": "Don Quijote Asakusa",
+      "description": "See entry for Don Quijote Asakusa",
+      "coords": [
+        35.7139074,
+        139.7930322
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 5,
+        "nature": 3,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-103",
+      "name": "Ryogoku Kokugikan",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6969758,
+        139.7932863
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 2,
+        "food": 4,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Sumo district — chanko nabe restaurants, Edo-Tokyo Museum."
+    },
+    {
+      "id": "place-104",
+      "name": "Asakusa Underground District",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7114596,
+        139.7977801
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 5,
+        "nature": 3,
+        "food": 5,
+        "craft": 7,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-105",
+      "name": "2k540 Aki-Oka Artisan",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7031798,
+        139.774044
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 5,
+        "nature": 5,
+        "food": 3,
+        "craft": 7,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Landmark — verify if it adds unique experience or just another photo op."
+    },
+    {
+      "id": "place-106",
+      "name": "Omotesando",
+      "description": "description: One of Tokyo's most pleasant places to just walk around and a close cousin of Harajuku, Jingumae, and Aoyama. Omotesando is a pleasant mix of the hyper wealthy and fashionable young people, all mingling along very European sidewalks and drinking specialty coffees in some of Tokyo's f...",
+      "coords": [
+        35.6654074,
+        139.7091651
+      ],
+      "layer": "area",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 6,
+        "craft": 5,
+        "recovery": 4
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-107",
+      "name": "Ghibli Museum",
+      "description": "See entry for Ghibli Museum",
+      "coords": [
+        35.696238,
+        139.5704317
+      ],
+      "layer": "entertainment",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_outer",
+      "payoff": {
+        "innovation": 8,
+        "nature": 4,
+        "food": 3,
+        "craft": 8,
+        "recovery": 6
+      },
+      "transit_minutes_estimate": 50,
+      "worth_it": true,
+      "ai_note": "Book through Lawson 3 months ahead — magical, no re-entry."
+    },
+    {
+      "id": "place-108",
+      "name": "Kawaguchiko station apartment",
+      "description": "Address: 3557-10 Funatsu, Fujikawaguchiko, Yamanashi 401-0301Latitude: 35.4989Longitude: 138.7692Category: stayDay: Stay baseItinerary Days: Notes: Rakuten STAY Fuji Kawaguchiko Station or similar keeps you close to buses, groceries, taxis, and lake loops.Source: https://travel.rakuten.com/Google...",
+      "coords": [
+        35.4989,
+        138.7692
+      ],
+      "layer": "scenario",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 6,
+        "nature": 4,
+        "food": 4,
+        "craft": 6,
+        "recovery": 2
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Verify current hours and any reservation requirements before visiting."
+    },
+    {
+      "id": "place-109",
+      "name": "Aoyama Flower Market Tea House (near LSJ Old office in Aoyama) (Tea / Lunch)",
+      "description": "See entry for Aoyama Flower Market Tea House (near LSJ Old office in Aoyama) (Tea / Lunch)",
+      "coords": [
+        35.6622458,
+        139.7134816
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 1,
+        "food": 5,
+        "craft": 7,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "Verify current hours and any reservation requirements before visiting.",
+      "tabelog_score": 3.49,
+      "tabelog_verdict": "Gimmick-adjacent — cafe surrounded by flowers in Omotesando. Score 3.49, not a food destination. Skip.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Omotesando"
+    },
+    {
+      "id": "place-110",
+      "name": "ABOUT LIFE COFFEE BREWERS - Specialty Coffee Stand",
+      "description": "See entry for ABOUT LIFE COFFEE BREWERS - Specialty Coffee Stand",
+      "coords": [
+        35.6566777,
+        139.6958237
+      ],
+      "layer": "coffee",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 8,
+        "nature": 1,
+        "food": 6,
+        "craft": 5,
+        "recovery": 3
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": false,
+      "ai_note": "Shibuya micro-roaster — standing bar, excellent espresso.",
+      "tabelog_score": 3.27,
+      "tabelog_verdict": "Score 3.27 is weak. Tiny standing bar — skip unless passing through Shibuya.",
+      "tabelog_keep": "CUT",
+      "tabelog_reservation": "none",
+      "tabelog_area_label": "Shibuya"
+    },
+    {
+      "id": "place-111",
+      "name": "Isetan Shinjuku (Department Store)",
+      "description": "See entry for Isetan Shinjuku (Department Store)",
+      "coords": [
+        35.6916496,
+        139.7045194
+      ],
+      "layer": "shopping",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Best depachika in Japan — basement food hall with artisan producers, not a mall."
+    },
+    {
+      "id": "place-112",
+      "name": "Isetan Shinjuku (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6916376,
+        139.704616
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Best depachika in Japan — basement food hall with artisan producers, not a mall."
+    },
+    {
+      "id": "place-113",
+      "name": "Takashimaya Shinjuku (Depachika)",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6876981,
+        139.7022767
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 7,
+        "nature": 0,
+        "food": 8,
+        "craft": 6,
+        "recovery": 1
+      },
+      "transit_minutes_estimate": 25,
+      "worth_it": true,
+      "ai_note": "Premier depachika — go for the basement food hall, not the store."
+    },
+    {
+      "id": "place-114",
+      "name": "Hanayashiki Amusement Park",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.7152297,
+        139.7950424
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 4,
+        "nature": 7,
+        "food": 2,
+        "craft": 6,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Landmark — verify if it adds unique experience or just another photo op."
+    },
+    {
+      "id": "place-115",
+      "name": "Hibiya Park",
+      "description": "description: Name: Address: Latitude: Longitude: Category: Day: Itinerary Days: Notes: Source: Google Maps Search:",
+      "coords": [
+        35.6745022,
+        139.7563931
+      ],
+      "layer": "landmark",
+      "suggested_day": "Fri Oct 16",
+      "transit_zone": "tokyo_center",
+      "payoff": {
+        "innovation": 4,
+        "nature": 7,
+        "food": 2,
+        "craft": 6,
+        "recovery": 5
+      },
+      "transit_minutes_estimate": 15,
+      "worth_it": true,
+      "ai_note": "Landmark — verify if it adds unique experience or just another photo op."
+    },
+    {
+      "id": "place-116",
+      "name": "Nikko — Toshogu + Oku-Nikko Plateau",
+      "description": "The single best full-day trip from Tokyo in October. UNESCO Toshogu Shrine complex (Yomeimon Gate, cedar forest approach, Tokugawa mausoleum) in the morning, then bus up the Iroha-zaka switchbacks to the Oku-Nikko highlands: Kegon Falls (97m), Lake Chuzenji, and the Senjogahara marshland plateau at peak autumn foliage. Oku-Nikko highlands hit peak color mid-October — legitimately world-class.",
+      "coords": [
+        36.7482,
+        139.5988
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Mon Oct 19",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 120,
+      "payoff": {
+        "innovation": 5,
+        "nature": 10,
+        "food": 5,
+        "craft": 6,
+        "recovery": 8
+      },
+      "worth_it": true,
+      "ai_note": "Tobu Limited Express from Asakusa ~2hr, ¥2,700. Book Revaty/Spacia in advance — sells out. Full day required. Bring a layer — Oku-Nikko is 1,270m elevation, 10°C cooler than Tokyo. Yuba soba near station = only worthwhile food stop; eat breakfast in Tokyo.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Nikko / Tochigi"
+    },
+    {
+      "id": "place-117",
+      "name": "Kamakura — Daibutsu Trail + Hokoku-ji Bamboo",
+      "description": "Japan's 13th-century capital, 1 hour from Tokyo. The Daibutsu hiking trail (Kita-Kamakura → ridgeline forest → Great Buddha) is one of the best active cultural routes in the Kanto region. Hokoku-ji bamboo temple (2,000-stalk grove + matcha in the grove) caps daily visitors — arrive before 10am. Excellent weekday food: shirasudon whitebait bowls, Kamakura Brewing craft beer. Enoshima coastal loop optional add-on. Late October has trails in perfect condition with early turning color.",
+      "coords": [
+        35.3192,
+        139.5467
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 60,
+      "payoff": {
+        "innovation": 4,
+        "nature": 9,
+        "food": 8,
+        "craft": 6,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "JR Yokosuka Line from Tokyo Station, ~1hr, ¥920. Depart by 8am. Weekday-only — weekends are gridlock. Hokoku-ji: arrive before 10am or it's capped. Skip Chinatown entirely.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Kamakura / Kanagawa"
+    },
+    {
+      "id": "place-118",
+      "name": "Chichibu + Nagatoro — Sake Breweries + Gorge",
+      "description": "Most underrated day trip from Tokyo. Arrive on the designer Seibu Laview train (77min, panoramic windows). October is sake hiyaoroshi season — drop-in tastings at Bunsangiku (est. 1851) and other craft breweries, no reservation needed weekdays. Nagatoro gorge boat rides through dramatic rock formations. Flat valley cycling Chichibu → Nagatoro (~15km) is the ideal connector. SL Paleo Express steam locomotive runs select weekdays Oct-Nov. No foreign tourists.",
+      "coords": [
+        35.9898,
+        139.085
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Wed Oct 21",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 77,
+      "payoff": {
+        "innovation": 5,
+        "nature": 8,
+        "food": 8,
+        "craft": 9,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "Seibu Limited Express Laview from Ikebukuro, ~77min, ¥1,700. Reserve seat on Laview (Seibu app). Check SL Paleo Express schedule at chichibu-railway.co.jp. Miso potato skewers at station stalls = must-eat. Leave Tokyo by 8am for full day.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Chichibu / Saitama"
+    },
+    {
+      "id": "place-119",
+      "name": "Mitake Valley — Forest Hike + Sawanoi Sake Brewery",
+      "description": "Best half-day nature reset from Tokyo. Riverside trail through Chichibu-Tama-Kai National Park (Ishigamimae → Mitake Station, ~5km mossy cedar forest). Cable car to 929m Musashi-Mitake Shrine village. Sawai station has Ozawa Brewery (Sawanoi sake brand) — one of Tokyo Prefecture's most respected producers, with a riverside restaurant. Late October Autumn Colors Festival adds stalls without crowds. Back in Nihombashi by 5:30pm.",
+      "coords": [
+        35.7879,
+        139.1598
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Thu Oct 22",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 95,
+      "payoff": {
+        "innovation": 3,
+        "nature": 9,
+        "food": 6,
+        "craft": 7,
+        "recovery": 9
+      },
+      "worth_it": true,
+      "ai_note": "JR Chuo Line to Shinjuku, then Ome Line to Mitake Station, ~95min total, ¥950. Half-day optimal — depart 8am, back by 3-4pm. Sawai brewery is one stop further at Sawai Station. Mitake Valley Autumn Colors Festival runs late Oct–Nov.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Mitake / Ome / West Tokyo"
+    },
+    {
+      "id": "place-120",
+      "name": "Mashiko — Pottery Studios + Hamada Museum",
+      "description": "Japan's most important living pottery town. Where the Mingei movement took root under Shoji Hamada (Living National Treasure). ~60 active kilns and galleries. Hamada Memorial Sankokan Museum preserves his actual workshop and collection alongside Bernard Leach pieces. Jonaizaka Street lined with 20+ studios. Walk-in pottery class at Mashiko Ware Pottery Center (¥2,500, pieces shipped home). Irori Chaya does wild boar nabe. Signs in Japanese only — a feature.",
+      "coords": [
+        36.4708,
+        140.0985
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 120,
+      "payoff": {
+        "innovation": 5,
+        "nature": 4,
+        "food": 7,
+        "craft": 10,
+        "recovery": 5
+      },
+      "worth_it": true,
+      "ai_note": "Shinkansen to Utsunomiya (~50min, ¥4,500) + bus to Mashiko (~65min, ¥1,000). Total ~2hr. Closed Mondays (Hamada Museum + Ceramic Art Museum both shut). Bus infrequent — check return times before going. Best Tue–Thu.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Mashiko / Tochigi"
+    },
+    {
+      "id": "place-121",
+      "name": "Kawagoe 'Little Edo' — Kurazukuri District",
+      "description": "Edo-period clay-wall merchant storehouses (kura) still standing at high density — not a theme park. Bell Tower still tolls hourly. Kashiya Yokocho (Candy Lane): 20 traditional sweet shops using local sweet potato. Kitain Temple contains the only Edo Castle rooms still in existence outside the Imperial Palace. Best before 10am when streets are quiet. Half-day: 4–5 hours is the right amount of time.",
+      "coords": [
+        35.9247,
+        139.4856
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Wed Oct 21",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 65,
+      "payoff": {
+        "innovation": 3,
+        "nature": 3,
+        "food": 5,
+        "craft": 7,
+        "recovery": 5
+      },
+      "worth_it": true,
+      "ai_note": "Metro Fukutoshin Line direct from Nihombashi area ~65min, ¥690. Half-day only — 4hr max before it's done. NOT the Matsuri festival weekend (3rd weekend Oct = crowds 200k+). Food is snack-focused, not meal-forward.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Kawagoe / Saitama"
+    },
+    {
+      "id": "place-122",
+      "name": "Yokohama — Noge Izakaya District + Sankeien Garden",
+      "description": "25 minutes from Tokyo — not a classic day trip but a strong half-day add-on. Noge district is Showa-era gritty izakaya culture: small bars, jazz, working-class vibe — completely different from tourist Yokohama. Sankeien Garden is 175,000 sq meters of traditional garden with relocated historic buildings and a three-story pagoda. CupNoodles Museum tells the genuine instant ramen innovation story. Minato Mirai waterfront at dusk is beautiful. Skip Chinatown entirely.",
+      "coords": [
+        35.4437,
+        139.638
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Mon Oct 19",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 30,
+      "payoff": {
+        "innovation": 7,
+        "nature": 5,
+        "food": 8,
+        "craft": 4,
+        "recovery": 5
+      },
+      "worth_it": true,
+      "ai_note": "JR Keihin-Tohoku from Tokyo Station ~30min, ¥480. Best as afternoon add-on after shorter morning destination. Yokohama Jazz Promenade typically mid-October (check 2026 dates). Chinatown = skip.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Yokohama / Kanagawa"
+    },
+    {
+      "id": "place-123",
+      "name": "Hakone Mountain Ripper — Lake Ashi Singletrack MTB",
+      "description": "The single best cycling experience of the entire trip. Guide Nori Suzuki leads the 5-hour Lake Ashi singletrack tour — explicitly designed for experienced mountain bikers. Thrilling singletrack through Hakone National Park forest. Also offers Deep Forest Cruising (16–19km, 3hr, ¥15,000–17,000) and premium e-bike Edo Old Road tour (~30km, cedar highway, Lake Ashi, Mt. Fuji views, ¥28,000–30,000 max 2 guests). October = Sengokuhara pampas grass at silver-white peak.",
+      "coords": [
+        35.2167,
+        139.0167
+      ],
+      "layer": "bike",
+      "suggested_day": "Thu Oct 23",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 90,
+      "payoff": {
+        "innovation": 4,
+        "nature": 10,
+        "food": 3,
+        "craft": 4,
+        "recovery": 8
+      },
+      "worth_it": true,
+      "ai_note": "Book now via mountainripper.com/en or Activity Japan. DEADLINE: 5pm the prior day. CASH ONLY on the day. Meeting: Hakone Visitor Center, Moto-Hakone. Lake Ashi singletrack (5hr) = ¥18,000; Deep Forest Intermediate (3hr) = ¥17,000; Premium e-bike (3-4hr) = ¥28,000–30,000. From Gora: bus toward Togendai → Shirayuridai stop.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Hakone / Sengokuhara"
+    },
+    {
+      "id": "place-124",
+      "name": "Nikko Cycling Ciel — Oku-Nikko E-Bike Tour",
+      "description": "English-guided 5-hour e-bike tour through forest roads above the Iroha-zaka switchbacks, closed to general traffic. Route covers Odashirogahara wetland boardwalk, Lake Chuzenji beach, and the highlands that hit peak autumn foliage early-to-mid October. Nikko Natural Science Museum also offers self-guided e-bike with GPS nav (¥5,000) for more flexibility. Either way: riding above the treeline in peak color is legitimately exceptional.",
+      "coords": [
+        36.7752,
+        139.5086
+      ],
+      "layer": "bike",
+      "suggested_day": "Mon Oct 19",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 120,
+      "payoff": {
+        "innovation": 4,
+        "nature": 10,
+        "food": 5,
+        "craft": 4,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "Book Nikko Cycling Ciel 5-hr e-bike tour via Viator/TripAdvisor, ~$116/person, max 4 riders, free cancel 24hr. Self-guided option: Nikko Natural Science Museum, ¥5,000, GPS included. Both depart from Tobu-Nikko Station. October = earliest peak foliage in Kanto.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Oku-Nikko / Tochigi"
+    },
+    {
+      "id": "place-125",
+      "name": "Trekkling Okutama — Specialized MTB Rental + Mukashi Road",
+      "description": "Best MTB day trip near Tokyo. Rent a Specialized Rockhopper/Chisel or Merida Big7 (¥6,000/day) directly from Okutama Station. Real mountain terrain: Okutama Mukashi Old Road (Edo-era trade route), Unazawa Valley waterfall loop, Nippara Limestone Cave off-road section. Can ride point-to-point downstream and return bike at Ozawa Sake Brewery or Aoyagi Bicycle in Ome. Tokyo Snow Club also runs guided English MTB group tours from Okutama Station (¥10,000–15,000).",
+      "coords": [
+        35.8086,
+        139.0986
+      ],
+      "layer": "bike",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 90,
+      "payoff": {
+        "innovation": 3,
+        "nature": 9,
+        "food": 5,
+        "craft": 4,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "JR Chuo → Ome Line to Okutama Station, ~90min, ¥1,000. Trekkling is at station exit: trekkling.jp/en, Specialized Rockhopper ¥6,000/day. Reserve online, cancel by 5pm prior day. Guided option: Tokyo Snow Club (tokyosnowclub.com), meet 9:15am at station. Late Oct = foliage just starting, ideal riding conditions.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Okutama / West Tokyo"
+    },
+    {
+      "id": "place-126",
+      "name": "Chichibu Valley Cycling — Seibu-Chichibu to Nagatoro",
+      "description": "Flat valley cycling connecting two towns through mountain scenery with zero foreign tourists. ~15km each way on quiet rural roads between Seibu-Chichibu and Nagatoro Stations. Bike rental at both stations. October = hiyaoroshi sake season: Bunsangiku Brewery (est. 1851) drop-in tastings en route. Nagatoro gorge at the finish. Can combine with SL Paleo Express steam train return (select weekdays Oct-Nov). Best pairing with the Chichibu day-trip entry.",
+      "coords": [
+        36.0037,
+        139.1041
+      ],
+      "layer": "bike",
+      "suggested_day": "Wed Oct 21",
+      "transit_zone": "day_trip",
+      "transit_minutes_estimate": 77,
+      "payoff": {
+        "innovation": 3,
+        "nature": 8,
+        "food": 7,
+        "craft": 7,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "Seibu Laview from Ikebukuro ~77min to Seibu-Chichibu. Rental bikes at station. 15km mostly flat valley road to Nagatoro. Check SL Paleo Express weekday schedule for scenic train return: chichibu-railway.co.jp/en/steam-locomotive.html",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Chichibu / Saitama"
+    },
+    {
+      "id": "place-127",
+      "name": "TokyoBike Yanaka — Old Tokyo Neighborhood Exploration",
+      "description": "Tokyo's best cultural neighborhood on a lightweight city bike. Yanaka is Tokyo's most intact pre-war district: tiny alleys, traditional shotengai, Yanaka Cemetery (cats + cherry blossoms), temples, and craftspeople. The concept shop itself (300-year-old sake purveyor building) is worth the visit. Good loop: Yanaka → Ueno → Akihabara → Kanda → Imperial Palace moat (~20km flat). Rentals from multiple TokyoBike locations also available in Kuramae, Asakusa, Jimbocho.",
+      "coords": [
+        35.7263,
+        139.7714
+      ],
+      "layer": "bike",
+      "suggested_day": "Sat Oct 17",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 15,
+      "payoff": {
+        "innovation": 5,
+        "nature": 4,
+        "food": 7,
+        "craft": 8,
+        "recovery": 6
+      },
+      "worth_it": true,
+      "ai_note": "Hibiya Line to Nishi-Nippori, ~15min from Nihombashi. ¥2,500/day, passport required. Book online at tokyobike.us/pages/yanaka-rentals. Closed Wednesdays. Best before noon — narrow streets get busy afternoon.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Yanaka / Taito"
+    },
+    {
+      "id": "place-128",
+      "name": "Arakawa Cycling Road — Tokyo River Path",
+      "description": "Tokyo's best urban cycling route. The Arakawa riverside path runs ~80km from Tokyo Bay north to Saitama. Best Nihombashi-accessible section: Kasai Rinkai Park (Tokyo Bay, Ferris wheel) north to Sakurabashi near Skytree (~20–30km round trip). Left bank (Saitama side) is less crowded, better Mt. Fuji views, wider sight lines. Cosmos flowers line the banks in October. Fast flat riding for a rest day. Docomo Cycle share ports throughout central Tokyo for getting to/from the path.",
+      "coords": [
+        35.653,
+        139.8593
+      ],
+      "layer": "bike",
+      "suggested_day": "Sun Oct 18",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 30,
+      "payoff": {
+        "innovation": 3,
+        "nature": 7,
+        "food": 3,
+        "craft": 2,
+        "recovery": 8
+      },
+      "worth_it": true,
+      "ai_note": "Metro Keiyō Line to Kasai Rinkai Koen, ~30min, ¥260. Bring own bike or use Docomo Cycle share (¥165/30min, app-based). No dedicated rental at river — rent in central Tokyo first. Best on weekday morning.",
+      "tabelog_score": null,
+      "tabelog_verdict": null,
+      "tabelog_keep": null,
+      "tabelog_reservation": null,
+      "tabelog_area_label": "Katsushika / East Tokyo"
+    },
+    {
+      "id": "place-129",
+      "name": "Okutama — Tama River Gorge + Koyo E-Bike",
+      "description": "Best October koyo day trip from Tokyo with English e-bike operator (Trekkling). Tama River gorge turns crimson. 90-min ride on the Ome Line — scenic mountain train. Combine forest hike with Sawanoi sake brewery stop.",
+      "coords": [
+        35.8097,
+        139.0947
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 100,
+      "payoff": {
+        "innovation": 1,
+        "nature": 9,
+        "food": 5,
+        "craft": 4,
+        "recovery": 6
+      },
+      "worth_it": true,
+      "ai_note": "Top pick for a nature day. Trekkling MTB/e-bike operator speaks English. Koyo peak hits mid-to-late October. Pairs well with Sawanoi brewery visit.",
+      "tabelog_score": null,
+      "tabelog_verdict": "nature",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Okutama, Tokyo"
+    },
+    {
+      "id": "place-130",
+      "name": "Yugawara Onsen — Mikan Picking + Coastal Onsen",
+      "description": "Least-touristy onsen town on the Shonan coast. October mikan (tangerine) picking season begins. Ryokan onsen are superior value to Hakone at half the price. 57-85 min from Tokyo by JR Tokaido Line.",
+      "coords": [
+        35.1464,
+        139.0742
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Wed Oct 21",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 75,
+      "payoff": {
+        "innovation": 1,
+        "nature": 7,
+        "food": 7,
+        "craft": 3,
+        "recovery": 9
+      },
+      "worth_it": true,
+      "ai_note": "TripAdvisor 4.0. Underrated alternative to Hakone for onsen day. Coastal scenery. Mikan picking only in October — time-sensitive seasonal experience.",
+      "tabelog_score": null,
+      "tabelog_verdict": "onsen",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Yugawara, Kanagawa"
+    },
+    {
+      "id": "place-131",
+      "name": "Sawara — Little Edo Canal Town",
+      "description": "Japan's best-preserved Edo-period merchant town. Zero Western tourists. Merchant warehouses line a canal, sake breweries still operating since 1700s. 90 min from Tokyo on JR Sobu Line. Completely off the English tourist circuit.",
+      "coords": [
+        35.884,
+        140.4982
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Mon Oct 19",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 90,
+      "payoff": {
+        "innovation": 2,
+        "nature": 4,
+        "food": 6,
+        "craft": 9,
+        "recovery": 5
+      },
+      "worth_it": true,
+      "ai_note": "TripAdvisor 4.4+ on tours. Most underrated day trip for craft/culture. Canal town with sake brewing history. No tour buses, no crowds. Completely different from Kawagoe or Nikko.",
+      "tabelog_score": null,
+      "tabelog_verdict": "craft",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Sawara, Chiba"
+    },
+    {
+      "id": "place-132",
+      "name": "Narita Town — Temple + Edo Omotesando Street",
+      "description": "Narita-san Shinsho-ji temple is one of Japan's most visited (10M/year) but almost no visitors walk the 800m Omotesando approach lined with 300-year-old eel restaurants and craft shops. 45-65 min from Tokyo — easy arrival/departure day add-on.",
+      "coords": [
+        35.7957,
+        140.3187
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Thu Oct 15",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 55,
+      "payoff": {
+        "innovation": 1,
+        "nature": 3,
+        "food": 8,
+        "craft": 7,
+        "recovery": 4
+      },
+      "worth_it": true,
+      "ai_note": "TripAdvisor 4.3 temple. Perfect for arrival day — airport is in Narita. Unaju (eel over rice) here is a Tokyo bucket list item. Low effort, high authenticity.",
+      "tabelog_score": null,
+      "tabelog_verdict": "food",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Narita, Chiba"
+    },
+    {
+      "id": "place-133",
+      "name": "Izu Peninsula — Shuzenji Onsen + Coastal Cycling",
+      "description": "Best coastal cycling in the Kanto region. Shuzenji onsen town sits in a bamboo-lined gorge. October is peak season — not summer crowds, not winter cold. E-bike rentals available. 80-110 min by Shinkansen + local train.",
+      "coords": [
+        34.9697,
+        138.929
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Tue Oct 20",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 95,
+      "payoff": {
+        "innovation": 1,
+        "nature": 8,
+        "food": 6,
+        "craft": 4,
+        "recovery": 8
+      },
+      "worth_it": true,
+      "ai_note": "TripAdvisor 4.5 on tours. Coastal road cycling with Mt Fuji views on clear days. Shuzenji is more intimate than Hakone. October ideal conditions.",
+      "tabelog_score": null,
+      "tabelog_verdict": "nature",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Izu, Shizuoka"
+    },
+    {
+      "id": "place-134",
+      "name": "Boso Peninsula — Coastal Cycling (Sotoboso)",
+      "description": "Dedicated cycling infrastructure with the Uchiboso cycling road. Coastal Pacific views, fishing villages, fresh seafood markets. The Boso Cycling Line train carries bikes. Zero tour buses. 60-90 min from Tokyo.",
+      "coords": [
+        35.2297,
+        140.1046
+      ],
+      "layer": "bike",
+      "suggested_day": "Wed Oct 21",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 75,
+      "payoff": {
+        "innovation": 1,
+        "nature": 8,
+        "food": 7,
+        "craft": 2,
+        "recovery": 7
+      },
+      "worth_it": true,
+      "ai_note": "TripAdvisor 4.0-4.2. The train literally carries your bike. Coastal Japan with no crowds. Fresh tuna and lobster at fishing port markets. Best cycling day trip from Tokyo.",
+      "tabelog_score": null,
+      "tabelog_verdict": "bike",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Chiba Prefecture"
+    },
+    {
+      "id": "place-135",
+      "name": "Oze National Park — Crimson Marsh + Alpine Trail",
+      "description": "Japan's most scenic wetland boardwalk. October peak: marsh grasses turn crimson-red. TripAdvisor 4.7 (155 reviews). CLOSES OCTOBER 29 — time-sensitive window. 150 min by bus from Ueno but completely worth it for the October color.",
+      "coords": [
+        36.8981,
+        139.2747
+      ],
+      "layer": "day_trip",
+      "suggested_day": "Mon Oct 19",
+      "transit_zone": "tokyo_outer",
+      "transit_minutes_estimate": 150,
+      "payoff": {
+        "innovation": 1,
+        "nature": 10,
+        "food": 3,
+        "craft": 2,
+        "recovery": 8
+      },
+      "worth_it": true,
+      "ai_note": "Highest-rated destination in research (4.7/5, 155 reviews). CLOSES OCT 29. 150 min is at the limit but the crimson marsh is genuinely world-class. Only worth it for pure nature day.",
+      "tabelog_score": null,
+      "tabelog_verdict": "nature",
+      "tabelog_keep": true,
+      "tabelog_reservation": false,
+      "tabelog_area_label": "Gunma / Fukushima Border"
+    }
+  ]
+}
