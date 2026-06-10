@@ -2122,9 +2122,28 @@ svg.leaflet-image-layer.leaflet-interactive path {
         overflow: hidden;
       }
 
-      /* Hide desktop map — phone uses scenario map instead */
-      .map-wrap {
+      /* Map tab panel — fills aside height, hidden until .visible */
+      .map-tab-panel {
         display: none;
+        flex: 1;
+        height: 0;
+        overflow: hidden;
+      }
+      .map-tab-panel.visible {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .map-tab-panel .map-wrap {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .map-tab-panel #map {
+        flex: 1;
+        height: 100% !important;
+        min-height: 0;
       }
 
       /* aside = full remaining height between status bar & bottom nav */
@@ -2183,6 +2202,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       }
       .tab-btn[data-tab="itinerary"]::before { content: "\1F5D3"; font-size: 20px; line-height: 1; }
       .tab-btn[data-tab="scenario"]::before   { content: "\2728";  font-size: 20px; line-height: 1; }
+      .tab-btn[data-tab="map"]::before        { content: "\1F5FA"; font-size: 20px; line-height: 1; }
 
       /* --- Panels: scroll inside their container --- */
       .panel-view {
@@ -2935,18 +2955,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <nav class="tab-bar" role="tablist">
     <button class="tab-btn active" role="tab" data-tab="itinerary">Itinerary</button>
     <button class="tab-btn" role="tab" data-tab="scenario">Screen &amp; Plan</button>
+    <button class="tab-btn" role="tab" data-tab="map">Map</button>
 
   </nav>
 
-    <section class="map-wrap" aria-label="Interactive itinerary map">
-      <div id="map"></div>
-      <div class="legend" aria-label="Route legend">
-        <p class="legend-title">Map Mode</p>
-        <div class="legend-row">Tap <strong>Map this day</strong> to show numbered stops in order.</div>
-        <div class="legend-row">Tap any pin/card to show only nearby connections.</div>
-        <div class="legend-row">Use the color filters only when browsing places, not when navigating a day.</div>
-      </div>
-    </section>
+    <div id="tab-map" class="panel-view map-tab-panel">
+      <section class="map-wrap" aria-label="Interactive itinerary map">
+        <div id="map"></div>
+        <div class="legend" aria-label="Route legend">
+          <p class="legend-title">Map Mode</p>
+          <div class="legend-row">Tap <strong>Map this day</strong> to show numbered stops in order.</div>
+          <div class="legend-row">Tap any pin/card to show only nearby connections.</div>
+          <div class="legend-row">Use the color filters only when browsing places, not when navigating a day.</div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <div class="carousel-modal" id="carouselModal" aria-hidden="true">
@@ -5225,6 +5248,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           event.preventDefault();
           const day = days[Number(button.dataset.mapDay)];
           focusDay(day);
+          if (typeof switchToMapTab === "function") switchToMapTab();
         });
       });
       timeline.querySelectorAll("[data-marker]").forEach((card) => {
@@ -5303,6 +5327,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
             time: op.time,
             transport: op.transport
           })), dayLabel);
+          if (typeof switchToMapTab === 'function') switchToMapTab();
         }
         return;
       }
@@ -5315,6 +5340,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         transport: p.transit_mode || 'transit'
       }));
       drawCommittedDayRoute(ops, dayLabel);
+      if (typeof switchToMapTab === 'function') switchToMapTab();
     };
 
     function drawCommittedDayRoute(ops, dayLabel) {
@@ -6060,22 +6086,29 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (card) card.classList.toggle('expanded');
     };
 
+    // switchToMapTab — shared by all "Map this day" buttons
+    function switchToMapTab() {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const mapBtn = document.querySelector('.tab-btn[data-tab="map"]');
+      if (mapBtn) mapBtn.classList.add('active');
+      document.querySelectorAll('.panel-view').forEach(pv => pv.classList.remove('visible'));
+      const mapPanel = document.getElementById('tab-map');
+      if (mapPanel) mapPanel.classList.add('visible');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (window._leafletMap) window._leafletMap.invalidateSize(true);
+        });
+      });
+    }
+
     window.modelerMapFocus = function(id) {
-      // Switch to Itinerary tab and highlight if map is available
       const places = getPlaces();
       const p = places.find(pl => pl.id === id);
       if (!p || !p.coords) return;
-      // Try to center the existing Leaflet map on these coords
       if (window._leafletMap) {
         window._leafletMap.setView(p.coords, 14);
       }
-      // Switch to itinerary tab where the real map lives
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      const itinBtn = document.querySelector('.tab-btn[data-tab="itinerary"]');
-      if (itinBtn) itinBtn.classList.add('active');
-      document.querySelectorAll('.panel-view').forEach(pv => pv.classList.remove('visible'));
-      const itinTab = document.getElementById('tab-itinerary');
-      if (itinTab) itinTab.classList.add('visible');
+      switchToMapTab();
     };
 
     // ── LOGISTICS ENGINE ───────────────────────────────────────────
@@ -6341,11 +6374,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
             <button class="logistics-approve-btn"
               onclick="window.modelerApproveDay('${d.key}', '${d.label}', ${JSON.stringify(committedIds).replace(/"/g,'&quot;')})"
               style="font-size:11px;">${approveLabel}</button>
-            ${committedPlaces.length > 0
-              ? `<button class="map-link logistics-map-btn" type="button"
-                  onclick="window.modelerMapDay('${d.key}','${d.label}')"
-                  style="font-size:11px;margin-left:8px;">&#128205; Map this day</button>`
-              : ''}
+            <button class="map-link logistics-map-btn" type="button"
+                onclick="window.modelerMapDay('${d.key}','${d.label}')"
+                style="font-size:11px;margin-left:8px;">&#128205; Map this day</button>
           </div>`;
         }
 
@@ -6587,6 +6618,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
           updatePickerCount();
           runLogistics();
           renderScenarioDays();
+        }
+        if (tab === 'map') {
+          // Leaflet needs invalidateSize after container transitions from display:none
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              if (window._leafletMap) window._leafletMap.invalidateSize(true);
+            });
+          });
         }
       });
     });
@@ -7350,13 +7389,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       el.style.webkitTapHighlightColor = 'transparent';
     });
 
-    // --- Resize: re-show map on orientation change to landscape on phone ---
+    // --- Resize: invalidate Leaflet size on orientation change ---
     window.addEventListener('resize', function() {
-      if (window.innerWidth > 480) {
-        // Restore map visibility if browser widens (e.g. landscape iPad)
-        var mw = document.querySelector('.map-wrap');
-        if (mw) mw.style.display = '';
-      }
+      requestAnimationFrame(function() {
+        if (window._leafletMap) window._leafletMap.invalidateSize(true);
+      });
     });
 
   })();
