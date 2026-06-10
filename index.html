@@ -2387,35 +2387,48 @@ svg.leaflet-image-layer.leaflet-interactive path {
     .pwa-install-banner { display: none !important; }
 
     /* Desktop: map-wrap is the second grid column — always visible */
-    .map-wrap {
-      display: block;
+    /* MUST be in @media so it doesn't override the mobile display:none rule */
+    @media (min-width: 481px) {
+      .map-wrap {
+        display: block;
+      }
     }
 
     /* Wider sidebar for planning */
     .shell {
       grid-template-columns: minmax(460px, 560px) 1fr;
-      grid-template-rows: auto 1fr;
     }
 
-    /* ── FIX-GRID: explicit grid placement (3 children, 2 cols) ────────────
+    @media (min-width: 481px) {
+      .shell {
+        grid-template-rows: auto 1fr;
+      }
+    }
+
+    /* ── FIX-GRID: explicit grid placement — DESKTOP ONLY (@media min-width:481px)
        Without these, auto-placement puts tab-bar in col 2 (stealing map area).
        aside = col1 row2 (scrollable content panel)
        nav.tab-bar = col1 row1 (sticky nav at top of left column)
        .map-wrap = col2 spanning all rows (full-height map right column)
+       MUST be inside @media so height:100% on aside does NOT override
+       the mobile aside { height:0 } flex fix.
     ───────────────────────────────────────────────────────────────────────── */
-    aside {
-      grid-column: 1;
-      grid-row: 2;
-      height: 100%;
-      min-height: 0;
-    }
-    nav.tab-bar {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .map-wrap {
-      grid-column: 2;
-      grid-row: 1 / span 2;
+    @media (min-width: 481px) {
+      aside {
+        grid-column: 1;
+        grid-row: 2;
+        height: 100%;
+        min-height: 0;
+        overflow-y: auto;
+      }
+      nav.tab-bar {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .map-wrap {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+      }
     }
 
     /* Sticky tab bar -- desktop only; mobile uses order:10 flex */
