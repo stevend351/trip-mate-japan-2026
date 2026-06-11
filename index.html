@@ -952,12 +952,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     .shell {
       display: grid;
       grid-template-columns: minmax(380px, 500px) 1fr;
-      min-height: 100vh;
+      /* Lock shell to viewport so aside scrolls independently and map doesn't move */
+      height: 100dvh;
+      overflow: hidden;
     }
 
     aside {
-      height: 100vh;
-      overflow: auto;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
       border-right: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.72);
       backdrop-filter: blur(10px);
@@ -2420,6 +2423,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         height: 100%;
         min-height: 0;
         overflow-y: auto;
+        overflow-x: hidden;
       }
       nav.tab-bar {
         grid-column: 1;
@@ -2428,6 +2432,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       .map-wrap {
         grid-column: 2;
         grid-row: 1 / span 2;
+        /* Stick map to viewport — never scrolls with left panel */
+        position: sticky;
+        top: 0;
+        height: 100dvh;
+        overflow: hidden;
       }
     }
 
@@ -5288,8 +5297,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
         button.addEventListener("click", (event) => {
           event.preventDefault();
           const day = days[Number(button.dataset.mapDay)];
-          focusDay(day);
-          if (typeof switchToMapTab === "function") switchToMapTab();
+          // switchToMapTab first: waits for Leaflet invalidateSize before drawing routes
+          if (typeof switchToMapTab === 'function') {
+            switchToMapTab().then(() => focusDay(day));
+          } else {
+            focusDay(day);
+          }
         });
       });
       timeline.querySelectorAll("[data-marker]").forEach((card) => {
@@ -5362,13 +5375,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
         const itinDay = (window.ITIN_DAYS || []).find(d => d.day === dayLabel);
         if (itinDay) {
           const ops = (itinDay.ops || []).filter(op => placeById[op.place]);
-          drawCommittedDayRoute(ops.map((op, i) => ({
+          const itinRouteOps = ops.map((op, i) => ({
             id: op.place,
             name: op.title,
             time: op.time,
             transport: op.transport
-          })), dayLabel);
-          if (typeof switchToMapTab === 'function') switchToMapTab();
+          }));
+          if (typeof switchToMapTab === 'function') {
+            switchToMapTab().then(() => drawCommittedDayRoute(itinRouteOps, dayLabel));
+          } else {
+            drawCommittedDayRoute(itinRouteOps, dayLabel);
+          }
         }
         return;
       }
@@ -5380,22 +5397,30 @@ svg.leaflet-image-layer.leaflet-interactive path {
         time: p.best_time || '',
         transport: p.transit_mode || 'transit'
       }));
-      drawCommittedDayRoute(ops, dayLabel);
-      if (typeof switchToMapTab === 'function') switchToMapTab();
+      // switchToMapTab first, then draw after Leaflet knows map size
+      const doRoute = () => drawCommittedDayRoute(ops, dayLabel);
+      if (typeof switchToMapTab === 'function') {
+        switchToMapTab().then(doRoute);
+      } else {
+        doRoute();
+      }
     };
 
     function getHotelForDay(dayLabel) {
-      // Derive hotel place ID from the day's base string in ITIN_DAYS
-      const itinDay = (window.ITIN_DAYS || []).find(d => d.day === dayLabel);
-      if (!itinDay) return null;
-      // Check ops first for explicit stay-* entries
-      const stayOp = (itinDay.ops || []).find(op => op.place && op.place.startsWith('stay-'));
-      if (stayOp) return stayOp.place;
-      // Fall back to base field: "Marunouchi" days -> stay-nihombashi, "Hakone" days -> stay-hakone
-      const base = itinDay.base || '';
-      if (base.includes('Marunouchi') || base.includes('Nihombashi')) return 'stay-nihombashi';
-      if (base.includes('Hakone') || base.includes('Gora')) return 'stay-hakone';
-      if (base.includes('Kawaguchiko')) return 'stay-kawaguchiko';
+      // Derive the night's hotel from ITIN_DAYS ops — uses the LAST stay-* op in the day,
+      // which is where you sleep that night. Falls back to the previous day's hotel if
+      // the current day has no stay-* op (e.g. a full day out with no check-in/out op).
+      const days = window.ITIN_DAYS || [];
+      const dayIdx = days.findIndex(d => d.day === dayLabel);
+      if (dayIdx === -1) return null;
+
+      // Scan backward through all days from this day to find the most recent stay-* op
+      for (let i = dayIdx; i >= 0; i--) {
+        const ops = days[i].ops || [];
+        // Last stay-* op in a day = tonight's hotel
+        const stayOps = ops.filter(op => op.place && op.place.startsWith('stay-'));
+        if (stayOps.length) return stayOps[stayOps.length - 1].place;
+      }
       return null;
     }
 
@@ -6126,11 +6151,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (!committed[dayLabel]) committed[dayLabel] = [];
       if (!committed[dayLabel].includes(placeId)) committed[dayLabel].push(placeId);
       localStorage.setItem('tm-v3-committed', JSON.stringify(committed));
+      // Preserve scroll position — re-renders reset aside scrollTop on mobile
+      const aside = document.querySelector('aside');
+      const scrollBefore = aside ? aside.scrollTop : 0;
       // Refresh views
       renderCanvas();
       runLogistics();
       if (typeof renderTimeline === 'function') renderTimeline();
       if (typeof window.planRefresh === 'function') window.planRefresh();
+      // Restore scroll position after all re-renders complete
+      requestAnimationFrame(() => { if (aside) aside.scrollTop = scrollBefore; });
       // Toast
       const places = getPlaces();
       const p = places.find(pl => pl.id === placeId);
@@ -6156,22 +6186,43 @@ svg.leaflet-image-layer.leaflet-interactive path {
     };
 
     // switchToMapTab — activates map view on mobile; on desktop map is always visible
+    // switchToMapTab: returns a Promise that resolves AFTER Leaflet has recalculated size.
+    // Always await this before drawing routes so Leaflet knows the real map dimensions.
     window.switchToMapTab = function switchToMapTab() {
       // Mark map tab button active
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       const mapBtn = document.querySelector('.tab-btn[data-tab="map"]');
       if (mapBtn) mapBtn.classList.add('active');
-      // On mobile: toggle class on shell to swap aside <-> map-wrap
-      // On desktop: map-wrap is always the second grid column — no DOM change needed
+      // On mobile: toggle class on shell to swap aside <-> map-wrap.
+      // Scroll window to 0 FIRST to prevent iOS Safari viewport-resize scroll
+      // (adding map-tab-active causes a layout reflow that triggers scroll-to-top).
       const shell = document.querySelector('.shell');
+      const isMobile = window.innerWidth <= 480;
+      if (isMobile) {
+        // Anchor scroll before reflow so Safari chrome doesn't push nav offscreen
+        window.scrollTo(0, 0);
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+      }
       if (shell) shell.classList.add('map-tab-active');
-      // Leaflet must recalculate size after map becomes visible
-      requestAnimationFrame(() => {
+      // Return promise so callers can await Leaflet size recalculation before drawing routes
+      return new Promise(resolve => {
         requestAnimationFrame(() => {
-          if (window._leafletMap) window._leafletMap.invalidateSize(true);
+          requestAnimationFrame(() => {
+            if (window._leafletMap) window._leafletMap.invalidateSize(true);
+            resolve();
+          });
         });
       });
-    }
+    };
+
+    // switchFromMapTab: call when leaving map tab on mobile to restore scroll
+    window.switchFromMapTab = function() {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
 
     window.modelerMapFocus = function(id) {
       const places = getPlaces();
@@ -6687,6 +6738,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         const shell = document.querySelector('.shell');
         if (tab !== 'map') {
           if (shell) shell.classList.remove('map-tab-active');
+          // Restore scroll on mobile when leaving map tab
+          if (typeof window.switchFromMapTab === 'function') window.switchFromMapTab();
           document.getElementById('tab-'+tab)?.classList.add('visible');
         } else {
           // Map tab: use switchToMapTab for consistent behaviour
