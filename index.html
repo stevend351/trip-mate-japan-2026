@@ -5330,30 +5330,57 @@ svg.leaflet-image-layer.leaflet-interactive path {
     function drawDayRoute(day) {
       routeLayer.clearLayers();
       stopLayer.clearLayers();
-      const ops = (day.ops || []).filter((op) => placeById[op.place]);
+      // Build ops list with place IDs resolved
+      const rawOps = (day.ops || []).filter((op) => placeById[op.place]);
+      // Map to unified shape: { id, title, time, detail, transport }
+      let ops = rawOps.map(op => ({
+        id: op.place,
+        title: op.title,
+        time: op.time,
+        detail: op.detail || '',
+        transport: op.transport || ''
+      }));
+
+      // ── Hotel bookend: prepend depart-hotel pin 1, append return-hotel last pin ──
+      const hotelId = getHotelForDay(day.day);
+      if (hotelId && placeById[hotelId]) {
+        const hotelPlace = placeById[hotelId];
+        const hotelOp = { id: hotelId, title: hotelPlace.title, time: 'Hotel', detail: 'Base hotel', transport: '' };
+        // Only bookend if not already starting/ending at a stay- place
+        const firstIsStay = ops.length > 0 && ops[0].id.startsWith('stay-');
+        const lastIsStay  = ops.length > 0 && ops[ops.length - 1].id.startsWith('stay-');
+        if (!firstIsStay) ops.unshift({ ...hotelOp, time: 'Depart', transport: 'Leave hotel' });
+        if (!lastIsStay)  ops.push({ ...hotelOp, time: 'Return', transport: 'Return to hotel' });
+      }
+
+      if (!ops.length) return;
+
       ops.forEach((op, index) => {
-        const place = placeById[op.place];
-        const marker = L.marker(place.coords, { icon: numberedIcon(index + 1) })
+        const place = placeById[op.id];
+        const num = index + 1;
+        const isHotel = op.id.startsWith('stay-');
+        const marker = L.marker(place.coords, { icon: numberedIcon(num) })
           .bindPopup(`
             <article class="popup">
               ${imageTag(place.image, place.title)}
-              <h2>${index + 1}. ${op.title}</h2>
-              <p><strong>${op.time}</strong> · ${op.detail}</p>
-              <p><strong>Move</strong> · ${op.transport}</p>
-              <p><strong>Address</strong> · ${place.address}</p>
+              <h2>${num}. ${op.title}</h2>
+              <p><strong>${op.time}</strong>${op.detail ? ' · ' + op.detail : ''}</p>
+              ${op.transport ? `<p><strong>Move</strong> · ${op.transport}</p>` : ''}
+              <p><strong>Address</strong> · ${place.address || ''}</p>
             </article>
           `);
         stopLayer.addLayer(marker);
+        if (index === 0) marker.openPopup();
       });
 
       for (let index = 0; index < ops.length - 1; index += 1) {
-        const from = placeById[ops[index].place];
-        const to = placeById[ops[index + 1].place];
+        const from = placeById[ops[index].id];
+        const to   = placeById[ops[index + 1].id];
         L.polyline([from.coords, to.coords], {
           color: palette[day.group] || palette.private,
           weight: 5,
           opacity: 0.78
-        }).bindTooltip(`${ops[index].time} -> ${ops[index + 1].time}`, { sticky: true }).addTo(routeLayer);
+        }).bindTooltip(`${index + 1}→${index + 2}: ${ops[index].time} → ${ops[index + 1].time}`, { sticky: true }).addTo(routeLayer);
       }
     }
 
