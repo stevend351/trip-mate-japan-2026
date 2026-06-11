@@ -5327,12 +5327,99 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (markers[id]) markers[id].openPopup();
     }
 
-    function drawDayRoute(day) {
+    // ── ORS Real-Road Routing ────────────────────────────────────────────────
+    // Key stored here — personal-use app, no server-side proxy needed.
+    const ORS_KEY = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImY0YzUyN2EwZWQ5ZTQxNDM5MzhlMDc4NjNmN2I5NzNlIiwiaCI6Im11cm11cjY0In0=';
+
+    // Fetch real walking route for one leg. Returns {coords: [[lat,lng],...], durationMin, distanceKm}
+    // Falls back to straight line on error.
+    async function fetchOrsLeg(fromCoords, toCoords) {
+      const [fLat, fLng] = fromCoords;
+      const [tLat, tLng] = toCoords;
+      // Straight-line distance in km (Haversine approximation)
+      const R = 6371;
+      const dLat = (tLat - fLat) * Math.PI / 180;
+      const dLng = (tLng - fLng) * Math.PI / 180;
+      const a = Math.sin(dLat/2)**2 + Math.cos(fLat*Math.PI/180) * Math.cos(tLat*Math.PI/180) * Math.sin(dLng/2)**2;
+      const slKm = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+      // Legs > 2.5km straight-line: almost certainly metro. Skip ORS, return transit estimate.
+      if (slKm > 2.5) {
+        const metroMin = Math.round(slKm * 3 + 5); // rough: 3 min/km + 5 min overhead
+        return { coords: [fromCoords, toCoords], durationMin: metroMin, distanceKm: slKm, isTransit: true };
+      }
+
+      try {
+        const resp = await fetch('https://api.openrouteservice.org/v2/directions/foot-walking/geojson', {
+          method: 'POST',
+          headers: {
+            'Authorization': ORS_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            coordinates: [[fLng, fLat], [tLng, tLat]],
+            instructions: false
+          })
+        });
+        if (!resp.ok) throw new Error(resp.status);
+        const data = await resp.json();
+        const feat = data.features[0];
+        const props = feat.properties;
+        const durationMin = Math.round(props.summary.duration / 60);
+        const distanceKm = props.summary.distance / 1000;
+        // GeoJSON coords are [lng, lat] — flip to [lat, lng] for Leaflet
+        const coords = feat.geometry.coordinates.map(c => [c[1], c[0]]);
+        return { coords, durationMin, distanceKm, isTransit: false };
+      } catch (e) {
+        // Fallback: straight line with walking estimate (5km/h)
+        const durationMin = Math.round(slKm / 5 * 60);
+        return { coords: [fromCoords, toCoords], durationMin, distanceKm: slKm, isTransit: false, fallback: true };
+      }
+    }
+
+    // Draw all legs for an ops array. Clears routeLayer before drawing.
+    // ops: [{id, title, time, ...}] using placeById for coords.
+    async function drawRoutedLegs(ops, groupColor) {
+      routeLayer.clearLayers();
+      const promises = [];
+      for (let i = 0; i < ops.length - 1; i++) {
+        const from = placeById[ops[i].id];
+        const to   = placeById[ops[i + 1].id];
+        promises.push(fetchOrsLeg(from.coords, to.coords));
+      }
+      const legs = await Promise.all(promises);
+      legs.forEach((leg, i) => {
+        const fromTime = ops[i].time || '';
+        const toTime   = ops[i + 1].time || '';
+        const timeLabel = fromTime || toTime ? ` · ${fromTime}→${toTime}` : '';
+        let label, color, dash;
+        if (leg.isTransit) {
+          label = `${i+1}→${i+2}: ~${leg.durationMin} min metro${timeLabel}`;
+          color = '#e07b39';   // orange = transit estimate
+          dash  = '4 8';
+        } else if (leg.fallback) {
+          label = `${i+1}→${i+2}: ~${leg.durationMin} min walk${timeLabel}`;
+          color = groupColor;
+          dash  = '6 4';
+        } else {
+          label = `${i+1}→${i+2}: ${leg.durationMin} min walk · ${leg.distanceKm.toFixed(2)}km${timeLabel}`;
+          color = groupColor;
+          dash  = null;
+        }
+        L.polyline(leg.coords, {
+          color,
+          weight: leg.isTransit ? 4 : 5,
+          opacity: 0.85,
+          dashArray: dash
+        }).bindTooltip(label, { sticky: true, direction: 'top' }).addTo(routeLayer);
+      });
+    }
+
+    async function drawDayRoute(day) {
       routeLayer.clearLayers();
       stopLayer.clearLayers();
       // Build ops list with place IDs resolved
       const rawOps = (day.ops || []).filter((op) => placeById[op.place]);
-      // Map to unified shape: { id, title, time, detail, transport }
       let ops = rawOps.map(op => ({
         id: op.place,
         title: op.title,
@@ -5341,12 +5428,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
         transport: op.transport || ''
       }));
 
-      // ── Hotel bookend: prepend depart-hotel pin 1, append return-hotel last pin ──
+      // ── Hotel bookend ──
       const hotelId = getHotelForDay(day.day);
       if (hotelId && placeById[hotelId]) {
         const hotelPlace = placeById[hotelId];
         const hotelOp = { id: hotelId, title: hotelPlace.title, time: 'Hotel', detail: 'Base hotel', transport: '' };
-        // Only bookend if not already starting/ending at a stay- place
         const firstIsStay = ops.length > 0 && ops[0].id.startsWith('stay-');
         const lastIsStay  = ops.length > 0 && ops[ops.length - 1].id.startsWith('stay-');
         if (!firstIsStay) ops.unshift({ ...hotelOp, time: 'Depart', transport: 'Leave hotel' });
@@ -5355,10 +5441,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
       if (!ops.length) return;
 
+      // Draw numbered stop markers
       ops.forEach((op, index) => {
         const place = placeById[op.id];
         const num = index + 1;
-        const isHotel = op.id.startsWith('stay-');
         const marker = L.marker(place.coords, { icon: numberedIcon(num) })
           .bindPopup(`
             <article class="popup">
@@ -5373,15 +5459,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         if (index === 0) marker.openPopup();
       });
 
-      for (let index = 0; index < ops.length - 1; index += 1) {
-        const from = placeById[ops[index].id];
-        const to   = placeById[ops[index + 1].id];
-        L.polyline([from.coords, to.coords], {
-          color: palette[day.group] || palette.private,
-          weight: 5,
-          opacity: 0.78
-        }).bindTooltip(`${index + 1}→${index + 2}: ${ops[index].time} → ${ops[index + 1].time}`, { sticky: true }).addTo(routeLayer);
-      }
+      // Draw real-road routes (async, replaces crow-fly lines)
+      await drawRoutedLegs(ops, palette[day.group] || palette.private);
     }
 
     // ── SCREEN & PLAN: Map this day (committed ideas, not hardcoded ops) ──
@@ -5451,7 +5530,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       return null;
     }
 
-    function drawCommittedDayRoute(ops, dayLabel) {
+    async function drawCommittedDayRoute(ops, dayLabel) {
       routeLayer.clearLayers();
       stopLayer.clearLayers();
 
@@ -5492,26 +5571,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         if (index === 0) marker.openPopup();
       });
 
-      // Draw route lines with transit time labels
-      for (let i = 0; i < validOps.length - 1; i++) {
-        const from = placeById[validOps[i].id];
-        const to   = placeById[validOps[i + 1].id];
-        const transitMin = to.transit_minutes_estimate || null;
-        const fromTime = validOps[i].time || '';
-        const toTime   = validOps[i + 1].time || '';
-        const label = transitMin
-          ? `${i + 1}→${i + 2}: ~${transitMin} min transit${fromTime ? ' · ' + fromTime : ''}${toTime ? ' → ' + toTime : ''}`
-          : `${i + 1}→${i + 2}${fromTime ? ' · ' + fromTime : ''}${toTime ? ' → ' + toTime : ''}`;
-
-        L.polyline([from.coords, to.coords], {
-          color: '#236a67',
-          weight: 4,
-          opacity: 0.85,
-          dashArray: '6, 4'
-        })
-        .bindTooltip(label, { sticky: true, direction: 'top' })
-        .addTo(routeLayer);
-      }
+      // Draw real-road routes (async)
+      await drawRoutedLegs(validOps, '#236a67');
 
       // On mobile, scroll map into view
       const mapEl = document.getElementById('map');
