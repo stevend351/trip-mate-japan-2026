@@ -5425,8 +5425,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
               // Inject approved modeler places for this day
               var dayKeyMap = {
                 'Thu Oct 15':'oct15','Fri Oct 16':'oct16','Sat Oct 17':'oct17',
-                'Sun Oct 18':'oct18','Mon Oct 19':'oct19','Tue Oct 20':'oct20',
-                'Wed Oct 21':'oct21','Thu Oct 22':'oct22','Fri Oct 23':'oct23',
+                'Sun Oct 18':'oct18','Mon Oct 20':'oct20',
+                'Tue Oct 21':'oct21','Wed Oct 22':'oct22','Thu Oct 23':'oct23',
                 'Sat Oct 24':'oct24','Sun Oct 25':'oct25'
               };
               var dayKey = dayKeyMap[item.day];
@@ -5447,8 +5447,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
               // Map dayKey to day label for committed lookup
               var dayLabelMap = {
                 'oct15':'Thu Oct 15','oct16':'Fri Oct 16','oct17':'Sat Oct 17',
-                'oct18':'Sun Oct 18','oct19':'Mon Oct 19','oct20':'Tue Oct 20',
-                'oct21':'Wed Oct 21','oct22':'Thu Oct 22','oct23':'Fri Oct 23',
+                'oct18':'Sun Oct 18','oct20':'Mon Oct 20',
+                'oct21':'Tue Oct 21','oct22':'Wed Oct 22','oct23':'Thu Oct 23',
                 'oct24':'Sat Oct 24','oct25':'Sun Oct 25'
               };
               var approvedIds = approvedDays[dayKey] || approvedDays[dayLabelMap[dayKey]];
@@ -6514,10 +6514,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
       { key:'oct16', label:'Fri Oct 16', base:'Marunouchi', coords:[35.6846,139.7745], halfDay:true,  capacity:2, note:'Arrival day — afternoon/evening only' },
       { key:'oct17', label:'Sat Oct 17', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:false, capacity:4, note:'Full day' },
       { key:'oct18', label:'Sun Oct 18', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:false, capacity:4, note:'Full day' },
-      { key:'oct19', label:'Mon Oct 19', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:false, capacity:3, note:'Innovation day — likely committed to Tsukuba/Anritsu route' },
-      { key:'oct20', label:'Tue Oct 20', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:false, capacity:4, note:'Full day — Tsukiji morning option eats first half' },
-      { key:'oct21', label:'Wed Oct 21', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:false, capacity:4, note:'Full day — neighborhood day trip likely' },
-      { key:'oct22', label:'Thu Oct 22', base:'Marunouchi',  coords:[35.6846,139.7745], halfDay:true,  capacity:2, note:'Last Tokyo day — pack for Hakone, errands, tax-free' },
+      { key:'oct20', label:'Mon Oct 20', base:'Kyoto',        coords:[34.9857,135.7584], halfDay:false, capacity:4, note:'Kyoto full-day bike tour — Arashiyama, Shoraian' },
+      { key:'oct21', label:'Tue Oct 21', base:'Kita-Kamakura', coords:[35.3319,139.5476], halfDay:false, capacity:4, note:'Kamakura + Enoshima day trip' },
+      { key:'oct22', label:'Wed Oct 22', base:'Mitake',        coords:[35.7871,139.1557], halfDay:false, capacity:3, note:'Mt Mitake + Tama River — last Tokyo-area day' },
     ];
 
     // Area clusters: places in the same area should go on the same day
@@ -6900,8 +6899,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (!container) return;
 
       // Day names fallback
-      const dayNames = ['Thu Oct 15','Fri Oct 16','Sat Oct 17','Sun Oct 18','Mon Oct 19','Tue Oct 20','Wed Oct 21','Thu Oct 22','Fri Oct 23','Sat Oct 24','Sun Oct 25'];
-      const dayTitles = ['Flight Day (JL61)','Arrival — Tokyo','Craft Day (Barber + Denim)','Prep Day','Innovation Day','Day Trip / Local','Neighborhood Day','Last Tokyo Day','Hakone Day 1','Hakone / Return','Departure (JL62)'];
+      const dayNames = ['Thu Oct 15','Fri Oct 16','Sat Oct 17','Sun Oct 18','Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25'];
+      const dayTitles = ['Flight Day (JL61)','Arrival — Oakwood Premier','E-Bike Tokyo + Ginza','Shinjuku Food Tour + Kakigori','Kyoto Full-Day Bike Tour','Kamakura + Enoshima','Mt Mitake + Tama River','Sumo + Tsukiji + Chinzanso','Tokyo → Gora (Hakone)','Hakone Loop → Fly Home'];
 
       container.innerHTML = dayProfiles.map((dp, i) => {
         const dayName = dayNames[dp.dayIdx] || '';
@@ -7087,11 +7086,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       'Fri Oct 16': [35.6846, 139.7745],  // Nihombashi
       'Sat Oct 17': [35.6846, 139.7745],  // Nihombashi
       'Sun Oct 18': [35.6846, 139.7745],  // Nihombashi
-      'Mon Oct 19': [35.6846, 139.7745],  // Nihombashi
-      'Tue Oct 20': [35.6846, 139.7745],  // Nihombashi
-      'Wed Oct 21': [35.6846, 139.7745],  // Nihombashi
-      'Thu Oct 22': [35.6846, 139.7745],  // Nihombashi
-      'Fri Oct 23': [35.2329, 139.0216],  // Hakone / Gora
+      'Mon Oct 20': [34.9857, 135.7584],  // Kyoto (day trip)
+      'Tue Oct 21': [35.3319, 139.5476],  // Kita-Kamakura
+      'Wed Oct 22': [35.7871, 139.1557],  // Mt Mitake
+      'Thu Oct 23': [35.6846, 139.7745],  // Marunouchi / Oakwood
+      'Fri Oct 24': [35.2505, 139.0472],  // Gora / Tensui Saryo (Hakone)
       'Sat Oct 24': [35.6846, 139.7745],  // Back to Nihombashi
       'Sun Oct 25': [35.6846, 139.7745],  // Departure morning
     };
@@ -7817,12 +7816,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       { key:'oct16', dow:'Fri', date:'16', label:'Fri Oct 16', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
       { key:'oct17', dow:'Sat', date:'17', label:'Sat Oct 17', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
       { key:'oct18', dow:'Sun', date:'18', label:'Sun Oct 18', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct19', dow:'Mon', date:'19', label:'Mon Oct 19', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct20', dow:'Tue', date:'20', label:'Tue Oct 20', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct21', dow:'Wed', date:'21', label:'Wed Oct 21', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct22', dow:'Thu', date:'22', label:'Thu Oct 22', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct23', dow:'Fri', date:'23', label:'Fri Oct 23', base:'Hakone / Gora',          coords:[35.2329,139.0216] },
-      { key:'oct24', dow:'Sat', date:'24', label:'Sat Oct 24', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
+      { key:'oct20', dow:'Mon', date:'20', label:'Mon Oct 20', base:'Kyoto (day trip)',        coords:[34.9857,135.7584] },
+      { key:'oct21', dow:'Tue', date:'21', label:'Tue Oct 21', base:'Kita-Kamakura',          coords:[35.3319,139.5476] },
+      { key:'oct22', dow:'Wed', date:'22', label:'Wed Oct 22', base:'Mt Mitake',              coords:[35.7871,139.1557] },
+      { key:'oct23', dow:'Thu', date:'23', label:'Thu Oct 23', base:'Oakwood Premier, Tokyo', coords:[35.6846,139.7745] },
+      { key:'oct24', dow:'Fri', date:'24', label:'Fri Oct 24', base:'Tensui Saryo, Gora',     coords:[35.2505,139.0472] },
       { key:'oct25', dow:'Sun', date:'25', label:'Sun Oct 25', base:'Tokyo → NRT (depart)',   coords:[35.6846,139.7745] },
     ];
 
@@ -8041,8 +8039,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       var placeById = {};
       allPlaces.forEach(function(p){ placeById[p.id] = p; });
 
-      var dayOrder = ['oct16','oct17','oct18','oct19','oct20','oct21','oct22'];
-      var dayLabels = {oct16:'Fri Oct 16',oct17:'Sat Oct 17',oct18:'Sun Oct 18',oct19:'Mon Oct 19',oct20:'Tue Oct 20',oct21:'Wed Oct 21',oct22:'Thu Oct 22'};
+      var dayOrder = ['oct16','oct17','oct18','oct20','oct21','oct22'];
+      var dayLabels = {oct16:'Fri Oct 16',oct17:'Sat Oct 17',oct18:'Sun Oct 18',oct20:'Mon Oct 20',oct21:'Tue Oct 21',oct22:'Wed Oct 22'};
       var approvedKeys = dayOrder.filter(function(k){ return approvedDays[k] && approvedDays[k].length; });
 
       if (!approvedKeys.length) {
@@ -8198,8 +8196,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       .filter(function(d){ return d.key !== 'oct15'; })
       .map(function(d){ return d.label; });
     if (!DAY_LABELS.length) {
-      DAY_LABELS = ['Fri Oct 16','Sat Oct 17','Sun Oct 18','Mon Oct 19',
-                    'Tue Oct 20','Wed Oct 21','Thu Oct 22','Fri Oct 23','Sat Oct 24','Sun Oct 25'];
+      DAY_LABELS = ['Fri Oct 16','Sat Oct 17','Sun Oct 18',
+                    'Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25'];
     }
 
     // Lookup table: label -> TRIP_SCHEDULE entry (for fixed blocks + halfDay flag)
