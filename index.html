@@ -3161,11 +3161,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
         id: "stay-nihombashi",
         day: "Stay base",
         group: "stay",
-        title: "Nihombashi apartment stay",
+        title: "Oakwood Premier Tokyo",
         coords: [35.6864, 139.7776],
         image: image("NihonbashiTokyo.jpg"),
         credit: "https://commons.wikimedia.org/wiki/File:NihonbashiTokyo.jpg",
-        note: "Use MIMARU SUITES Tokyo Nihombashi or MONday Apart Premium Nihonbashi as the stable Tokyo base."
+        note: "Oakwood Premier Tokyo, 1-8-2 Tekko Building, Marunouchi, Chiyoda-ku, Tokyo 100-0005. Full kitchen, in-unit washer/dryer, 24hr convenience store at entrance, direct underground access to Tokyo Station. Check-in 3pm, check-out 11am."
       },
       {
         id: "ginza",
@@ -3391,11 +3391,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
         id: "stay-hakone",
         day: "Stay base",
         group: "stay",
-        title: "Hakone Yutowa / Gora stay",
+        title: "Tensui Saryo — Gora",
         coords: [35.2505, 139.0472],
         image: image("Gora Station, Hakone July 2018.jpg"),
         credit: "https://www.hakoneyutowa-hotel.jp/",
-        note: "Choose Gora for onsen access and simpler local movement. The point is recovery, not kitchen convenience."
+        note: "Tensui Saryo, 1320-276 Gora, Hakone, Ashigarashimo District, Kanagawa 250-0402. Private balcony onsen, 11-course kaiseki dinner included, 3 min walk to Gora Station. Check-in 3pm (notify 48hrs in advance), check-out 10am."
       },
       {
         id: "mountain-ripper",
@@ -3622,7 +3622,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     const addressById = {
       nrt: "1-1 Furugome, Narita, Chiba 282-0004",
       nihombashi: "Nihombashi, Chuo City, Tokyo 103-0027",
-      "stay-nihombashi": "1-8-2 Marunouchi, Chiyoda City, Tokyo 100-0005",
+      "stay-nihombashi": "1-8-2 Tekko Building, Marunouchi, Chiyoda-ku, Tokyo 100-0005",
       ginza: "Ginza, Chuo City, Tokyo 104-0061",
       "hiro-ginza": "Ginza area / Aoyama branch if booking Airi Kawana",
       "betty-ginza": "NISHIGINZA, 4-1 Ginza, Chuo City, Tokyo 104-0061",
@@ -3674,7 +3674,69 @@ svg.leaflet-image-layer.leaflet-interactive path {
       place.address = addressById[place.id] || "Address to confirm before booking";
     });
 
-    const days = [
+    /* ═══════════════════════════════════════════════════════════════
+       MASTER ITINERARY LOAD — June 18, 2026
+       Source: japan_trip_oct2026.md (uploaded by user — MASTER)
+       All conflicts resolved: upload wins, previous data moved to REPLACED section.
+
+       ## REPLACED (previous values overwritten by MASTER)
+       ─────────────────────────────────────────────────────────
+       1. stay-nihombashi title:
+          OLD: "Nihombashi apartment stay"
+          OLD note: "Use MIMARU SUITES Tokyo Nihombashi or MONday Apart Premium Nihonbashi..."
+          NEW: "Oakwood Premier Tokyo"
+          NEW note: full address + amenities from master
+          Reason: MASTER specifies Oakwood Premier Tokyo as the confirmed, booked hotel.
+
+       2. stay-nihombashi address:
+          OLD: "1-8-2 Marunouchi, Chiyoda City, Tokyo 100-0005"
+          NEW: "1-8-2 Tekko Building, Marunouchi, Chiyoda-ku, Tokyo 100-0005"
+          Reason: MASTER has more specific Tekko Building address.
+
+       3. stay-hakone title:
+          OLD: "Hakone Yutowa / Gora stay"
+          OLD credit: hakoneyutowa-hotel.jp
+          NEW: "Tensui Saryo — Gora"
+          NEW note: full address + check-in/out + amenities from master
+          Reason: MASTER specifies Tensui Saryo as the confirmed, booked ryokan.
+
+       4. Days array — FULL REPLACEMENT (11 days → 10 days):
+          REMOVED: "Mon Oct 19 — Weekday innovation access — Tsukuba or Atsugi"
+          Reason: MASTER has NO Oct 19. Day numbering jumps Oct 18 → Oct 20. This
+                  day was a planning placeholder not in the final confirmed itinerary.
+
+       5. Days Oct 17–25 — titles/content replaced to match MASTER:
+          OLD Oct 17: "Tokyo craft + grooming day" (barber + Betty Smith custom jeans)
+          NEW Oct 17: "E-Bike Tokyo + Ginza + Yurakucho Yakitori ✅ BOOKED"
+
+          OLD Oct 18: "Sunday dessert + shopping systems prep"
+          NEW Oct 18: "Shinjuku Food Tour + Kakigori ✅ BOOKED"
+
+          OLD Oct 20 (was Tue slot): "Tokyo day trip — Yokohama or Nihombashi deep-dive"
+          NEW Oct 20 (now Mon): "Kyoto Full-Day Bike Tour + Shoraian Kaiseki 🔴 BOOK NOW"
+
+          OLD Oct 21: "Tokyo craft + neighborhood walk"
+          NEW Oct 21: "Kamakura + Enoshima Island"
+
+          OLD Oct 22: "Last full Tokyo day — Nihombashi/Ginza errands + pack"
+          NEW Oct 22: "Mt Mitake + Tama River Gorge + Yurakucho Dinner"
+
+          OLD Oct 23: "Hakone day — Romancecar + Open-Air Museum + onsen"
+          NEW Oct 23: "Sumo + Tsukiji + Chinzanso + Hamarikyu + Venture Café"
+
+          OLD Oct 24: "Hakone morning + return to Tokyo afternoon"
+          NEW Oct 24: "Tokyo → Gora (Hakone) + Mountain Ripper Bike Tour"
+                      (Hakone is now Friday Oct 24 check-in, not Thursday Oct 23)
+
+          OLD Oct 25: "JL62 NRT to LAX" (departure only)
+          NEW Oct 25: "Hakone Loop → Tokyo → Fly Home"
+                      (full morning Hakone Loop before airport)
+       ═══════════════════════════════════════════════════════════════ */
+        const days = [
+      // ── REPLACED: Thu Oct 15 had no ops-level detail ─────────────────────────
+      // ## REPLACED
+      // Old: ops: [{ time: "1:05p", title: "Depart LAX", place: "nrt" }]
+      // Reason: Updated to match MASTER itinerary (single flight op, same content — no conflict)
       {
         day: "Thu Oct 15",
         title: "JL61 LAX to NRT",
@@ -3684,237 +3746,263 @@ svg.leaflet-image-layer.leaflet-interactive path {
         focus: "Depart LAX 1:05 PM on Japan Airlines JL61. Arrive NRT Fri Oct 16 at 4:35 PM.",
         markers: ["nrt"],
         activities: [
-          ["Flight", "JL61 business class, Boeing 787-9 Dreamliner, 11h 30m."],
-          ["Arrival setup", "Have Suica/PASMO, hotel address in Japanese, and first-night dinner plan ready."]
+          ["Flight", "JAL JL61, LAX → NRT. Business class, Boeing 787-9 Dreamliner, 11h 30m."],
+          ["Arrival setup", "Have Suica/PASMO loaded, hotel address in Japanese, and first-night dinner plan ready before landing."]
         ],
         ops: [
-          { time: "1:05p", title: "Depart LAX", place: "nrt", detail: "JL61 to Narita. Use this card for arrival prep rather than local navigation.", transport: "Flight: 11h 30m" }
+          { time: "1:05p", title: "Depart LAX", place: "nrt", detail: "JL61 to Narita. 11h 30m flight.", transport: "Flight: 11h 30m" }
         ]
       },
       {
         day: "Fri Oct 16",
-        title: "Arrival to Tokyo / Marunouchi",
+        title: "Arrival — Oakwood Premier Tokyo",
         group: "tokyo",
-        transfer: "NEX + taxi",
-        base: "Marunouchi, night 1 of 3",
-        focus: "Arrive, check in, eat nearby, do not over-plan.",
-        markers: ["nrt", "nihombashi", "stay-nihombashi", "kaneko"],
+        transfer: "Narita Express → walk",
+        base: "Oakwood Premier Tokyo, night 1 of 8",
+        focus: "Land 4:35pm, N'EX to Tokyo Station, walk underground to Oakwood. Stock kitchen. No restaurants tonight.",
+        markers: ["nrt", "stay-nihombashi"],
         activities: [
-          ["Transport", "NRT to Tokyo Station by Narita Express, then short taxi to Nihombashi."],
-          ["Stay", "Check in around 3:00 PM or later; your flight arrival means you will arrive after normal check-in starts."],
-          ["Food", "Easy tendon or COREDO food hall. No cross-city dinner."]
+          ["Transport", "NRT → Tokyo Station by Narita Express (53 min, ¥3,070). Platform B1F Terminal 1. Follow underground walkway directly to Oakwood — no street crossing."],
+          ["Check-in", "Oakwood Premier Tokyo. Full kitchen, washer/dryer, 24hr convenience store at entrance."],
+          ["Grocery run", "Stock full week at entrance convenience store: eggs, Greek yogurt, protein drinks, nuts, fruit. Tonight: onigiri + protein bar."],
+          ["Sleep", "No restaurants. Jet-lagged. Lock to Tokyo time immediately."]
         ],
         ops: [
-          { time: "4:35p", title: "Arrive NRT", place: "nrt", detail: "Immigration, customs, cash/IC/eSIM check.", transport: "Airport arrival" },
-          { time: "6:00p", title: "Narita Express", place: "nrt", detail: "Reserved train to Tokyo Station; final taxi to Nihombashi.", transport: "Approx. 42 mi / 68 km, 70-90 min total" },
-          { time: "7:30p", title: "Check in Marunouchi", place: "stay-nihombashi", detail: "Drop bags, reset, no ambitious evening.", transport: "Short taxi from Tokyo Station" },
-          { time: "8:15p", title: "Easy dinner", place: "kaneko", detail: "Tendon or COREDO food hall depending on line/energy.", transport: "Walk or short taxi" }
+          { time: "4:35p", title: "Land NRT", place: "nrt", detail: "Customs + bags: allow 60–75 min.", transport: "Airport arrival" },
+          { time: "5:45p", title: "Narita Express", place: "nrt", detail: "Platform B1F, Terminal 1. Direct → Tokyo Station. 53 min, ¥3,070. Every 30 min. Use Suica IC card or buy at machine.", transport: "53 min, ¥3,070" },
+          { time: "6:40p", title: "Arrive Tokyo Station", place: "stay-nihombashi", detail: "Follow underground walkway directly to Oakwood Premier — no street crossing.", transport: "Walk underground" },
+          { time: "6:50p", title: "Check in — Oakwood Premier", place: "stay-nihombashi", detail: "Full kitchen, in-unit washer/dryer, 24hr convenience store at entrance.", transport: "Lobby" },
+          { time: "7:00p", title: "Convenience store stock-up", place: "stay-nihombashi", detail: "Stock full week: eggs, Greek yogurt, protein drinks, nuts, fruit. Tonight: onigiri + protein bar.", transport: "Walk — building entrance" },
+          { time: "8:00p", title: "In-room dinner + sleep", place: "stay-nihombashi", detail: "No restaurants. Jet-lagged. Sleep by 10pm.", transport: "In-room" }
         ]
       },
       {
         day: "Sat Oct 17",
-        title: "Tokyo craft + grooming day",
+        title: "E-Bike Tokyo + Ginza + Yurakucho Yakitori ✅ BOOKED",
         group: "tokyo",
-        transfer: "Short taxi/metro",
-        base: "Marunouchi, night 2 of 3",
-        focus: "High-end barber, Betty Smith custom jeans, Ginza/Nihombashi food.",
-        markers: ["nihombashi", "ginza", "hiro-ginza", "betty-ginza", "kaneko", "godaime-nihombashi"],
+        transfer: "Walk / short taxi",
+        base: "Oakwood Premier Tokyo, night 2 of 8",
+        focus: "E-Bike Tokyo tour 9am–noon (BOOKED). Big lunch post-tour. Ginza barber + Levi's custom jeans. Yurakucho yakitori dinner.",
+        markers: ["stay-nihombashi", "ginza", "hiro-ginza", "betty-ginza"],
         activities: [
-          ["Morning", "Coffee/walk near Nihombashi and COREDO Muromachi."],
-          ["Midday", "HIRO GINZA barber full course or Airi Kawana if you choose the Aoyama branch."],
-          ["Afternoon", "Betty Smith GINZA custom denim appointment."],
-          ["Dinner", "Kaneko Hannosuke for tendon, Godaime Hanayama for udon, or a local izakaya near Nihombashi."]
+          ["Morning", "In-room breakfast 5:30am. Optional hotel gym 7–7:30am (gym closed Sundays — use today). Walk to Imperial Palace / Tokyo Station tour meeting point 8–8:45am."],
+          ["Tour", "E-Bike Tokyo BOOKED. 9am–noon. Imperial Palace, Yanaka old town, Asakusa area."],
+          ["Midday", "Big lunch on Marunouchi Naka-dori — heaviest meal of the day post-tour."],
+          ["Afternoon", "Ginza high-end barber/grooming 2–3:30pm. Levi's Ginza flagship custom jeans fitting 4–5:30pm."],
+          ["Dinner", "Yurakucho Gado-shita yakitori, 10 min walk south. Under elevated Yamanote Line tracks. Tsukune, thigh, leek, liver, skin. Cold Kirin. ¥3,000–4,000."]
         ],
         ops: [
-          { time: "9:30a", title: "Nihombashi coffee + walk", place: "coredo", detail: "Soft start near base.", transport: "Walk" },
-          { time: "11:30a", title: "HIRO GINZA barber", place: "hiro-ginza", detail: "High-end grooming appointment.", transport: "1-2 mi / 10-15 min taxi or metro" },
-          { time: "2:00p", title: "Betty Smith GINZA", place: "betty-ginza", detail: "Custom denim / jeans appointment.", transport: "Walk from Ginza barber area" },
-          { time: "6:30p", title: "Tendon or wide-udon dinner", place: "kaneko", detail: "Kaneko Hannosuke if you want tendon; Godaime Hanayama if you want wide udon.", transport: "Taxi or metro back toward Nihombashi" }
+          { time: "5:30a", title: "In-room breakfast", place: "stay-nihombashi", detail: "Kitchen: eggs + yogurt + protein.", transport: "In-room" },
+          { time: "8:00a", title: "Walk to tour meeting point", place: "stay-nihombashi", detail: "Near Imperial Palace / Tokyo Station area.", transport: "Walk 8–10 min" },
+          { time: "9:00a", title: "E-Bike Tokyo Tour", place: "stay-nihombashi", detail: "BOOKED. Imperial Palace, Yanaka old town, Asakusa area. 3 hours.", transport: "E-bike" },
+          { time: "12:00p", title: "Big lunch — Marunouchi Naka-dori", place: "ginza", detail: "Heaviest meal of day post-tour.", transport: "Walk/taxi" },
+          { time: "2:00p", title: "Ginza barber / grooming", place: "hiro-ginza", detail: "Ginza Takagi or Nakamura Shoten. Book in advance. 🟠 BOOK SOON.", transport: "Walk in Ginza" },
+          { time: "4:00p", title: "Levi's Ginza — custom jeans fitting", place: "betty-ginza", detail: "Levi's Ginza flagship, 6-9-5 Ginza, Chuo-ku. Custom fit, ships to US ~2 weeks.", transport: "Walk in Ginza" },
+          { time: "7:00p", title: "Yurakucho Gado-shita Yakitori", place: "ginza", detail: "10 min walk south from Ginza. Under elevated Yamanote Line tracks near Yurakucho Station. Tsukune, thigh, leek, liver, skin. Cold Kirin. ¥3,000–4,000. Salaryman crowd, zero tourists.", transport: "10 min walk" }
         ]
       },
       {
         day: "Sun Oct 18",
-        title: "Sunday dessert + shopping systems prep",
+        title: "Shinjuku Food Tour + Kakigori ✅ BOOKED",
         group: "tokyo",
-        transfer: "Local / tactical",
-        base: "Marunouchi, night 3 of 3",
-        focus: "Make Sunday useful without pretending serious manufacturer access is easy on a weekend: dessert, light Ginza/Nihombashi movement, shopping/shipping setup, and Monday innovation prep.",
-        markers: ["stay-nihombashi", "tsuruya-nihombashi", "ginza", "shiseido-parlour", "kaneko"],
-        embeddedPlan: "sunday",
+        transfer: "Tokyo Metro Marunouchi Line",
+        base: "Oakwood Premier Tokyo, night 3 of 8",
+        focus: "HARD RULE: Dinner 5:30pm. Room by 7pm. Asleep by 9pm. 5:15am wake Monday for Kyoto. Non-negotiable.",
+        markers: ["stay-nihombashi", "ginza"],
         activities: [
-          ["Best use", "Treat Sunday as the day to recover, see Tokyo locally, and prepare Monday's serious access. Do not make it a museum day."],
-          ["Dessert", "Tsuruya Yoshinobu Tokyo Mise for wagashi near the base, or Shiseido Parlour/Ginza West if you want a classic Ginza dessert room."],
-          ["Shopping setup", "Build the personal-shopping list, baggage plan, tax-free passport workflow, and ship-home estimate before you buy anything bulky."],
-          ["Innovation prep", "Finalize the spec packet for Anritsu/Ishida/Yamato questions and confirm the Monday destination before the evening Hakone car day."]
+          ["Morning", "In-room breakfast 5:30am. Imperial Palace east garden moat loop 8:30–9:15am — 35 min flat walk from hotel."],
+          ["Transit", "Tokyo Metro Marunouchi Line → Shinjuku. 15 min, ¥200. Depart ~10:30am."],
+          ["Tour", "Shinjuku Authentic Food Tour BOOKED — 11:30am–2pm. Multi-bite eating across izakayas, standing counters, stalls."],
+          ["Afternoon", "Kakigori Ryan 2:30–3:15pm — 1-5 Yotsuya, near Yotsuya-Sanchome Station. Shaved ice experience."],
+          ["HARD RULE", "5:30pm light dinner in-room or nearby. 9:00pm SLEEP. Non-negotiable — 5:15am wake for Kyoto Monday."]
         ],
         ops: [
-          { time: "10:00a", title: "Sleep / laundry / shopping list", place: "stay-nihombashi", detail: "Build the personal-shopping and ship-home list before buying bulky things.", transport: "Stay local" },
-          { time: "11:30a", title: "Wagashi near the base", place: "tsuruya-nihombashi", detail: "Tsuruya Yoshinobu Tokyo Mise: calm, route-friendly Kyoto-style sweets inside COREDO Muromachi.", transport: "Walk 5-12 min from Nihombashi stay" },
-          { time: "1:00p", title: "Local lunch", place: "kaneko", detail: "Easy tendon or local lunch. Keep it close so the afternoon remains flexible.", transport: "Walk" },
-          { time: "2:30p", title: "Ginza spillover / shopping scout", place: "ginza", detail: "Use this for missed Betty/HIRO spillover, light shopping, or price-checking small personal items.", transport: "1-2 mi / 10-15 min taxi or metro" },
-          { time: "4:00p", title: "Classic dessert room", place: "shiseido-parlour", detail: "Shiseido Parlour if you want the old-school Ginza dessert experience; skip if energy drops.", transport: "Walk/taxi in Ginza" },
-          { time: "5:30p", title: "Monday access confirmation", place: "stay-nihombashi", detail: "Confirm Monday access choice, private car pickup, Hakone late check-in, and Asahi Factory reservation status.", transport: "Short taxi/metro back" }
+          { time: "5:30a", title: "In-room breakfast", place: "stay-nihombashi", detail: "Eggs + yogurt + protein.", transport: "In-room" },
+          { time: "8:30a", title: "Imperial Palace east garden moat loop", place: "stay-nihombashi", detail: "35 min flat walk. Partial loop east side only.", transport: "Walk from hotel" },
+          { time: "10:30a", title: "Transit to Shinjuku", place: "stay-nihombashi", detail: "Tokyo Metro Marunouchi Line → Shinjuku. 15 min, ¥200.", transport: "15 min metro" },
+          { time: "11:30a", title: "Shinjuku Authentic Food Tour", place: "ginza", detail: "BOOKED. Multi-bite eating across izakayas, standing counters, stalls. Through 2pm.", transport: "Walk in Shinjuku" },
+          { time: "2:30p", title: "Kakigori Ryan", place: "ginza", detail: "1-5 Yotsuya, near Yotsuya-Sanchome Station. Shaved ice — not dessert, an experience.", transport: "15 min walk/metro" },
+          { time: "3:30p", title: "Transit back to Oakwood", place: "stay-nihombashi", detail: "15 min back to hotel.", transport: "Metro 15 min" },
+          { time: "5:30p", title: "Light dinner — in-room or nearby", place: "stay-nihombashi", detail: "Protein only. HARD RULE: room by 7pm, sleep by 9pm.", transport: "In-room or walk" }
         ]
       },
       {
-        day: "Mon Oct 19",
-        title: "Weekday innovation access — Tsukuba or Atsugi",
+        day: "Mon Oct 20",
+        title: "Kyoto Full-Day Bike Tour + Shoraian Kaiseki 🔴 BOOK NOW",
         group: "private",
-        transfer: "Metro / Tsukuba Express",
-        base: "Marunouchi, night 4 of 7",
-        focus: "Best weekday for manufacturer or R&D access. Day trip to Tsukuba or Atsugi; stay in Tokyo.",
-        markers: ["nihombashi", "akihabara", "cyberdyne", "aist", "science-tour"],
+        transfer: "Nozomi Shinkansen",
+        base: "Oakwood Premier Tokyo, night 4 of 8",
+        focus: "5:15am wake. Nozomi to Kyoto 6:20am. Full-day bike tour Fushimi Inari → Arashiyama. Shoraian kaiseki 12:30pm. Return Tokyo 8:30pm.",
+        markers: ["stay-nihombashi", "nrt"],
         activities: [
-          ["Decision rule", "Choose the route with the stronger confirmed access by 2-4 weeks out. If neither confirms, keep as a Tokyo deep-dive day."],
-          ["Rule", "Return to Nihombashi by 6-7 PM; no overnight transfer."]
-        ],
-        routeOptions: [
-          {
-            title: "Route A: Tsukuba applied R&D",
-            kicker: "Best if custom access confirms",
-            body: "Nihombashi → Akihabara → Tsukuba Express → CYBERDYNE or AIST (~10:45 AM) → Science Tour / Startup Park → back to Nihombashi by 5 PM.",
-            detail: "Use this if you get guided/demo access, a custom Science Tour route, or a Startup Park event. Skip if it is only public exhibits."
-          },
-          {
-            title: "Route B: Anritsu / Atsugi procurement",
-            kicker: "Strongest if buying problem is primary",
-            body: "Nihombashi after rush → Atsugi / Anritsu Infivis late morning → product-inspection demo or sales-engineer meeting → return Tokyo by late afternoon.",
-            detail: "Use only if Anritsu confirms a real demo or procurement conversation."
-          },
-          {
-            title: "Route C: Tokyo food-automation backup",
-            kicker: "If Tsukuba and Anritsu fall through",
-            body: "Connected Robotics or Yokohama operator contact in greater Tokyo. Tsukiji market deep-dive or Kappabashi equipment sourcing.",
-            detail: "Keep the day productive locally rather than burning a day trip for a brochure visit."
-          }
+          ["Wake", "5:15am wake. Greek yogurt + nuts + protein drink. Pack bag."],
+          ["Shinkansen out", "Depart Oakwood 6am. Walk underground to Tokyo Station. Nozomi at 6:20am → Kyoto 8:35am. ¥14,170 reserved seat. Book via Smart EX app."],
+          ["Bike tour", "Baja Bikes Full-Day Kyoto — 9am, 8.5 hours. Fushimi Inari, Tofukuji, Gion, Philosopher's Path, Nanzenji, Arashiyama Bamboo Forest, Kinkakuji. ¥25,000/person. 🔴 BOOK NOW — Oct fills 6–8 weeks out."],
+          ["Kaiseki", "Shoraian Arashiyama 12:30–1:30pm — SHORYU course ¥6,900. Former PM's retreat. Tofu kaiseki: yuba shabu-shabu, fresh tofu, wagyu fillet, rice, pickles, dessert. 🔴 RESERVE NOW."],
+          ["Return", "Nozomi 6:15pm Kyoto → Tokyo. Arrive 8:30pm. Walk underground to Oakwood."]
         ],
         ops: [
-          { time: "9:15a", title: "Akihabara / Tsukuba Express", place: "akihabara", detail: "Leave after rush; no luggage.", transport: "36-45 mi / 58-72 km, 70-90 min to Tsukuba stops" },
-          { time: "10:45a", title: "CYBERDYNE / AIST target", place: "cyberdyne", detail: "HAL/cybernics demo or AIST-Cube depending confirmed slot.", transport: "Tsukuba Express + short taxi" },
-          { time: "1:30p", title: "AIST / Science Tour route", place: "aist", detail: "Industrial R&D / applied technology; custom route if arranged.", transport: "Taxi inside Tsukuba" },
-          { time: "4:30p", title: "Return to Nihombashi", place: "stay-nihombashi", detail: "Dinner near base; early night.", transport: "70-90 min back from Tsukuba" }
+          { time: "5:15a", title: "Wake + protein breakfast", place: "stay-nihombashi", detail: "Greek yogurt + nuts + protein drink. Pack bag.", transport: "In-room" },
+          { time: "6:00a", title: "Depart Oakwood", place: "stay-nihombashi", detail: "Walk underground to Tokyo Station.", transport: "Walk underground" },
+          { time: "6:20a", title: "Nozomi Shinkansen — Tokyo → Kyoto", place: "stay-nihombashi", detail: "2h 15min. ¥14,170 reserved seat. Book via Smart EX app (smartex.jp). NOT covered by JR Pass. Window seat D or E row — Mt Fuji ~35 min in.", transport: "2h 15min" },
+          { time: "8:35a", title: "Arrive Kyoto Station", place: "nrt", detail: "Shinkansen exit → Central Gate, ground floor. Walk 5–10 min to bike tour meeting point.", transport: "Walk" },
+          { time: "9:00a", title: "Full-Day Kyoto Bike Tour", place: "nrt", detail: "Baja Bikes — Fushimi Inari, Tofukuji, Gion, Philosopher's Path, Nanzenji, Arashiyama, Kinkakuji. ¥25,000/person. 🔴 BOOK: bajabikes.eu/en/kyoto-bike-tour", transport: "E-bike" },
+          { time: "12:30p", title: "Shoraian — Tofu Kaiseki Lunch", place: "nrt", detail: "Former PM's retreat, Arashiyama. SHORYU course ¥6,900. 🔴 RESERVE: Klook or +81-75-861-0123. Request Mon 12:30pm slot.", transport: "15 min riverside walk from Bamboo Forest" },
+          { time: "5:45p", title: "Return to Kyoto Station", place: "nrt", detail: "Kyoto Station basement convenience store — protein snack before boarding.", transport: "10 min walk/taxi" },
+          { time: "6:15p", title: "Nozomi — Kyoto → Tokyo", place: "nrt", detail: "Arrives Tokyo Station ~8:30pm. Book return via Smart EX same session as outbound.", transport: "~2h 15min" },
+          { time: "8:30p", title: "Arrive Tokyo Station → Oakwood", place: "stay-nihombashi", detail: "Walk underground directly to Oakwood.", transport: "Walk underground" }
         ]
       },
       {
-        day: "Tue Oct 20",
-        title: "Tokyo day trip — Yokohama or Nihombashi local deep-dive",
+        day: "Tue Oct 21",
+        title: "Kamakura + Enoshima Island",
         group: "tokyo",
-        transfer: "Tokaido Line or metro",
-        base: "Marunouchi, night 5 of 7",
-        focus: "Weekday. Day trip to Yokohama, or Tsukiji / Nihombashi local deep-dive.",
-        markers: ["nihombashi", "tsukiji", "ginza"],
+        transfer: "JR Yokosuka Line",
+        base: "Oakwood Premier Tokyo, night 5 of 8",
+        focus: "Depart 9:45am. Kita-Kamakura → Daibutsu trail → Great Buddha → Enoshima sea caves. Back by 6:30pm.",
+        markers: ["stay-nihombashi", "nrt"],
         activities: [
-          ["Option A", "Yokohama: 32 min on Tokaido Line — Chinatown food production context, Minato Mirai, Noge izakaya district."],
-          ["Option B", "Tsukiji outer market deep-dive (go before 9 AM) + Kappabashi kitchenware district."],
-          ["Option C", "Nihombashi/Ginza local — COREDO Muromachi, Mitsukoshi basement, Haibara washi paper, Itoya stationery."]
+          ["Transit", "9:45am depart Oakwood underground to Tokyo Station. JR Yokosuka Line → Kita-Kamakura. ~55 min, ¥1,040. Platforms 1–4, underground."],
+          ["Kamakura", "Engakuji Temple → Jochiji Temple → Daibutsu Hiking Trail (2.7km wooded ridge) → lunch (shirasu-don) → Kotoku-in Great Buddha → Hasedera Temple."],
+          ["Enoshima", "Enoden tram Hase → Enoshima. Enoshima Shrine → Iwaya Sea Caves at south tip. Two connected Pacific sea caves with lanterns."],
+          ["Return", "Enoshima Station (Odakyu) → Fujisawa → Shinjuku. ~70 min. Back at Oakwood by 6:30pm."]
         ],
         ops: [
-          { time: "8:00a", title: "Tsukiji Outer Market", place: "tsukiji", detail: "Arrive before 9 AM; most stalls close by 10-11 AM. Tuna-don or tamagoyaki.", transport: "12 min walk/taxi from Nihombashi" },
-          { time: "11:00a", title: "Kappabashi kitchenware district", place: "nihombashi", detail: "Professional kitchen tools, knives, lacquerware, plastic food models.", transport: "Metro to Tawaramachi, 20 min" },
-          { time: "2:00p", title: "Yokohama option", place: "nihombashi", detail: "If skipping Kappabashi: 32 min Tokaido Line to Yokohama — Chinatown, Noge, Minato Mirai.", transport: "32 min from Tokyo Station" },
-          { time: "6:30p", title: "Dinner near Nihombashi", place: "stay-nihombashi", detail: "Ningyocho food street or COREDO food hall.", transport: "Walk" }
+          { time: "5:30a", title: "In-room breakfast", place: "stay-nihombashi", detail: "Kitchen breakfast.", transport: "In-room" },
+          { time: "9:45a", title: "Depart Oakwood", place: "stay-nihombashi", detail: "Underground to Tokyo Station.", transport: "Walk underground" },
+          { time: "10:00a", title: "JR Yokosuka Line → Kita-Kamakura", place: "nrt", detail: "Platforms 1–4, underground. Direct. ~55 min, ¥1,040. Suica IC.", transport: "55 min" },
+          { time: "10:55a", title: "Engakuji Temple", place: "nrt", detail: "2 min from Kita-Kamakura station. Finest Rinzai Zen temple in Kamakura. ¥500.", transport: "2 min walk" },
+          { time: "11:25a", title: "Jochiji Temple + Daibutsu Hiking Trail", place: "nrt", detail: "5 min walk to Jochiji. Trailhead 5 min from Jochiji. 2.7km wooded ridge to Great Buddha. ~50 min. Download AllTrails offline.", transport: "Hike 2.7km" },
+          { time: "12:45p", title: "Lunch near Hase — shirasu-don", place: "nrt", detail: "Whitebait rice bowl — Kamakura local catch from Sagami Bay. Light, protein-rich. ¥1,200–1,800.", transport: "Walk" },
+          { time: "1:30p", title: "Kotoku-in — Great Buddha", place: "nrt", detail: "13m bronze Amida, 1252 AD. ¥500. Enter hollow interior: ¥50 extra.", transport: "Walk" },
+          { time: "2:00p", title: "Hasedera Temple", place: "nrt", detail: "Hillside gardens, Pacific views, eleven-headed Kannon. ¥400.", transport: "Walk" },
+          { time: "2:50p", title: "Enoden tram: Hase → Enoshima", place: "nrt", detail: "25 min, ¥260. Buy Enoshima 1-Day Pass ¥1,100 at station.", transport: "Enoden tram" },
+          { time: "3:20p", title: "Enoshima Shrine + Sea Caves", place: "nrt", detail: "Enoshima Shrine → Iwaya Caves at south tip. Two connected Pacific sea caves, lanterns provided.", transport: "Walk island" },
+          { time: "5:00p", title: "Transit back to Tokyo", place: "nrt", detail: "Enoshima Station (Odakyu Line) → Fujisawa → Shinjuku. ~70 min. Arrive ~6:15pm.", transport: "~70 min" },
+          { time: "6:30p", title: "Back at Oakwood", place: "stay-nihombashi", detail: "Taxi or Metro from Shinjuku. Light dinner near hotel.", transport: "Taxi/metro 15 min" }
         ]
       },
       {
-        day: "Wed Oct 21",
-        title: "Tokyo craft + neighborhood walk",
-        group: "tokyo",
-        transfer: "Metro local",
-        base: "Marunouchi, night 6 of 7",
-        focus: "Weekday. Shimokitazawa/Koenji vintage and craft, or Yanaka neighborhood walk.",
-        markers: ["nihombashi", "yanaka", "ginza"],
-        activities: [
-          ["Option A", "Yanaka/Nezu/Sendagi walk: old Tokyo shitamachi, artisan shops, cats, Yanaka Cemetery, Yanaka Ginza food street."],
-          ["Option B", "Shimokitazawa + Koenji: vintage, indie music, craft — Tokyo's counterculture on a quiet Wednesday."],
-          ["Option C", "Daikanyama T-Site + Nakameguro canal walk + craft coffee roasters (Onibus, Switch)."]
-        ],
-        ops: [
-          { time: "10:00a", title: "Yanaka neighborhood", place: "nihombashi", detail: "Metro to Nishi-Nippori or Nezu. Old Tokyo, Yanaka Ginza, cemetery walk.", transport: "20 min metro from Nihombashi" },
-          { time: "1:00p", title: "Lunch: Yanaka craft food", place: "nihombashi", detail: "Local soba or kushiage on Yanaka Ginza street.", transport: "Walk" },
-          { time: "3:00p", title: "Daikanyama option", place: "nihombashi", detail: "T-Site bookstore + Nakameguro canal for evening walk.", transport: "25 min metro" },
-          { time: "6:30p", title: "Return dinner", place: "stay-nihombashi", detail: "Easy Nihombashi dinner; pack light for Hakone tomorrow.", transport: "Metro back" }
-        ]
-      },
-      {
-        day: "Thu Oct 22",
-        title: "Last full Tokyo day — Nihombashi/Ginza errands + pack",
-        group: "tokyo",
-        transfer: "Walk/taxi local",
-        base: "Marunouchi, night 7 of 7",
-        focus: "Last full Tokyo day. Collect final purchases, tax-free passport processing, ship-home logistics, Nihombashi/Ginza final run.",
-        markers: ["nihombashi", "ginza", "stay-nihombashi"],
-        activities: [
-          ["Morning", "COREDO Muromachi final items + tax-free processing at Mitsukoshi Nihombashi."],
-          ["Afternoon", "Ginza: Dover Street Market, Itoya stationery, Isetan food hall final treats."],
-          ["Packing", "Pack bags for Hakone tomorrow. Leave only carry-on for Hakone night — store main luggage at hotel."]
-        ],
-        ops: [
-          { time: "10:00a", title: "COREDO + Mitsukoshi tax-free", place: "nihombashi", detail: "Tax-free passport processing, final food hall run.", transport: "Walk from base" },
-          { time: "1:00p", title: "Ginza final round", place: "ginza", detail: "Dover Street Market, Itoya, Ginza Six basement.", transport: "10 min walk/taxi" },
-          { time: "4:00p", title: "Pack + luggage plan", place: "stay-nihombashi", detail: "Store main luggage at hotel; pack Hakone overnight bag only.", transport: "Base" },
-          { time: "7:00p", title: "Final Nihombashi dinner", place: "stay-nihombashi", detail: "Ningyocho Imahan sukiyaki or easy local option.", transport: "Walk" }
-        ]
-      },
-      {
-        day: "Fri Oct 23",
-        title: "Hakone day — Romancecar + Open-Air Museum + onsen",
+        day: "Wed Oct 22",
+        title: "Mt Mitake + Tama River Gorge + Yurakucho Dinner",
         group: "nature",
-        transfer: "Romancecar or private car",
-        base: "Hakone / Gora, 1 night",
-        focus: "Leave Tokyo after rush hour (~9:30-10 AM). Arrive Gora ~noon. Full afternoon in Hakone. 1 night.",
-        markers: ["gora", "mountain-ripper", "open-air", "lake-ashi", "stay-hakone"],
+        transfer: "JR Chuo Line Rapid",
+        base: "Oakwood Premier Tokyo, night 6 of 8",
+        focus: "JR Chuo Line rapid → Ome → cable car → Musashi-Mitake-jinja summit. Rock Garden trail. Yurakucho yakitori dinner.",
+        markers: ["stay-nihombashi", "ginza"],
         activities: [
-          ["Transfer", "Romancecar from Shinjuku (85 min) or private car from Nihombashi (90-105 min). Depart 9:30-10 AM."],
-          ["Afternoon", "Hakone Open-Air Museum, Mountain Ripper e-MTB if timing allows, or Lake Ashi ropeway."],
-          ["Evening", "Rotenburo onsen at hotel. Dinner in Gora (Tamura Ginkatsu-tei or hotel kaiseki)."],
-          ["Rule", "Transit tax calculated from Gora base, not Nihombashi."]
+          ["Transit", "9:45am depart Oakwood. JR Chuo Line Rapid Tokyo → Ome (~80 min, ¥770). Transfer to Ome Line → Mitake Station (15 min). Total: ~95 min."],
+          ["Mountain", "Bus to cable car base → Mitake Cable Car (10 min, ¥1,130 RT) → Musashi-Mitake-jinja summit (2,000+ yrs old, wolf guardian statues). Lunch at summit village."],
+          ["Trail", "Rock Garden + Ayahiro-no-taki Waterfall trail — 30–40 min loop. Moss boulders, forest streams, early autumn color."],
+          ["Gorge", "Tama River gorge walk — flat trail along crystal-clear river from Mitake Station."],
+          ["Dinner", "Yurakucho Gado-shita Yakitori 7–9pm. Second visit — same great spot. Best ¥3,500 dinner in Tokyo."]
         ],
         ops: [
-          { time: "9:30a", title: "Depart Tokyo", place: "stay-nihombashi", detail: "After rush hour. Romancecar from Shinjuku recommended — book seat in advance.", transport: "Romancecar: 85 min to Hakone-Yumoto, then local train to Gora" },
-          { time: "12:00p", title: "Arrive Gora / check in", place: "stay-hakone", detail: "Drop bags, light lunch near station.", transport: "Local taxi/walk" },
-          { time: "1:30p", title: "Hakone Open-Air Museum", place: "open-air", detail: "Outdoor sculpture + Picasso ceramics. All-weather.", transport: "2 stops on Hakone Tozan Railway from Gora" },
-          { time: "4:30p", title: "Mountain Ripper or Lake Ashi", place: "mountain-ripper", detail: "E-MTB if Mountain Ripper has late afternoon slot; otherwise ropeway/Lake Ashi.", transport: "Local taxi" },
-          { time: "7:00p", title: "Onsen + dinner", place: "stay-hakone", detail: "Rotenburo at hotel. Dinner at Tamura Ginkatsu-tei or hotel kaiseki.", transport: "Walk" }
+          { time: "5:30a", title: "In-room breakfast", place: "stay-nihombashi", detail: "Kitchen breakfast.", transport: "In-room" },
+          { time: "9:45a", title: "Depart Oakwood underground", place: "stay-nihombashi", detail: "Walk underground to Tokyo Station.", transport: "Walk underground" },
+          { time: "10:00a", title: "JR Chuo Line Rapid → Ome", place: "ginza", detail: "~80 min, ¥770. Transfer at Ome Station: JR Ome Line local → Mitake. 15 min, ¥200.", transport: "~95 min total, ¥970" },
+          { time: "11:35a", title: "Bus to cable car + Mitake Cable Car", place: "ginza", detail: "Bus ¥270 timed to train → cable car 10 min ¥1,130 RT.", transport: "Bus + cable car" },
+          { time: "11:55a", title: "Musashi-Mitake-jinja Shrine", place: "ginza", detail: "Summit. 2,000+ years old. Wolf guardian statues — Japan's only wolf deity mountain shrine.", transport: "Walk summit" },
+          { time: "12:45p", title: "Lunch — summit village soba", place: "ginza", detail: "Small soba restaurants and cafes run by permanent residents.", transport: "Walk" },
+          { time: "1:30p", title: "Rock Garden + Waterfall trail", place: "ginza", detail: "Ayahiro-no-taki Waterfall. 30–40 min loop. Moss boulders, forest streams, early autumn color.", transport: "Trail" },
+          { time: "2:45p", title: "Cable car down + Tama River gorge walk", place: "ginza", detail: "Flat trail along crystal-clear river from Mitake Station.", transport: "Walk" },
+          { time: "3:30p", title: "JR Ome Line → Ome → JR Chuo → Shinjuku", place: "ginza", detail: "~95 min. Counter-rush direction — comfortable.", transport: "~95 min" },
+          { time: "7:00p", title: "Yurakucho Gado-shita Yakitori", place: "ginza", detail: "10 min walk south. Under elevated Yamanote tracks. Weeknight salarymen. Best ¥3,500 dinner in Tokyo.", transport: "10 min walk" }
         ]
       },
       {
-        day: "Sat Oct 24",
-        title: "Hakone morning + return to Tokyo afternoon",
-        group: "private",
-        transfer: "Romancecar or private car back",
-        base: "Marunouchi (return by 4-5 PM)",
-        focus: "Onsen morning in Hakone. Return to Tokyo mid-afternoon. Light evening in Nihombashi.",
-        markers: ["gora", "lake-ashi", "nihombashi", "stay-nihombashi"],
-        activities: [
-          ["Morning", "1 activity max: Hakone Ropeway (if Fuji is visible) or slow onsen. Nothing that runs past noon."],
-          ["Transfer", "Return to Tokyo by Romancecar or private car. Target Nihombashi arrival 4-5 PM."],
-          ["Evening", "Flag anything requiring transit as NOT RECOMMENDED. Easy walk-to-dinner only."]
-        ],
-        ops: [
-          { time: "8:00a", title: "Morning onsen", place: "stay-hakone", detail: "Final rotenburo before checkout. Do not over-schedule.", transport: "Hotel" },
-          { time: "10:00a", title: "Hakone Ropeway or slow walk", place: "lake-ashi", detail: "Only if Fuji is clear. Must finish by 11:30 AM.", transport: "Local taxi/train" },
-          { time: "12:00p", title: "Checkout + depart Hakone", place: "gora", detail: "Romancecar from Hakone-Yumoto or private car.", transport: "85-105 min to Nihombashi" },
-          { time: "4:30p", title: "Arrive Nihombashi", place: "stay-nihombashi", detail: "Drop bags. Light evening — walk-only dining.", transport: "Door-to-door" },
-          { time: "7:00p", title: "Easy local dinner", place: "stay-nihombashi", detail: "Nihombashi or Ginza walk-to restaurant only. No metro.", transport: "Walk" }
-        ]
-      },
-      {
-        day: "Sun Oct 25",
-        title: "JL62 NRT to LAX",
+        day: "Thu Oct 23",
+        title: "Sumo + Tsukiji + Chinzanso + Hamarikyu + Venture Café",
         group: "tokyo",
-        transfer: "Airport transfer",
-        base: "Departure",
-        focus: "Depart NRT 5:05 PM on Japan Airlines JL62. Arrive LAX 10:40 AM same day.",
-        markers: ["nihombashi", "nrt"],
+        transfer: "Walk / taxi",
+        base: "Oakwood Premier Tokyo, night 7 of 8",
+        focus: "Last full Tokyo base day. Sumo practice 7:30am → Tsukiji 9:30am → Chinzanso tea 12:30pm → Hamarikyu 2pm → pack for Hakone → Venture Café 5pm.",
+        markers: ["stay-nihombashi", "tsukiji", "ginza"],
         activities: [
-          ["Timing", "Aim to reach NRT by about 2:00 PM for a calm business-class departure."],
-          ["Flight", "JL62 business class, Boeing 787-9 Dreamliner, 9h 35m."],
-          ["Rule", "No meaningful sightseeing on departure day."]
+          ["Sumo", "7am depart on foot. Arashio Beya 2-47-2 Nihonbashi Hamacho — 7:30–9:00am. FREE. Street window. Silence required. Photos OK from outside."],
+          ["Tsukiji", "9:30–11:30am. Sushi counter breakfast (¥3,000–5,000) + professional knife shops (Aritsugu or Yamawaki) + Namiyoke Inari Shrine."],
+          ["Tea ceremony", "Chinzanso 12–12:30pm garden walk. Zangetsu tea ceremony 12:30–1:30pm. ¥90,000/1–3 people. 🔴 RESERVE 10 days minimum advance."],
+          ["Hamarikyu", "¥300. Former Tokugawa tidal garden. Seawater tidal pond, island teahouse matcha."],
+          ["Hakone prep", "Pack Hakone overnight bag 3:45–4:30pm. Main luggage stored with hotel concierge."],
+          ["Venture Café", "5pm–9pm, Toranomon Hills Business Tower 15F. FREE. Weekly innovation event. Founders, VCs, foodtech, automation hardware."]
         ],
         ops: [
-          { time: "12:15p", title: "Leave Nihombashi", place: "stay-nihombashi", detail: "Use NEX from Tokyo Station or private car.", transport: "Nihombashi -> NRT about 42 mi / 68 km" },
-          { time: "2:00p", title: "Arrive NRT", place: "nrt", detail: "Business-class check-in/security with plenty of margin.", transport: "NEX/taxi-car" },
-          { time: "5:05p", title: "Depart NRT", place: "nrt", detail: "JL62 to LAX.", transport: "Flight: 9h 35m" }
+          { time: "5:30a", title: "In-room breakfast", place: "stay-nihombashi", detail: "Last in-room breakfast of Tokyo base.", transport: "In-room" },
+          { time: "7:00a", title: "Walk to Arashio Beya", place: "stay-nihombashi", detail: "15 min walk south.", transport: "Walk 15 min" },
+          { time: "7:30a", title: "Arashio Beya — Sumo Morning Practice", place: "tsukiji", detail: "2-47-2 Nihonbashi Hamacho, Chuo-ku. FREE. Street window. Silence required. 7:30–9:00am.", transport: "On foot" },
+          { time: "9:10a", title: "Tsukiji Outer Market", place: "tsukiji", detail: "Sushi/uni counter breakfast + Aritsugu knife shop + Namiyoke Inari Shrine. Shops close 1–2pm — morning essential.", transport: "20 min walk or ¥700 taxi" },
+          { time: "11:30a", title: "Taxi to Hotel Chinzanso", place: "ginza", detail: "~¥1,200, 20 min.", transport: "Taxi 20 min" },
+          { time: "12:00p", title: "Chinzanso garden walk", place: "ginza", detail: "150-year-old private garden. Pagoda, sacred camphor tree. Early autumn foliage.", transport: "Walk" },
+          { time: "12:30p", title: "Zangetsu Tea Ceremony", place: "ginza", detail: "1919 tea house, Important Cultural Property. Omotesenke matcha. English-speaking tea master. ¥90,000/1–3 people. White socks required. 🔴 RESERVE: hotel-chinzanso-tokyo.com", transport: "In-house" },
+          { time: "1:30p", title: "Taxi to Hamarikyu", place: "ginza", detail: "~¥1,500, 15 min.", transport: "Taxi 15 min" },
+          { time: "2:00p", title: "Hamarikyu Gardens", place: "ginza", detail: "¥300. Former Tokugawa tidal garden. Island teahouse matcha + wagashi ¥700. Ancient black pines.", transport: "Walk" },
+          { time: "3:30p", title: "Taxi back to Oakwood", place: "stay-nihombashi", detail: "10 min.", transport: "Taxi 10 min" },
+          { time: "3:45p", title: "Pack Hakone overnight bag", place: "stay-nihombashi", detail: "Leave main luggage with hotel concierge (free storage).", transport: "In-room" },
+          { time: "4:45p", title: "Walk to Toranomon", place: "stay-nihombashi", detail: "15 min southwest.", transport: "Walk 15 min" },
+          { time: "5:00p", title: "Venture Café Tokyo — Thursday Gathering", place: "ginza", detail: "Toranomon Hills Business Tower, 1-17-1 Toranomon, 15F. FREE, open to all. Tokyo's weekly innovation event — founders, VCs, foodtech, automation hardware. English widely spoken.", transport: "In venue" }
+        ]
+      },
+      {
+        day: "Fri Oct 24",
+        title: "Tokyo → Gora (Hakone) + Mountain Ripper Bike Tour",
+        group: "nature",
+        transfer: "Odakyu Romance Car → Hakone Tozan Railway",
+        base: "Tensui Saryo, Gora — check-in 5pm",
+        focus: "Depart 9:45am. Shinjuku → Romance Car → Gora 12:40pm. Mountain Ripper MTB 1:30–4:30pm. Check in Tensui Saryo. 11-course kaiseki dinner.",
+        markers: ["stay-nihombashi", "stay-hakone", "mountain-ripper"],
+        activities: [
+          ["Transit", "Taxi Oakwood → Shinjuku Station (~¥1,200, 15 min). Buy Hakone Freepass 2-day ¥7,100 at Odakyu counter + Romance Car seat ¥1,200. Romance Car departs 10:30am."],
+          ["Arrival", "Arrive Hakone-Yumoto 11:55am. Hakone Tozan Railway → Gora 12:40pm. 3 min walk to Tensui Saryo. Drop bags."],
+          ["Mountain Ripper", "1:30–4:30pm. Hakone Visitor Center, Sengokuhara. 3 hours, 17km MTB. Hidden trails, volcanic plateau, autumn foliage. ¥15,000/person. 🔴 BOOK: mountainripper.com/en"],
+          ["Ryokan", "Check in 5pm. Notify Tensui Saryo 48hrs in advance. Private balcony onsen 5:15–6:30pm. 11-course kaiseki dinner 7pm. Evening rotenburo."]
+        ],
+        ops: [
+          { time: "5:30a", title: "In-room breakfast + collect Hakone bag", place: "stay-nihombashi", detail: "Collect Hakone overnight bag from concierge.", transport: "In-room" },
+          { time: "9:45a", title: "Taxi to Shinjuku Station", place: "stay-nihombashi", detail: "Taxi to Shinjuku west side. ~¥1,200, 15 min.", transport: "Taxi 15 min" },
+          { time: "10:00a", title: "Buy Hakone Freepass + Romance Car seat", place: "stay-nihombashi", detail: "Odakyu counter, Shinjuku. Freepass 2-day ¥7,100 + Romance Car seat ¥1,200. Covers all Hakone transport.", transport: "Odakyu counter" },
+          { time: "10:30a", title: "Romance Car departs Shinjuku", place: "stay-nihombashi", detail: "85 min through Kanagawa hills.", transport: "85 min" },
+          { time: "11:55a", title: "Arrive Hakone-Yumoto", place: "stay-hakone", detail: "Transfer to Hakone Tozan Railway.", transport: "Transfer" },
+          { time: "12:00p", title: "Hakone Tozan Railway → Gora", place: "stay-hakone", detail: "40 min rack railway. Included in Freepass.", transport: "40 min" },
+          { time: "12:40p", title: "Arrive Gora — Tensui Saryo", place: "stay-hakone", detail: "3 min walk. Drop bags (room ready 3pm, bags held). Light lunch near station.", transport: "3 min walk" },
+          { time: "1:10p", title: "Taxi: Gora → Hakone Visitor Center", place: "mountain-ripper", detail: "~15 min, ~¥1,500. Sengokuhara. Mountain Ripper meeting point.", transport: "Taxi 15 min" },
+          { time: "1:30p", title: "Mountain Ripper — Deep Forest Cruising", place: "mountain-ripper", detail: "3 hours, 17km MTB through Sengokuhara forest. ¥15,000/person. Includes bike, tea break, accident insurance. 🔴 BOOK: mountainripper.com/en", transport: "MTB" },
+          { time: "4:30p", title: "Taxi back to Tensui Saryo", place: "stay-hakone", detail: "~15 min.", transport: "Taxi 15 min" },
+          { time: "5:00p", title: "Check in — Tensui Saryo", place: "stay-hakone", detail: "1320-276 Gora, Hakone. Private balcony onsen, kaiseki dinner included. Notify 48hrs in advance.", transport: "Check-in" },
+          { time: "5:15p", title: "Private balcony onsen", place: "stay-hakone", detail: "First soak. Room's outdoor hot spring bath.", transport: "In-room" },
+          { time: "7:00p", title: "11-course Kaiseki dinner", place: "stay-hakone", detail: "Included. Multi-course formal Japanese dinner. Eat slowly.", transport: "Ryokan" },
+          { time: "9:00p", title: "Evening rotenburo", place: "stay-hakone", detail: "Communal outdoor onsen under October night sky.", transport: "Ryokan" }
+        ]
+      },
+      {
+        day: "Sat Oct 25",
+        title: "Hakone Loop → Tokyo → Fly Home",
+        group: "tokyo",
+        transfer: "Hakone Freepass → Romance Car → N'EX",
+        base: "Departure — NRT 5:05pm",
+        focus: "Check-out 10am sharp. Gora Station (3 min walk) → Ropeway → Lake Ashi boat → Hakone Shrine → return Tokyo → N'EX 2pm → JL62 5:05pm.",
+        markers: ["stay-hakone", "mountain-ripper", "lake-ashi", "stay-nihombashi", "nrt"],
+        activities: [
+          ["Morning", "Ryokan breakfast 6am. Check out 8am. Store bags at ryokan. Walk 3 min to Gora Station."],
+          ["Hakone Loop", "Gora → Sounzan Cable Car (10 min) → Hakone Ropeway over Owakudani crater (30 min, buy black eggs) → Togendai → Lake Ashi Sightseeing Boat to Moto-Hakone (30 min) → Hakone Shrine (10 min walk, floating torii) → Bus to Hakone-Yumoto."],
+          ["Return", "Romance Car Hakone-Yumoto → Shinjuku (85 min, arrives ~1:45pm). Taxi to Tokyo Station. N'EX 2–2:15pm → Narita 53 min."],
+          ["Flight", "JL62 departs NRT 5:05pm. Arrive LAX 10:40am same day."]
+        ],
+        ops: [
+          { time: "6:00a", title: "Ryokan breakfast", place: "stay-hakone", detail: "Full Japanese breakfast included. Eat well — long day ahead.", transport: "Ryokan" },
+          { time: "8:00a", title: "Check out + store bags", place: "stay-hakone", detail: "Ryokan holds bags. Arrange taxi forward from Gora in advance (~¥2,000).", transport: "Lobby" },
+          { time: "8:10a", title: "Walk to Gora Station", place: "stay-hakone", detail: "3 min walk.", transport: "Walk 3 min" },
+          { time: "8:15a", title: "Gora → Sounzan Cable Car", place: "stay-hakone", detail: "10 min. Included in Freepass.", transport: "Cable car 10 min" },
+          { time: "8:25a", title: "Sounzan → Togendai: Hakone Ropeway", place: "mountain-ripper", detail: "30 min over Owakudani active volcanic crater — steam vents, sulfur, Mt Fuji overhead on clear mornings. Buy black eggs at Owakudani midstation ¥500/5.", transport: "Ropeway 30 min" },
+          { time: "9:00a", title: "Arrive Togendai — Lake Ashi", place: "lake-ashi", detail: "Board sightseeing boat.", transport: "Walk to dock" },
+          { time: "9:10a", title: "Lake Ashi Sightseeing Boat", place: "lake-ashi", detail: "Galleon ferry to Moto-Hakone. 30 min. Included in Freepass. Mt Fuji reflection in calm morning lake.", transport: "Boat 30 min" },
+          { time: "10:00a", title: "Hakone Shrine", place: "lake-ashi", detail: "10 min walk from dock. Cedar forest approach. Floating vermillion torii gate in lake. 1,200-year-old shrine. Free admission.", transport: "Walk 10 min" },
+          { time: "10:50a", title: "Bus: Moto-Hakone → Hakone-Yumoto", place: "lake-ashi", detail: "35 min. Included in Freepass. Collect forwarded bags.", transport: "Bus 35 min" },
+          { time: "11:30a", title: "Final lunch near Hakone-Yumoto", place: "lake-ashi", detail: "Last Japanese meal. Soba or fresh seafood.", transport: "Walk" },
+          { time: "12:15p", title: "Romance Car: Hakone-Yumoto → Shinjuku", place: "stay-nihombashi", detail: "85 min. Included in Freepass + ¥1,150 reserved seat. Arrives ~1:45pm.", transport: "85 min" },
+          { time: "1:45p", title: "Arrive Shinjuku → Tokyo Station", place: "stay-nihombashi", detail: "Taxi to Tokyo Station (10 min). Pick up any stored items at Oakwood if needed.", transport: "Taxi 10 min" },
+          { time: "2:00p", title: "N'EX from Tokyo Station → Narita", place: "nrt", detail: "53 min, ¥3,070. Depart 2:00–2:15pm for 5:05pm flight. 2hr 45min at airport.", transport: "53 min" },
+          { time: "3:10p", title: "Arrive Narita Airport", place: "nrt", detail: "Check in, security, lounge.", transport: "Airport" },
+          { time: "5:05p", title: "JAL JL62 departs NRT", place: "nrt", detail: "To LAX. Arrive 10:40am same day.", transport: "Flight 9h 35m" }
         ]
       }
     ];
@@ -4552,7 +4640,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         title: "Tamura Ginkatsu-tei",
         kicker: "Must-try: tofu katsuni",
         body: "Gora’s signature tofu katsuni: tofu stuffed with minced pork, fried, simmered with egg and dashi. This is the right Hakone local meal. Cost: about ¥2,000-¥5,000 ($13-$32).",
-        detail: "How to get there: walk from Gora/Hakone Yutowa. Go early before lunch crowds.",
+        detail: "How to get there: walk from Gora/Tensui Saryo area. Go early before lunch crowds.",
         marker: "ginkatsu",
         image: image("Katsudon by coniferconifer.jpg"),
         source: "https://tabelog.com/en/kanagawa/A1410/A141001/14001492/",
