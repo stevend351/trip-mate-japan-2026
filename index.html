@@ -2526,7 +2526,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <div class="flight-anchor-row">
             <span class="flight-anchor-icon">&#9992;</span>
             <div class="flight-anchor-body">
-              <div class="flight-anchor-title">Return &mdash; JL62 &nbsp;<span class="flight-anchor-tag">Sun Oct 25</span></div>
+              <div class="flight-anchor-title">Return &mdash; JL62 &nbsp;<span class="flight-anchor-tag">Sun Oct 26</span></div>
               <div class="flight-anchor-detail">NRT 5:05 PM &rarr; LAX 10:40 AM (same day) &nbsp;&middot;&nbsp; JAL 787-9 Business &nbsp;&middot;&nbsp; 9h 35m</div>
             </div>
           </div>
@@ -2540,7 +2540,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <section class="guide" aria-label="Detailed trip guide">
         <section class="panel">
           <h2 class="panel-title">Flight + Date Anchor</h2>
-          <p class="panel-copy">One traveler. Japan Airlines business class. Confirmation hidden for public sharing. This fixes the actual Japan nights: Fri Oct 16 through Sat Oct 24, departing Sun Oct 25.</p>
+          <p class="panel-copy">One traveler. Japan Airlines business class. Confirmation hidden for public sharing. Fri Oct 16 through Sat Oct 25 at Oakwood Premier (return from Hakone). Departing Sun Oct 26.</p>
           <div class="section-grid" id="flightCards"></div>
         </section>
 
@@ -4075,7 +4075,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       },
       {
         day: "Sat Oct 25",
-        title: "Hakone Loop → Tokyo → Fly Home",
+        title: "Hakone Loop → Tokyo",
         group: "tokyo",
         transfer: "Hakone Freepass → Romance Car → N'EX",
         base: "Departure — NRT 5:05pm",
@@ -4193,7 +4193,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       },
       {
         title: "Return JL62",
-        kicker: "REDACTED / Sun Oct 25",
+        kicker: "REDACTED / Sun Oct 26",
         body: "NRT 5:05 PM to LAX 10:40 AM same day. Japan Airlines JL62, Boeing 787-9 Dreamliner, business class, 9h 35m.",
         detail: "One traveler. Confirmation hidden for public sharing. Target NRT arrival around 2:00 PM. Avoid any serious sightseeing on departure day.",
         marker: "nrt",
@@ -4316,8 +4316,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       {
         title: "Tokyo return stay — Marunouchi/Chiyoda",
         kicker: "Oct 24–25, 1 night · CONFIRMED via Expedia",
-        body: "Superior Studio, 1-8-2 Marunouchi, Chiyoda-ku, Tokyo 100-0005. Check-in Sat Oct 24 from 3:00 PM · Checkout Sun Oct 25 by 11:00 AM.",
-        detail: "Free cancellation until Oct 21 at 3:00 PM property time. Same property as main stay — easy return from Hakone. Take NEX from Tokyo Station to NRT for JL62 departing Sun Oct 25 at 5:05 PM.",
+        body: "Superior Studio, 1-8-2 Marunouchi, Chiyoda-ku, Tokyo 100-0005. Check-in Sat Oct 25 from 3:00 PM (return from Hakone) · Checkout Sun Oct 26 by 11:00 AM.",
+        detail: "Free cancellation until Oct 21 at 3:00 PM property time. Same property as main stay — easy return from Hakone. Take NEX from Tokyo Station to NRT for JL62 departing Sun Oct 26 at 5:05 PM.",
         marker: "stay-nihombashi",
         image: image("Tokyo-International-Airport T3 Departure-lobby.jpg"),
         source: "https://www.expedia.com",
@@ -5427,7 +5427,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
                 'Thu Oct 15':'oct15','Fri Oct 16':'oct16','Sat Oct 17':'oct17',
                 'Sun Oct 18':'oct18','Mon Oct 20':'oct20',
                 'Tue Oct 21':'oct21','Wed Oct 22':'oct22','Thu Oct 23':'oct23',
-                'Sat Oct 24':'oct24','Sun Oct 25':'oct25'
+                'Sat Oct 24':'oct24','Sat Oct 25':'oct25','Sun Oct 26':'oct26'
               };
               var dayKey = dayKeyMap[item.day];
               if (!dayKey) return '';
@@ -5449,7 +5449,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
                 'oct15':'Thu Oct 15','oct16':'Fri Oct 16','oct17':'Sat Oct 17',
                 'oct18':'Sun Oct 18','oct20':'Mon Oct 20',
                 'oct21':'Tue Oct 21','oct22':'Wed Oct 22','oct23':'Thu Oct 23',
-                'oct24':'Sat Oct 24','oct25':'Sun Oct 25'
+                'oct24':'Sat Oct 24','oct25':'Sat Oct 25','oct26':'Sun Oct 26'
               };
               var approvedIds = approvedDays[dayKey] || approvedDays[dayLabelMap[dayKey]];
               if (!approvedIds || !approvedIds.length) return '';
@@ -6184,7 +6184,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     // ── Tier classification ────────────────────────────────────────
     function getTier(transitMin, dayLabel) {
-      if (dayLabel === 'Sun Oct 25') return transitMin <= 45 ? 'ok' : 'blocked';
+      if (dayLabel === 'Sun Oct 26') return transitMin <= 45 ? 'ok' : 'blocked';
       if (dayLabel === 'Fri Oct 23') return 'hakone';
       if (transitMin <= 30)  return 'local';
       if (transitMin <= 120) return 'day-trip';
@@ -6567,7 +6567,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         fixed:['7:30am: Arashio Beya sumo practice (FREE)','9:30am: Tsukiji Outer Market','12:30pm: Chinzanso tea ceremony','5pm: Venture Café Toranomon (FREE)'] },
       { key:'oct24', label:'Fri Oct 24', dow:'Fri', date:'24', base:'Tensui Saryo, Gora (Hakone)',  coords:[35.2505,139.0472], halfDay:false, note:'Tokyo → Hakone + Mountain Ripper MTB + Kaiseki',
         fixed:['10:30am: Romance Car Shinjuku → Gora','1:30pm: Mountain Ripper 3hr MTB','5pm: Check-in Tensui Saryo','7pm: 11-course Kaiseki dinner'] },
-      { key:'oct25', label:'Sat Oct 25', dow:'Sat', date:'25', base:'Tokyo → NRT (depart)',        coords:[35.6846,139.7745], halfDay:true,  note:'Hakone Loop → Tokyo → Fly Home',
+      { key:'oct25', label:'Sat Oct 25', dow:'Sat', date:'25', base:'Oakwood Premier, Tokyo',      coords:[35.6846,139.7745], halfDay:false, note:'Hakone Loop → back to Tokyo, Oakwood Premier',
+      { key:'oct26', label:'Sun Oct 26', dow:'Sun', date:'26', base:'Tokyo → NRT (depart)',        coords:[35.6846,139.7745], halfDay:true,  note:'Departure — JL62 NRT 5:05pm',
         fixed:['8:15am: Gora → Ropeway → Lake Ashi Boat → Hakone Shrine','12:15pm: Romance Car → Shinjuku','2:00pm: N\'EX → Narita','5:05pm: JAL JL62 departs NRT'] },
     ];
     // Expose globally so later <script> blocks can read it without scope issues
@@ -6679,7 +6680,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         if (d.key === 'oct16') { freeStart = 17 * 60; freeEnd = 20 * 60; }
         if (d.key === 'oct22') { freeEnd   = 13 * 60; }
         if (d.key === 'oct24') { freeEnd   = 11 * 60; }
-        if (d.key === 'oct25') { freeEnd   = Math.floor(13.5 * 60); }
+        if (d.key === 'oct26') { freeEnd   = Math.floor(13.5 * 60); }
 
         const timeAvailable = freeEnd - freeStart;
         const totalEstMin = committedPlaces.reduce((sum, p, idx) =>
@@ -6899,8 +6900,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       if (!container) return;
 
       // Day names fallback
-      const dayNames = ['Thu Oct 15','Fri Oct 16','Sat Oct 17','Sun Oct 18','Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25'];
-      const dayTitles = ['Flight Day (JL61)','Arrival — Oakwood Premier','E-Bike Tokyo + Ginza','Shinjuku Food Tour + Kakigori','Kyoto Full-Day Bike Tour','Kamakura + Enoshima','Mt Mitake + Tama River','Sumo + Tsukiji + Chinzanso','Tokyo → Gora (Hakone)','Hakone Loop → Fly Home'];
+      const dayNames = ['Thu Oct 15','Fri Oct 16','Sat Oct 17','Sun Oct 18','Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25','Sun Oct 26'];
+      const dayTitles = ['Flight Day (JL61)','Arrival — Oakwood Premier','E-Bike Tokyo + Ginza','Shinjuku Food Tour + Kakigori','Kyoto Full-Day Bike Tour','Kamakura + Enoshima','Mt Mitake + Tama River','Sumo + Tsukiji + Chinzanso','Tokyo → Gora (Hakone)','Hakone Loop → Tokyo','Departure — JL62'];
 
       container.innerHTML = dayProfiles.map((dp, i) => {
         const dayName = dayNames[dp.dayIdx] || '';
@@ -7092,7 +7093,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       'Thu Oct 23': [35.6846, 139.7745],  // Marunouchi / Oakwood
       'Fri Oct 24': [35.2505, 139.0472],  // Gora / Tensui Saryo (Hakone)
       'Sat Oct 24': [35.6846, 139.7745],  // Back to Nihombashi
-      'Sun Oct 25': [35.6846, 139.7745],  // Departure morning
+      'Sat Oct 25': [35.6846, 139.7745],  // Hakone Loop → return Oakwood
+      'Sun Oct 26': [35.6846, 139.7745],  // Departure morning
     };
 
     const ALL_DAYS = Object.keys(DAY_BASES);
@@ -7821,7 +7823,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       { key:'oct22', dow:'Wed', date:'22', label:'Wed Oct 22', base:'Mt Mitake',              coords:[35.7871,139.1557] },
       { key:'oct23', dow:'Thu', date:'23', label:'Thu Oct 23', base:'Oakwood Premier, Tokyo', coords:[35.6846,139.7745] },
       { key:'oct24', dow:'Fri', date:'24', label:'Fri Oct 24', base:'Tensui Saryo, Gora',     coords:[35.2505,139.0472] },
-      { key:'oct25', dow:'Sun', date:'25', label:'Sun Oct 25', base:'Tokyo → NRT (depart)',   coords:[35.6846,139.7745] },
+      { key:'oct25', dow:'Sat', date:'25', label:'Sat Oct 25', base:'Oakwood Premier, Tokyo', coords:[35.6846,139.7745] },
+      { key:'oct26', dow:'Sun', date:'26', label:'Sun Oct 26', base:'Tokyo → NRT (depart)',   coords:[35.6846,139.7745] },
     ];
 
     // Fixed blocks per day (from the existing itinerary)
@@ -7831,7 +7834,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
               {time:'Check-in', label:'Nihombashi base setup — night 1 of 7', tag:'fixed'}],
       oct23: [{time:'9:30 AM', label:'Depart Tokyo after rush — Romancecar to Hakone/Gora', tag:'travel'}],
       oct24: [{time:'Noon–4 PM', label:'Return Hakone → Nihombashi — Romancecar or private car', tag:'travel'}],
-      oct25: [{time:'1:30 PM', label:'HARD CUTOFF — depart Nihombashi for NRT. Board 4 PM. JL62 departs 5:05 PM.', tag:'travel'}],
+      oct25: [{time:'6:00 PM', label:'Return to Oakwood Premier Tokyo from Hakone (Odakyu → Shinjuku ~70min)', tag:'travel'}],
+      oct26: [{time:'1:30 PM', label:'HARD CUTOFF — depart Oakwood for NRT. Board 4 PM. JL62 departs 5:05 PM.', tag:'travel'}],
     };
 
     // Time slots for editable blocks
@@ -8197,7 +8201,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       .map(function(d){ return d.label; });
     if (!DAY_LABELS.length) {
       DAY_LABELS = ['Fri Oct 16','Sat Oct 17','Sun Oct 18',
-                    'Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25'];
+                    'Mon Oct 20','Tue Oct 21','Wed Oct 22','Thu Oct 23','Fri Oct 24','Sat Oct 25','Sun Oct 26'];
     }
 
     // Lookup table: label -> TRIP_SCHEDULE entry (for fixed blocks + halfDay flag)
