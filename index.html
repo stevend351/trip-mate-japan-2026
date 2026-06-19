@@ -4074,10 +4074,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
         ]
       },
       {
-        day: "Sat Oct 25",
-        title: "Hakone Loop → Tokyo",
+        day: "Sun Oct 26",
+        title: "Departure — JL62",
         group: "tokyo",
-        transfer: "Hakone Freepass → Romance Car → N'EX",
+        transfer: "Romance Car → N'EX → NRT",
         base: "Departure — NRT 5:05pm",
         focus: "Check-out 10am sharp. Gora Station (3 min walk) → Ropeway → Lake Ashi boat → Hakone Shrine → return Tokyo → N'EX 2pm → JL62 5:05pm.",
         markers: ["stay-hakone", "mountain-ripper", "lake-ashi", "stay-nihombashi", "nrt"],
@@ -7085,15 +7085,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     const DAY_BASES = {
       'Thu Oct 15': [35.7719, 140.3929],  // in flight / NRT
-      'Fri Oct 16': [35.6846, 139.7745],  // Nihombashi
-      'Sat Oct 17': [35.6846, 139.7745],  // Nihombashi
-      'Sun Oct 18': [35.6846, 139.7745],  // Nihombashi
+      'Fri Oct 16': [35.6864, 139.7776],  // Oakwood Premier Tokyo
+      'Sat Oct 17': [35.6864, 139.7776],  // Oakwood Premier Tokyo
+      'Sun Oct 18': [35.6864, 139.7776],  // Oakwood Premier Tokyo
       'Mon Oct 20': [34.9857, 135.7584],  // Kyoto (day trip)
       'Tue Oct 21': [35.3319, 139.5476],  // Kita-Kamakura
       'Wed Oct 22': [35.7871, 139.1557],  // Mt Mitake
       'Thu Oct 23': [35.6846, 139.7745],  // Marunouchi / Oakwood
       'Fri Oct 24': [35.2505, 139.0472],  // Gora / Tensui Saryo (Hakone)
-      'Sat Oct 24': [35.6846, 139.7745],  // Back to Nihombashi
       'Sat Oct 25': [35.6846, 139.7745],  // Hakone Loop → return Oakwood
       'Sun Oct 26': [35.6846, 139.7745],  // Departure morning
     };
@@ -7816,9 +7815,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
     // Trip days definition
     const TRIP_DAYS = [
       { key:'oct15', dow:'Thu', date:'15', label:'Thu Oct 15', base:'In Flight (JL61)',       coords:[35.7719,140.3929] },
-      { key:'oct16', dow:'Fri', date:'16', label:'Fri Oct 16', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct17', dow:'Sat', date:'17', label:'Sat Oct 17', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
-      { key:'oct18', dow:'Sun', date:'18', label:'Sun Oct 18', base:'Nihombashi, Tokyo',      coords:[35.6846,139.7745] },
+      { key:'oct16', dow:'Fri', date:'16', label:'Fri Oct 16', base:'Oakwood Premier Tokyo',  coords:[35.6864,139.7776] },
+      { key:'oct17', dow:'Sat', date:'17', label:'Sat Oct 17', base:'Oakwood Premier Tokyo',  coords:[35.6864,139.7776] },
+      { key:'oct18', dow:'Sun', date:'18', label:'Sun Oct 18', base:'Oakwood Premier Tokyo',  coords:[35.6864,139.7776] },
       { key:'oct20', dow:'Mon', date:'20', label:'Mon Oct 20', base:'Kyoto (day trip)',        coords:[34.9857,135.7584] },
       { key:'oct21', dow:'Tue', date:'21', label:'Tue Oct 21', base:'Kita-Kamakura',          coords:[35.3319,139.5476] },
       { key:'oct22', dow:'Wed', date:'22', label:'Wed Oct 22', base:'Mt Mitake',              coords:[35.7871,139.1557] },
@@ -7831,10 +7830,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     // Fixed blocks per day (from the existing itinerary)
     const FIXED_BLOCKS = {
       oct15: [{time:'All day', label:'Flight JL61 LAX → NRT — depart 1:05 PM LAX', tag:'travel'}],
-      oct16: [{time:'4:35 PM', label:'Arrive NRT — NEX to Tokyo Station, taxi to Nihombashi', tag:'travel'},
-              {time:'Check-in', label:'Nihombashi base setup — night 1 of 7', tag:'fixed'}],
+      oct16: [{time:'4:35 PM', label:'Arrive NRT — NEX to Tokyo Station → Oakwood Premier', tag:'travel'},
+              {time:'Check-in', label:'Oakwood Premier check-in — night 1 of 8', tag:'fixed'}],
       oct23: [{time:'9:30 AM', label:'Depart Tokyo after rush — Romancecar to Hakone/Gora', tag:'travel'}],
-      oct24: [{time:'Noon–4 PM', label:'Return Hakone → Nihombashi — Romancecar or private car', tag:'travel'}],
+      oct24: [{time:'All day', label:'Hakone Day — Mountain Ripper MTB + Tensui Saryo Kaiseki', tag:'fixed'}],
       oct25: [{time:'6:00 PM', label:'Return to Oakwood Premier Tokyo from Hakone (Odakyu → Shinjuku ~70min)', tag:'travel'}],
       oct26: [{time:'1:30 PM', label:'HARD CUTOFF — depart Oakwood for NRT. Board 4 PM. JL62 departs 5:05 PM.', tag:'travel'}],
     };
