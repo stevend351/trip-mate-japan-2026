@@ -4074,35 +4074,56 @@ svg.leaflet-image-layer.leaflet-interactive path {
         ]
       },
       {
-        day: "Sun Oct 26",
-        title: "Departure — JL62",
-        group: "tokyo",
-        transfer: "Romance Car → N'EX → NRT",
-        base: "Departure — NRT 5:05pm",
-        focus: "Check-out 10am sharp. Gora Station (3 min walk) → Ropeway → Lake Ashi boat → Hakone Shrine → return Tokyo → N'EX 2pm → JL62 5:05pm.",
-        markers: ["stay-hakone", "mountain-ripper", "lake-ashi", "stay-nihombashi", "nrt"],
+        day: "Sat Oct 25",
+        title: "Hakone Loop → Back to Tokyo",
+        group: "nature",
+        transfer: "Hakone Freepass → Romance Car → Oakwood Premier",
+        base: "Hakone → Oakwood Premier Tokyo",
+        focus: "Check-out 10am. Gora → Ropeway over Owakudani → Lake Ashi boat → Hakone Shrine → Romance Car → Shinjuku → Oakwood Premier. Last Tokyo night.",
+        markers: ["stay-hakone", "mountain-ripper", "lake-ashi", "stay-nihombashi"],
         activities: [
-          ["Morning", "Ryokan breakfast 6am. Check out 8am. Store bags at ryokan. Walk 3 min to Gora Station."],
+          ["Morning", "Ryokan breakfast 6am. Check out 8am. Store bags. Walk 3 min to Gora Station."],
           ["Hakone Loop", "Gora → Sounzan Cable Car (10 min) → Hakone Ropeway over Owakudani crater (30 min, buy black eggs) → Togendai → Lake Ashi Sightseeing Boat to Moto-Hakone (30 min) → Hakone Shrine (10 min walk, floating torii) → Bus to Hakone-Yumoto."],
-          ["Return", "Romance Car Hakone-Yumoto → Shinjuku (85 min, arrives ~1:45pm). Taxi to Tokyo Station. N'EX 2–2:15pm → Narita 53 min."],
+          ["Return to Tokyo", "Romance Car Hakone-Yumoto → Shinjuku (85 min, arrives ~1:45pm). Taxi to Oakwood Premier. Check back in. Last evening in Tokyo."],
+          ["Evening", "Last night at Oakwood Premier. Light dinner nearby. Pack for departure tomorrow. Sleep early."]
+        ],
+        ops: [
+          { time: "6:00a", title: "Ryokan breakfast", place: "stay-hakone", detail: "Full Japanese breakfast included.", transport: "Ryokan" },
+          { time: "8:00a", title: "Check out + store bags", place: "stay-hakone", detail: "Ryokan holds bags until taxi forward (~¥2,000).", transport: "Lobby" },
+          { time: "8:10a", title: "Walk to Gora Station", place: "stay-hakone", detail: "3 min walk.", transport: "Walk 3 min" },
+          { time: "8:15a", title: "Gora → Sounzan Cable Car", place: "stay-hakone", detail: "10 min. Included in Freepass.", transport: "Cable car 10 min" },
+          { time: "8:25a", title: "Sounzan → Togendai: Hakone Ropeway", place: "mountain-ripper", detail: "30 min over Owakudani volcanic crater. Buy black eggs at midstation ¥500/5.", transport: "Ropeway 30 min" },
+          { time: "9:00a", title: "Arrive Togendai — Lake Ashi", place: "lake-ashi", detail: "Board sightseeing boat.", transport: "Walk to dock" },
+          { time: "9:10a", title: "Lake Ashi Sightseeing Boat", place: "lake-ashi", detail: "Galleon ferry to Moto-Hakone. 30 min. Included in Freepass.", transport: "Boat 30 min" },
+          { time: "10:00a", title: "Hakone Shrine", place: "lake-ashi", detail: "10 min walk from dock. Floating torii gate in lake. Free.", transport: "Walk 10 min" },
+          { time: "10:50a", title: "Bus: Moto-Hakone → Hakone-Yumoto", place: "lake-ashi", detail: "35 min. Included in Freepass.", transport: "Bus 35 min" },
+          { time: "11:30a", title: "Final Hakone lunch", place: "lake-ashi", detail: "Last meal in Hakone. Soba or fresh seafood near Yumoto.", transport: "Walk" },
+          { time: "12:15p", title: "Romance Car: Hakone-Yumoto → Shinjuku", place: "stay-nihombashi", detail: "85 min. Freepass + ¥1,150 reserved seat. Arrives ~1:45pm.", transport: "85 min" },
+          { time: "1:45p", title: "Arrive Shinjuku → Oakwood Premier", place: "stay-nihombashi", detail: "Taxi to Oakwood (~15 min, ¥1,200). Check back in. Last night.", transport: "Taxi 15 min" },
+          { time: "7:00p", title: "Light dinner near hotel", place: "stay-nihombashi", detail: "Easy walk. Nothing heavy — early sleep for 5pm flight tomorrow.", transport: "Walk" },
+          { time: "9:30p", title: "Sleep", place: "stay-nihombashi", detail: "Early night. N'EX at 2pm tomorrow.", transport: "In-room" }
+        ]
+      },
+      {
+        day: "Sun Oct 26",
+        title: "Departure — JL62 NRT → LAX",
+        group: "tokyo",
+        transfer: "N'EX from Tokyo Station → Narita",
+        base: "Oakwood Premier → NRT → LAX",
+        focus: "Check-out 11am. N'EX departs Tokyo Station 2:00pm → Narita 2:53pm. JL62 departs NRT 5:05pm. Arrive LAX 10:40am same day.",
+        markers: ["stay-nihombashi", "nrt"],
+        activities: [
+          ["Morning", "Last in-room breakfast. Pack final bags. Check out by 11am."],
+          ["Transit", "Walk underground to Tokyo Station. N'EX 2:00–2:15pm → Narita 53 min. 2hr 45min at airport."],
           ["Flight", "JL62 departs NRT 5:05pm. Arrive LAX 10:40am same day."]
         ],
         ops: [
-          { time: "6:00a", title: "Ryokan breakfast", place: "stay-hakone", detail: "Full Japanese breakfast included. Eat well — long day ahead.", transport: "Ryokan" },
-          { time: "8:00a", title: "Check out + store bags", place: "stay-hakone", detail: "Ryokan holds bags. Arrange taxi forward from Gora in advance (~¥2,000).", transport: "Lobby" },
-          { time: "8:10a", title: "Walk to Gora Station", place: "stay-hakone", detail: "3 min walk.", transport: "Walk 3 min" },
-          { time: "8:15a", title: "Gora → Sounzan Cable Car", place: "stay-hakone", detail: "10 min. Included in Freepass.", transport: "Cable car 10 min" },
-          { time: "8:25a", title: "Sounzan → Togendai: Hakone Ropeway", place: "mountain-ripper", detail: "30 min over Owakudani active volcanic crater — steam vents, sulfur, Mt Fuji overhead on clear mornings. Buy black eggs at Owakudani midstation ¥500/5.", transport: "Ropeway 30 min" },
-          { time: "9:00a", title: "Arrive Togendai — Lake Ashi", place: "lake-ashi", detail: "Board sightseeing boat.", transport: "Walk to dock" },
-          { time: "9:10a", title: "Lake Ashi Sightseeing Boat", place: "lake-ashi", detail: "Galleon ferry to Moto-Hakone. 30 min. Included in Freepass. Mt Fuji reflection in calm morning lake.", transport: "Boat 30 min" },
-          { time: "10:00a", title: "Hakone Shrine", place: "lake-ashi", detail: "10 min walk from dock. Cedar forest approach. Floating vermillion torii gate in lake. 1,200-year-old shrine. Free admission.", transport: "Walk 10 min" },
-          { time: "10:50a", title: "Bus: Moto-Hakone → Hakone-Yumoto", place: "lake-ashi", detail: "35 min. Included in Freepass. Collect forwarded bags.", transport: "Bus 35 min" },
-          { time: "11:30a", title: "Final lunch near Hakone-Yumoto", place: "lake-ashi", detail: "Last Japanese meal. Soba or fresh seafood.", transport: "Walk" },
-          { time: "12:15p", title: "Romance Car: Hakone-Yumoto → Shinjuku", place: "stay-nihombashi", detail: "85 min. Included in Freepass + ¥1,150 reserved seat. Arrives ~1:45pm.", transport: "85 min" },
-          { time: "1:45p", title: "Arrive Shinjuku → Tokyo Station", place: "stay-nihombashi", detail: "Taxi to Tokyo Station (10 min). Pick up any stored items at Oakwood if needed.", transport: "Taxi 10 min" },
-          { time: "2:00p", title: "N'EX from Tokyo Station → Narita", place: "nrt", detail: "53 min, ¥3,070. Depart 2:00–2:15pm for 5:05pm flight. 2hr 45min at airport.", transport: "53 min" },
-          { time: "3:10p", title: "Arrive Narita Airport", place: "nrt", detail: "Check in, security, lounge.", transport: "Airport" },
-          { time: "5:05p", title: "JAL JL62 departs NRT", place: "nrt", detail: "To LAX. Arrive 10:40am same day.", transport: "Flight 9h 35m" }
+          { time: "6:00a", title: "Last in-room breakfast", place: "stay-nihombashi", detail: "Kitchen: eggs + yogurt + protein. Use up remaining groceries.", transport: "In-room" },
+          { time: "10:00a", title: "Final pack + check out", place: "stay-nihombashi", detail: "Check out by 11am.", transport: "Lobby" },
+          { time: "1:45p", title: "Walk to Tokyo Station", place: "stay-nihombashi", detail: "Underground walkway from Oakwood directly to Tokyo Station. ~5 min.", transport: "Walk underground" },
+          { time: "2:00p", title: "N'EX: Tokyo Station → Narita Terminal 1", place: "nrt", detail: "53 min, ¥3,070. Platform B1F. Arrive Narita ~2:53pm.", transport: "53 min" },
+          { time: "2:53p", title: "Arrive Narita Airport", place: "nrt", detail: "Check in JAL counter, security, JAL Sakura Lounge.", transport: "Airport" },
+          { time: "5:05p", title: "JAL JL62 departs NRT", place: "nrt", detail: "To LAX. JAL 787-9 Business. Arrive LAX 10:40am same day.", transport: "Flight 9h 35m" }
         ]
       }
     ];
