@@ -6255,10 +6255,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
 
     // ── Get places from localStorage ───────────────────────────────
+    let placesCacheRaw = null;
+    let placesCache = [];
     function getPlaces() {
       try {
         const raw = localStorage.getItem('tm-v3-places');
-        return raw ? JSON.parse(raw) : [];
+        if (raw === placesCacheRaw) return placesCache;
+        placesCacheRaw = raw;
+        placesCache = raw ? JSON.parse(raw) : [];
+        return placesCache;
       } catch(e) { return []; }
     }
     window.getPlaces = getPlaces; // expose globally for modelerMapDay
@@ -7068,6 +7073,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
       });
     }
 
+    let scenarioViewsInited = false;
+    function refreshScenarioViews() {
+      renderPicker();
+      renderCanvas();
+      updatePickerCount();
+      runLogistics();
+      renderScenarioDays();
+      scenarioViewsInited = true;
+    }
+
     // ── Wire logistics button ──────────────────────────────────────
     document.getElementById('runLogisticsBtn')?.addEventListener('click', runLogistics);
 
@@ -7090,13 +7105,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           switchToMapTab();
           return; // switchToMapTab handles button active state
         }
-        if (tab === 'scenario') {
-          renderPicker();
-          renderCanvas();
-          updatePickerCount();
-          runLogistics();
-          renderScenarioDays();
-        }
+        if (tab === 'scenario') refreshScenarioViews();
       });
     });
 
@@ -7114,21 +7123,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     // ── Init ───────────────────────────────────────────────────────
     wireFilters();
     wireSliders();
-    setTimeout(() => {
-      renderScenarioDays();
-      // Always render picker and logistics on load — places are seeded synchronously
-      renderPicker();
-      renderCanvas();
-      updatePickerCount();
-      runLogistics(); // show full trip model immediately
-    }, 500);
 
     // Expose refresh so plan tab can call it
     window.modelerRefresh = function() {
-      renderPicker();
-      renderCanvas();
-      updatePickerCount();
-      runLogistics();
+      if (scenarioViewsInited) refreshScenarioViews();
     };
 
     // Expose globally so import engine can call it after data load
@@ -7784,15 +7782,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     hookTabSwitch();
     installRenderPatch();
 
-    // Load fixture if localStorage is empty (QA mode)
-    if (!importedPlaces.length) {
-      loadImportData(FIXTURE);
-    } else {
-      renderImportCards();
-    }
-
-    // After scenario engine renders, inject imported cards
-    setTimeout(injectImportedCards, 500);
+    renderImportCards();
 
     // Expose fixture loader for testing
     window.loadFixture = () => loadImportData(FIXTURE);
@@ -8167,7 +8157,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
 
     // Export for mobile: serializes pinned places per day as trip-import-style JSON
-    document.getElementById('planExportMobile').addEventListener('click', function(){
+    document.getElementById('planExportMobile')?.addEventListener('click', function(){
       var all = getImportedPlaces();
       var byId = {};
       all.forEach(function(p){ byId[p.id]=p; });
@@ -8197,10 +8187,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     });
 
     // Print
-    document.getElementById('planPrint').addEventListener('click', function(){ window.print(); });
+    document.getElementById('planPrint')?.addEventListener('click', function(){ window.print(); });
 
     // Clear all
-    document.getElementById('planClearAll').addEventListener('click', function(){
+    document.getElementById('planClearAll')?.addEventListener('click', function(){
       if (!confirm('Clear all planning notes and pins? This cannot be undone.')) return;
       planData = {}; pins = {};
       localStorage.removeItem(PLAN_KEY);
