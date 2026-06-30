@@ -2498,6 +2498,236 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
     /* hide any leftover .verdict nodes just in case */
     .verdict { display: none; }
+
+    /* ── IMPECCABLE/TASTE PRODUCT POLISH ───────────────────────────
+       Quieter product UI: cooler neutrals, less card striping,
+       stronger tab affordance, denser scan paths, better mobile controls. */
+    :root {
+      --ink: #172123;
+      --muted: #516467;
+      --paper: #eef3f1;
+      --surface: #fbfcfb;
+      --line: #c7d3cf;
+      --tokyo: #176e68;
+      --shadow: 0 10px 28px rgba(23, 33, 35, 0.10);
+    }
+
+    aside {
+      background: rgba(251, 252, 251, .92);
+      backdrop-filter: none;
+    }
+
+    .intro {
+      padding: 24px 24px 18px;
+      background:
+        linear-gradient(180deg, rgba(23, 110, 104, .07), rgba(23, 110, 104, 0) 72%),
+        var(--surface);
+    }
+
+    h1 {
+      font-size: 28px;
+      letter-spacing: -.01em;
+    }
+
+    .subhead,
+    .scenario-subhead {
+      color: #43575a;
+      text-wrap: pretty;
+    }
+
+    @media (min-width: 481px) {
+      .tab-bar {
+        gap: 6px;
+        padding: 6px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .tab-btn {
+        min-height: 40px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        color: #617274;
+        background: transparent;
+        letter-spacing: .03em;
+      }
+
+      .tab-btn:hover:not(.active) {
+        color: var(--ink);
+        background: #edf5f3;
+      }
+
+      .tab-btn.active {
+        color: #fff;
+        background: var(--ink);
+        border-color: var(--ink);
+        box-shadow: 0 8px 18px rgba(23, 33, 35, .16);
+      }
+    }
+
+    .flight-anchor-banner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-top: 16px;
+      border: 1px solid rgba(23, 110, 104, .22);
+      border-radius: 12px;
+      background: rgba(23, 110, 104, .14);
+    }
+
+    .flight-anchor-row {
+      background: rgba(251, 252, 251, .86);
+    }
+
+    .flight-anchor-row + .flight-anchor-row {
+      border-top: 0;
+    }
+
+    .flight-anchor-icon {
+      color: var(--tokyo);
+    }
+
+    .flight-anchor-tag,
+    .modeler-badge,
+    .drawer-badge {
+      border-radius: 999px;
+      background: rgba(23, 110, 104, .11);
+      color: #105b56;
+    }
+
+    .day-card {
+      border-left: 1px solid var(--line);
+      border-top: 3px solid var(--tokyo);
+      border-radius: 10px;
+      box-shadow: none;
+    }
+
+    .day-card.private { border-left-color: var(--line); border-top-color: var(--private); }
+    .day-card.tech { border-left-color: var(--line); border-top-color: var(--tech); }
+    .day-card.nature { border-left-color: var(--line); border-top-color: var(--nature); }
+    .day-card.food { border-left-color: var(--line); border-top-color: var(--food); }
+    .day-card.stay { border-left-color: var(--line); border-top-color: var(--stay); }
+
+    .panel,
+    .modeler-section,
+    .pref-sliders,
+    .scenario-day,
+    .canvas-card,
+    .logistics-day-block,
+    .flight-anchor-banner {
+      box-shadow: none;
+    }
+
+    .panel {
+      border-top: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .mini-activity,
+    .op-card,
+    .fixed-day-card {
+      background: #f7faf8;
+    }
+
+    .scenario-panel {
+      padding: 20px 16px 28px;
+    }
+
+    .scenario-header {
+      font-size: 18px;
+      letter-spacing: -.01em;
+    }
+
+    .modeler-section summary,
+    .scenario-day-header,
+    .logistics-day-head {
+      background: #f2f7f5;
+    }
+
+    .modeler-section summary:hover,
+    .scenario-day-header:hover {
+      background: #e8f2ef;
+    }
+
+    .pf-btn,
+    .pz-tab,
+    .pick-all-btn {
+      border-radius: 999px;
+      background: var(--surface);
+      color: #4c6164;
+    }
+
+    .pf-btn.active {
+      background: var(--tokyo);
+      border-color: var(--tokyo);
+      color: #fff;
+    }
+
+    .picker-place-row,
+    .logistics-place-item {
+      min-height: 42px;
+    }
+
+    .picker-place-row:hover {
+      background: #edf6f3;
+    }
+
+    .logistics-place-item[style*="border-left"] {
+      border-left: 0 !important;
+      box-shadow: inset 0 1px 0 rgba(23, 110, 104, .10);
+    }
+
+    .legend {
+      border-radius: 10px;
+      box-shadow: 0 10px 28px rgba(23, 33, 35, .12);
+    }
+
+    @media (max-width: 480px) {
+      .intro {
+        padding: 18px 14px 14px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .flight-anchor-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .scenario-panel,
+      .import-panel {
+        padding: 18px 14px 92px;
+      }
+
+      .scenario-subhead {
+        max-width: 34ch;
+      }
+
+      .pref-row {
+        grid-template-columns: 92px 1fr 24px;
+        gap: 7px;
+      }
+
+      .pf-btn,
+      .pz-tab {
+        min-height: 38px;
+        padding-inline: 13px;
+      }
+
+      .picker-filters,
+      .picker-zone-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+      }
+
+      .picker-filters::-webkit-scrollbar,
+      .picker-zone-tabs::-webkit-scrollbar {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
